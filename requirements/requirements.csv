@@ -5,4 +5,6 @@ source-3,Sprint 1,Data of a YANG data source can be filtered using XPath,,Accept
 source-4,Sprint 1,NETCONF is a type of YANG data source,,Accepted,,,RFC6241
 source-5,Sprint 1,Data of a NETCONF data source can be filtered using an XML subtree,,Accepted,,,RFC6241
 source-6,Sprint 1,NETCONF data source may use a device profile defined by a network vendor,,Accepted,,,ncclient
-source-7,Sprint,"gNMI, NETCONF, and RESTCONF are types of YANG data sources",,Accepted,,,
+source-7,Sprint 2,NETCONF data source implements NETCONF capabilities,,Accepted,,,RFC6241
+source-8,Sprint 2,"A NETCONF capability has a URI, a name, and a version",,,,,
+,,,,,,,
