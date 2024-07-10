@@ -3,25 +3,24 @@ This section provides details for each class and property defined by YANG Server
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#http://w3id.org/rml/LogicalSource" title="http://w3id.org/rml/LogicalSource">Logical Source</a></li>
-  <li><a href="#http://w3id.org/rml/Namespace" title="http://w3id.org/rml/Namespace">Namespace</a></li>
+  <li><a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a></li>
   <li><a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a></li>
   <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf server.</a></li>
-  <li><a href="#http://w3id.org/rml/ReferenceFormulation" title="http://w3id.org/rml/ReferenceFormulation">Reference Formulation</a></li>
-  <li><a href="#http://w3id.org/rml/Source" title="http://w3id.org/rml/Source">Source</a></li>
   <li><a href="#Vendor" title="https://w3id.org/yang/server#Vendor">Vendor</a></li>
-  <li><a href="#http://w3id.org/rml/XPathReferenceFormulation" title="http://w3id.org/rml/XPathReferenceFormulation">XPath Reference Formulation</a></li>
   <li><a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a></li>
  </ul>
- <div class="entity" id="http://w3id.org/rml/LogicalSource">
-  <h3>Logical Source<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/LogicalSource</p>
+ <div class="entity" id="NetconfCapability">
+  <h3>Netconf Capability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#NetconfCapability</p>
+  <div class="comment">
+   <span class="markdown">NETCONF capability.</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
    </dd>
   </dl>
   <dl class="description">
@@ -29,27 +28,13 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#http://w3id.org/rml/referenceFormulation" title="http://w3id.org/rml/referenceFormulation">reference formulation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/rml/source" title="http://w3id.org/rml/source">source</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
-  </dl>
- </div>
- <div class="entity" id="http://w3id.org/rml/Namespace">
-  <h3>Namespace<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/Namespace</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
-   </dd>
-  </dl>
-  <dl class="description">
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#http://w3id.org/rml/namespace" title="http://w3id.org/rml/namespace">namespace</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -72,7 +57,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -107,51 +92,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://w3id.org/rml/ReferenceFormulation">
-  <h3>Reference Formulation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/ReferenceFormulation</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#http://w3id.org/rml/XPathReferenceFormulation" title="http://w3id.org/rml/XPathReferenceFormulation">XPath Reference Formulation</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#http://w3id.org/rml/referenceFormulation" title="http://w3id.org/rml/referenceFormulation">reference formulation</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    has members
-   </dt>
-   <dd>
-    <a href="#Subtree" title="https://w3id.org/yang/server#Subtree">Subtree</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/rml/XPath" title="http://w3id.org/rml/XPath">XPath</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://w3id.org/rml/Source">
-  <h3>Source<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/Source</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
+    <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -171,36 +112,16 @@ This section provides details for each class and property defined by YANG Server
   </dl>
   <dl class="description">
    <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
     <a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://w3id.org/rml/XPathReferenceFormulation">
-  <h3>XPath Reference Formulation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/XPathReferenceFormulation</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#http://w3id.org/rml/ReferenceFormulation" title="http://w3id.org/rml/ReferenceFormulation">Reference Formulation</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://w3id.org/rml/namespace" title="http://w3id.org/rml/namespace">namespace</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -231,32 +152,27 @@ This section provides details for each class and property defined by YANG Server
    <dd>
     <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#port" title="https://w3id.org/yang/server#port">port</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#http://w3id.org/rml/source" title="http://w3id.org/rml/source">source</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#http://w3id.org/rml/namespace" title="http://w3id.org/rml/namespace">namespace</a></li>
+  <li><a href="#capability" title="https://w3id.org/yang/server#capability">capability</a></li>
   <li><a href="#profile" title="https://w3id.org/yang/server#profile">profile</a></li>
-  <li><a href="#http://w3id.org/rml/referenceFormulation" title="http://w3id.org/rml/referenceFormulation">reference formulation</a></li>
-  <li><a href="#http://w3id.org/rml/source" title="http://w3id.org/rml/source">source</a></li>
   <li><a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a></li>
  </ul>
- <div class="entity" id="http://w3id.org/rml/namespace">
-  <h3>namespace<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/namespace</p>
+ <div class="entity" id="capability">
+  <h3>capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#capability</p>
+  <div class="comment">
+   <span class="markdown">Refers to the NETCONF capability supported by the NETCONF server.</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
    </dd>
   </dl>
   <div class="description">
@@ -265,13 +181,13 @@ This section provides details for each class and property defined by YANG Server
      has domain
     </dt>
     <dd>
-     <a href="#http://w3id.org/rml/XPathReferenceFormulation" title="http://w3id.org/rml/XPathReferenceFormulation">XPath Reference Formulation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf server.</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#http://w3id.org/rml/Namespace" title="http://w3id.org/rml/Namespace">Namespace</a> <sup class="type-c" title="class">c</sup>
+     <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -303,62 +219,6 @@ This section provides details for each class and property defined by YANG Server
     </dt>
     <dd>
      <a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://w3id.org/rml/referenceFormulation">
-  <h3>reference formulation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/referenceFormulation</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://w3id.org/rml/LogicalSource" title="http://w3id.org/rml/LogicalSource">Logical Source</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://w3id.org/rml/ReferenceFormulation" title="http://w3id.org/rml/ReferenceFormulation">Reference Formulation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://w3id.org/rml/source">
-  <h3>source<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/source</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://w3id.org/rml/LogicalSource" title="http://w3id.org/rml/LogicalSource">Logical Source</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://w3id.org/rml/Source" title="http://w3id.org/rml/Source">Source</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -398,6 +258,9 @@ This section provides details for each class and property defined by YANG Server
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a></li>
+  <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
+  <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
+  <li><a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a></li>
   <li><a href="#port" title="https://w3id.org/yang/server#port">port</a></li>
   <li><a href="#username" title="https://w3id.org/yang/server#username">username</a></li>
  </ul>
@@ -430,6 +293,96 @@ This section provides details for each class and property defined by YANG Server
     </dt>
     <dd>
      <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hostKeyVerification">
+  <h3>host key verification<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#hostKeyVerification</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether SSH host key is verified to access the NETCONF server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf server.</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/identifier">
+  <h3>identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/identifier</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/name">
+  <h3>name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/name</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#Vendor" title="https://w3id.org/yang/server#Vendor">Vendor</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -496,50 +449,11 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
- <h3 id="namedindividuals" class="list">Named Individuals</h3>
- <ul class="hlist">
-  <li><a href="#Subtree" title="https://w3id.org/yang/server#Subtree">Subtree</a></li>
-  <li><a href="#http://w3id.org/rml/XPath" title="http://w3id.org/rml/XPath">XPath</a></li>
- </ul>
- <div class="entity" id="Subtree">
-  <h3>Subtree<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#Subtree</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#http://w3id.org/rml/ReferenceFormulation" title="http://w3id.org/rml/ReferenceFormulation">Reference Formulation</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="http://w3id.org/rml/XPath">
-  <h3>XPath<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://w3id.org/rml/XPath</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://w3id.org/rml/">http://w3id.org/rml/</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#http://w3id.org/rml/ReferenceFormulation" title="http://w3id.org/rml/ReferenceFormulation">Reference Formulation</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
-<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
 </div>
 </div>

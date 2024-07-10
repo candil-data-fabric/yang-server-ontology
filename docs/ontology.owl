@@ -18,7 +18,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/APACHE2.0"/>
         <vann:preferredNamespaceUri>https://w3id.org/yang/server#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">YANG Server Ontology</rdfs:label>
-        <owl:versionInfo>0.9.0</owl:versionInfo>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
@@ -130,45 +130,15 @@
     
 
 
-    <!-- http://w3id.org/rml/namespace -->
+    <!-- https://w3id.org/yang/server#capability -->
 
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/rml/namespace">
-        <rdfs:domain rdf:resource="http://w3id.org/rml/XPathReferenceFormulation"/>
-        <rdfs:range rdf:resource="http://w3id.org/rml/Namespace"/>
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>namespace</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3id.org/rml/referenceFormulation -->
-
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/rml/referenceFormulation">
-        <rdfs:domain rdf:resource="http://w3id.org/rml/LogicalSource"/>
-        <rdfs:range rdf:resource="http://w3id.org/rml/ReferenceFormulation"/>
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>reference formulation</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3id.org/rml/source -->
-
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/rml/source">
-        <rdfs:domain rdf:resource="http://w3id.org/rml/LogicalSource"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/rml/Source"/>
-                    <rdf:Description rdf:about="https://w3id.org/yang/server#YangServer"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>source</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/yang/server#capability">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#NetconfServer"/>
+        <rdfs:range rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <rdfs:comment>Refers to the NETCONF capability supported by the NETCONF server.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>capability</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -211,6 +181,31 @@
     
 
 
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/name">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#NetconfProfile"/>
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#Vendor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/yang/server#endpoint -->
 
 
@@ -221,6 +216,19 @@
         <rdfs:comment>YANG server endpoint. </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
         <rdfs:label>endpoint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/yang/server#hostKeyVerification -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#hostKeyVerification">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#NetconfServer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether SSH host key is verified to access the NETCONF server.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>host key verification</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -262,53 +270,14 @@
     
 
 
-    <!-- http://w3id.org/rml/LogicalSource -->
+    <!-- https://w3id.org/yang/server#NetconfCapability -->
 
 
-    <owl:Class rdf:about="http://w3id.org/rml/LogicalSource">
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>Logical Source</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rml/Namespace -->
-
-
-    <owl:Class rdf:about="http://w3id.org/rml/Namespace">
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>Namespace</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rml/ReferenceFormulation -->
-
-
-    <owl:Class rdf:about="http://w3id.org/rml/ReferenceFormulation">
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>Reference Formulation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rml/Source -->
-
-
-    <owl:Class rdf:about="http://w3id.org/rml/Source">
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>Source</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/rml/XPathReferenceFormulation -->
-
-
-    <owl:Class rdf:about="http://w3id.org/rml/XPathReferenceFormulation">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/rml/ReferenceFormulation"/>
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>XPath Reference Formulation</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/yang/server#NetconfCapability">
+        <rdfs:comment>NETCONF capability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Netconf Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
     </owl:Class>
     
 
@@ -358,41 +327,6 @@
         <rdfs:label>Yang Server</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc7950"/>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://w3id.org/rml/XPath -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/rml/XPath">
-        <rdf:type rdf:resource="http://w3id.org/rml/ReferenceFormulation"/>
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
-        <rdfs:label>XPath</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/yang/server#Subtree -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#Subtree">
-        <rdf:type rdf:resource="http://w3id.org/rml/ReferenceFormulation"/>
-        <rdfs:label>Subtree</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 
