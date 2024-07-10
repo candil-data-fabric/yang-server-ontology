@@ -1,0 +1,573 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/yang/server", "http://www.w3.org/2001/XMLSchema", "http://w3id.org/rml" ],
+    "title" : {
+      "undefined" : "YANG Server Ontology"
+    },
+    "iri" : "https://w3id.org/yang/server#",
+    "version" : "0.9.0",
+    "author" : [ "Ignacio Dominguez Martinez-Casanueva" ],
+    "description" : { },
+    "labels" : {
+      "en" : "YANG Server Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://purl.org/NET/rdflicense/APACHE2.0",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Ignacio Dominguez Martinez-Casanueva",
+        "type" : "label"
+      } ],
+      "createdWith" : [ {
+        "identifier" : "createdWith",
+        "language" : "undefined",
+        "value" : "https://chowlk.linkeddata.es/",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2024-07-09",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.9.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "YANG Server Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/rml/Namespace",
+    "baseIri" : "http://w3id.org/rml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/rml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Namespace",
+      "undefined" : "Namespace"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/yang/server#Vendor",
+    "baseIri" : "https://w3id.org/yang/server",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Vendor",
+      "undefined" : "Vendor"
+    },
+    "comment" : {
+      "undefined" : "Represents a network vendor."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "http://w3id.org/rml/ReferenceFormulation",
+    "baseIri" : "http://w3id.org/rml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/rml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ReferenceFormulation",
+      "undefined" : "Reference Formulation"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/yang/server#Subtree",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/rfc6241",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Subtree",
+        "undefined" : "Subtree"
+      }
+    }, {
+      "iri" : "http://w3id.org/rml/XPath",
+      "baseIri" : "http://w3id.org/rml",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://w3id.org/rml/",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/rfc6241",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "XPath",
+        "undefined" : "XPath"
+      }
+    } ],
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://w3id.org/rml/XPathReferenceFormulation",
+    "baseIri" : "http://w3id.org/rml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/rml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "XPathReferenceFormulation",
+      "undefined" : "XPath Reference Formulation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "14", "10" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/yang/server#YangServer",
+    "baseIri" : "https://w3id.org/yang/server",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://datatracker.ietf.org/doc/rfc7950",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "YangServer",
+      "undefined" : "Yang Server"
+    },
+    "subClasses" : [ "1" ],
+    "comment" : {
+      "undefined" : "An entity that provides access to YANG-defined data to a client, over some network management protocol."
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://w3id.org/rml/LogicalSource",
+    "baseIri" : "http://w3id.org/rml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/rml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LogicalSource",
+      "undefined" : "Logical Source"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/yang/server#NetconfProfile",
+    "baseIri" : "https://w3id.org/yang/server",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/ncclient/ncclient/tree/master",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NetconfProfile",
+      "undefined" : "Netconf Profile"
+    },
+    "comment" : {
+      "undefined" : "Vendor-specific profile for managing YANG servers via the NETCONF protocol."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://w3id.org/rml/Source",
+    "baseIri" : "http://w3id.org/rml",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/rml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Source",
+      "undefined" : "Source"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/yang/server#NetconfServer",
+    "baseIri" : "https://w3id.org/yang/server",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://datatracker.ietf.org/doc/rfc6241",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NetconfServer",
+      "undefined" : "Netconf server."
+    },
+    "comment" : {
+      "undefined" : "YANG server that can be managed via the NETCONF protocol."
+    },
+    "id" : "1",
+    "superClasses" : [ "10" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/yang/server#profile",
+    "baseIri" : "https://w3id.org/yang/server",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "profile",
+      "undefined" : "profile"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Refers to the network profile used when accessing the YANG server via NETCONF protocol."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "6"
+  }, {
+    "range" : "10",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/yang/server#port",
+    "baseIri" : "https://w3id.org/yang/server",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "port",
+      "undefined" : "port"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Port number where the YANG server is listening."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/yang/server#username",
+    "baseIri" : "https://w3id.org/yang/server",
+    "range" : "4",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "username",
+      "undefined" : "username"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Username for accessing the YANG server."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://w3id.org/rml/source",
+    "baseIri" : "http://w3id.org/rml",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/rml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "source",
+      "undefined" : "source"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/yang/server#vendor",
+    "baseIri" : "https://w3id.org/yang/server",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "vendor",
+      "undefined" : "vendor"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Refers to the network vendor that defines the network profile."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://w3id.org/rml/namespace",
+    "baseIri" : "http://w3id.org/rml",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/rml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "namespace",
+      "undefined" : "namespace"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://w3id.org/rml/referenceFormulation",
+    "baseIri" : "http://w3id.org/rml",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://w3id.org/rml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "referenceFormulation",
+      "undefined" : "reference formulation"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/yang/server#endpoint",
+    "baseIri" : "https://w3id.org/yang/server",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "192.168.1.10:830",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endpoint",
+      "undefined" : "endpoint"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "YANG server endpoint. "
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  } ]
+}

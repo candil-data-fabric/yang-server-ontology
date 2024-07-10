@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/yang/server#"
+     xml:base="https://w3id.org/yang/server"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/yang/server#">
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-09</dc:created>
+        <dc:creator>Ignacio Dominguez Martinez-Casanueva</dc:creator>
+        <dc:title>YANG Server Ontology</dc:title>
+        <terms:description></terms:description>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/APACHE2.0"/>
+        <vann:preferredNamespaceUri>https://w3id.org/yang/server#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">YANG Server Ontology</rdfs:label>
+        <owl:versionInfo>0.9.0</owl:versionInfo>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/example"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/rml/namespace -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rml/namespace">
+        <rdfs:domain rdf:resource="http://w3id.org/rml/XPathReferenceFormulation"/>
+        <rdfs:range rdf:resource="http://w3id.org/rml/Namespace"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>namespace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rml/referenceFormulation -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rml/referenceFormulation">
+        <rdfs:domain rdf:resource="http://w3id.org/rml/LogicalSource"/>
+        <rdfs:range rdf:resource="http://w3id.org/rml/ReferenceFormulation"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>reference formulation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rml/source -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rml/source">
+        <rdfs:domain rdf:resource="http://w3id.org/rml/LogicalSource"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/rml/Source"/>
+                    <rdf:Description rdf:about="https://w3id.org/yang/server#YangServer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/yang/server#profile -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/yang/server#profile">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#NetconfServer"/>
+        <rdfs:range rdf:resource="https://w3id.org/yang/server#NetconfProfile"/>
+        <rdfs:comment>Refers to the network profile used when accessing the YANG server via NETCONF protocol.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>profile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/yang/server#vendor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/yang/server#vendor">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#NetconfProfile"/>
+        <rdfs:range rdf:resource="https://w3id.org/yang/server#Vendor"/>
+        <rdfs:comment>Refers to the network vendor that defines the network profile.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>vendor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/yang/server#endpoint -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#endpoint">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#YangServer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <vann:example>192.168.1.10:830</vann:example>
+        <rdfs:comment>YANG server endpoint. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>endpoint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/yang/server#port -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#port">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#YangServer"/>
+        <rdfs:comment>Port number where the YANG server is listening.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>port</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/yang/server#username -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#username">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#YangServer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Username for accessing the YANG server.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>username</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/rml/LogicalSource -->
+
+
+    <owl:Class rdf:about="http://w3id.org/rml/LogicalSource">
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>Logical Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rml/Namespace -->
+
+
+    <owl:Class rdf:about="http://w3id.org/rml/Namespace">
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>Namespace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rml/ReferenceFormulation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/rml/ReferenceFormulation">
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>Reference Formulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rml/Source -->
+
+
+    <owl:Class rdf:about="http://w3id.org/rml/Source">
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rml/XPathReferenceFormulation -->
+
+
+    <owl:Class rdf:about="http://w3id.org/rml/XPathReferenceFormulation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rml/ReferenceFormulation"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>XPath Reference Formulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/yang/server#NetconfProfile -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#NetconfProfile">
+        <rdfs:comment>Vendor-specific profile for managing YANG servers via the NETCONF protocol.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Netconf Profile</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://github.com/ncclient/ncclient/tree/master"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/yang/server#NetconfServer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#NetconfServer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/yang/server#YangServer"/>
+        <rdfs:comment>YANG server that can be managed via the NETCONF protocol.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Netconf server.</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/yang/server#Vendor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#Vendor">
+        <rdfs:comment>Represents a network vendor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Vendor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/yang/server#YangServer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#YangServer">
+        <rdfs:comment>An entity that provides access to YANG-defined data to a client, over some network management protocol.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Yang Server</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc7950"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/rml/XPath -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/rml/XPath">
+        <rdf:type rdf:resource="http://w3id.org/rml/ReferenceFormulation"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/rml/"/>
+        <rdfs:label>XPath</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#Subtree -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#Subtree">
+        <rdf:type rdf:resource="http://w3id.org/rml/ReferenceFormulation"/>
+        <rdfs:label>Subtree</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -8,15 +8,11 @@ Online documentation: https://w3id.org/yang/source
 
 We encourage to locally develop the ontology documentation before publishing it online. For this, we recommend running WIDOCO tool via Docker container.
 
-First, make sure to build a Docker image for the latest release of WIDOCO tool:
-```bash
-docker build -t dgarijo/widoco:1.4.24 .
-```
-Then generate the documentation as follows:
+To generate the documentation, issue the following command:
 
 ```bash
 docker run -ti --rm \
   -v `pwd`/ontology:/usr/local/widoco/in \
   -v `pwd`/docs:/usr/local/widoco/out \
-  dgarijo/widoco:1.4.24 -ontFile in/aeros-building.owl -outFolder out -webVowl -oops  -getOntologyMetadata -htaccess -licensius
+  ghcr.io/dgarijo/widoco:v1.4.25 -ontFile in/yang-server.owl -outFolder out -webVowl -oops  -getOntologyMetadata -htaccess -licensius
 ```

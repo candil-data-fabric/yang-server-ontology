@@ -1,10 +1,9 @@
 Identifier (domain+id),Sprint,Competency Question/Natural Language Sentence,Answer,Status,Superseded by,Comments,Provenance
-source-1,Sprint 1,YANG data source is available in a URL and port,,Accepted,,,RFC6241
-source-2,Sprint 1,YANG data source is configured with username and password credentials,,Accepted,,,RFC6241
-source-3,Sprint 1,Data of a YANG data source can be filtered using XPath,,Accepted,,,RFC6241
-source-4,Sprint 1,NETCONF is a type of YANG data source,,Accepted,,,RFC6241
-source-5,Sprint 1,Data of a NETCONF data source can be filtered using an XML subtree,,Accepted,,,RFC6241
-source-6,Sprint 1,NETCONF data source may use a device profile defined by a network vendor,,Accepted,,,ncclient
-source-7,Sprint 2,NETCONF data source implements NETCONF capabilities,,Accepted,,,RFC6241
-source-8,Sprint 2,"A NETCONF capability has a URI, a name, and a version",,,,,
-,,,,,,,
+server-1,Sprint 1,A YANG server is accesible through an endpoint composed of URL or IP address and port number,,Accepted,,,RFC6241
+server-2,Sprint 1,Access to a YANG server requires username and password credentials,,Accepted,,,RFC6241
+server-3,Sprint 1,Access to data of a YANG server can be filtered using XPath,,Accepted,,,RFC6241
+server-4,Sprint 1,NETCONF is a type of YANG server,,Accepted,,,RFC6241
+server-5,Sprint 1,Access to data of a NETCONF server can be filtered using an XML subtree,,Accepted,,,RFC6241
+server-6,Sprint 1,A NETCONF server may require a device profile defined by a network vendor,,Accepted,,,ncclient
+server-7,Sprint 2,A NETCONF server implements NETCONF capabilities,,Accepted,,,RFC6241
+server-8,Sprint 2,A NETCONF capability has a URI,,,,,

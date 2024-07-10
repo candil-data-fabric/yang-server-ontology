@@ -1,0 +1,231 @@
+<https://w3id.org/yang/server#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/created> "2024-07-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/creator> "Ignacio Dominguez Martinez-Casanueva" .
+<https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/title> "YANG Server Ontology" .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/description> "" .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
+<https://w3id.org/yang/server#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/yang/server#" .
+<https://w3id.org/yang/server#> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
+<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "0.9.0" .
+<https://w3id.org/yang/server#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/example
+<http://purl.org/vocab/vann/example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/rml/namespace
+<http://w3id.org/rml/namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/XPathReferenceFormulation> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Namespace> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#label> "namespace" .
+# 
+# http://w3id.org/rml/referenceFormulation
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/LogicalSource> .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#label> "reference formulation" .
+# 
+# http://w3id.org/rml/source
+<http://w3id.org/rml/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/LogicalSource> .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#YangServer> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/Source> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#label> "source" .
+# 
+# https://w3id.org/yang/server#profile
+<https://w3id.org/yang/server#profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfServer> .
+<https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#NetconfProfile> .
+<https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the network profile used when accessing the YANG server via NETCONF protocol." .
+<https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#label> "profile" .
+# 
+# https://w3id.org/yang/server#vendor
+<https://w3id.org/yang/server#vendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#vendor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfProfile> .
+<https://w3id.org/yang/server#vendor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Vendor> .
+<https://w3id.org/yang/server#vendor> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the network vendor that defines the network profile." .
+<https://w3id.org/yang/server#vendor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#vendor> <http://www.w3.org/2000/01/rdf-schema#label> "vendor" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/yang/server#endpoint
+<https://w3id.org/yang/server#endpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/yang/server#endpoint> <http://purl.org/vocab/vann/example> "192.168.1.10:830" .
+<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "YANG server endpoint. " .
+<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint" .
+# 
+# https://w3id.org/yang/server#port
+<https://w3id.org/yang/server#port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#port> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#port> <http://www.w3.org/2000/01/rdf-schema#comment> "Port number where the YANG server is listening." .
+<https://w3id.org/yang/server#port> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#port> <http://www.w3.org/2000/01/rdf-schema#label> "port" .
+# 
+# https://w3id.org/yang/server#username
+<https://w3id.org/yang/server#username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#comment> "Username for accessing the YANG server." .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#label> "username" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/rml/LogicalSource
+<http://w3id.org/rml/LogicalSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/LogicalSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/LogicalSource> <http://www.w3.org/2000/01/rdf-schema#label> "Logical Source" .
+# 
+# http://w3id.org/rml/Namespace
+<http://w3id.org/rml/Namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/Namespace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/Namespace> <http://www.w3.org/2000/01/rdf-schema#label> "Namespace" .
+# 
+# http://w3id.org/rml/ReferenceFormulation
+<http://w3id.org/rml/ReferenceFormulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/ReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/ReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#label> "Reference Formulation" .
+# 
+# http://w3id.org/rml/Source
+<http://w3id.org/rml/Source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/Source> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/Source> <http://www.w3.org/2000/01/rdf-schema#label> "Source" .
+# 
+# http://w3id.org/rml/XPathReferenceFormulation
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#label> "XPath Reference Formulation" .
+# 
+# https://w3id.org/yang/server#NetconfProfile
+<https://w3id.org/yang/server#NetconfProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#NetconfProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "Vendor-specific profile for managing YANG servers via the NETCONF protocol." .
+<https://w3id.org/yang/server#NetconfProfile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#NetconfProfile> <http://www.w3.org/2000/01/rdf-schema#label> "Netconf Profile" .
+<https://w3id.org/yang/server#NetconfProfile> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/ncclient/ncclient/tree/master> .
+# 
+# https://w3id.org/yang/server#NetconfServer
+<https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#comment> "YANG server that can be managed via the NETCONF protocol." .
+<https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#label> "Netconf server." .
+<https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
+# https://w3id.org/yang/server#Vendor
+<https://w3id.org/yang/server#Vendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Vendor> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a network vendor." .
+<https://w3id.org/yang/server#Vendor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#Vendor> <http://www.w3.org/2000/01/rdf-schema#label> "Vendor" .
+# 
+# https://w3id.org/yang/server#YangServer
+<https://w3id.org/yang/server#YangServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#YangServer> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that provides access to YANG-defined data to a client, over some network management protocol." .
+<https://w3id.org/yang/server#YangServer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#YangServer> <http://www.w3.org/2000/01/rdf-schema#label> "Yang Server" .
+<https://w3id.org/yang/server#YangServer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc7950> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/rml/XPath
+<http://w3id.org/rml/XPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/XPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/XPath> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/> .
+<http://w3id.org/rml/XPath> <http://www.w3.org/2000/01/rdf-schema#label> "XPath" .
+<http://w3id.org/rml/XPath> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
+# https://w3id.org/yang/server#Subtree
+<https://w3id.org/yang/server#Subtree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/yang/server#Subtree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/ReferenceFormulation> .
+<https://w3id.org/yang/server#Subtree> <http://www.w3.org/2000/01/rdf-schema#label> "Subtree" .
+<https://w3id.org/yang/server#Subtree> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
