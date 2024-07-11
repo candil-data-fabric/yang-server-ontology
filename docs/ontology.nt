@@ -1,12 +1,12 @@
 <https://w3id.org/yang/server#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/created> "2024-07-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/created> "2024-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/creator> "Ignacio Dominguez Martinez-Casanueva" .
 <https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/title> "YANG Server Ontology" .
 <https://w3id.org/yang/server#> <http://purl.org/dc/terms/description> "" .
 <https://w3id.org/yang/server#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
 <https://w3id.org/yang/server#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/yang/server#" .
 <https://w3id.org/yang/server#> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
-<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
 <https://w3id.org/yang/server#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
@@ -65,6 +65,14 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/yang/server#accessDatastore
+<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Datastore> .
+<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the YANG datastore to be selected when accessing the YANG data of a YANG server." .
+<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "access datastore" .
+# 
 # https://w3id.org/yang/server#capability
 <https://w3id.org/yang/server#capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/yang/server#capability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfServer> .
@@ -72,6 +80,14 @@
 <https://w3id.org/yang/server#capability> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the NETCONF capability supported by the NETCONF server." .
 <https://w3id.org/yang/server#capability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#capability> <http://www.w3.org/2000/01/rdf-schema#label> "capability" .
+# 
+# https://w3id.org/yang/server#datastore
+<https://w3id.org/yang/server#datastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#datastore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#datastore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Datastore> .
+<https://w3id.org/yang/server#datastore> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the YANG datastore used by the YANG server." .
+<https://w3id.org/yang/server#datastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#datastore> <http://www.w3.org/2000/01/rdf-schema#label> "datastore" .
 # 
 # https://w3id.org/yang/server#profile
 <https://w3id.org/yang/server#profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -130,13 +146,6 @@
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#label> "host key verification" .
 # 
-# https://w3id.org/yang/server#port
-<https://w3id.org/yang/server#port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#port> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
-<https://w3id.org/yang/server#port> <http://www.w3.org/2000/01/rdf-schema#comment> "Port number where the YANG server is listening." .
-<https://w3id.org/yang/server#port> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server#port> <http://www.w3.org/2000/01/rdf-schema#label> "port" .
-# 
 # https://w3id.org/yang/server#username
 <https://w3id.org/yang/server#username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
@@ -153,6 +162,45 @@
 # #
 # #################################################################
 # 
+# 
+# https://w3id.org/yang/server#CandidateDatastore
+<https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#ConventionalDatastore> .
+<https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration datastore that can be manipulated without impacting the device's running configuration datastore and that can be committed to the running configuration datastore." .
+<https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Candidate Datastore" .
+<https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#ConventionalDatastore
+<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Datastore> .
+<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the following set of configuration datastores: <running>, <startup>, <candidate>, and <intended>.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores." .
+<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Conventional Datastore" .
+<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#Datastore
+<https://w3id.org/yang/server#Datastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Datastore> <http://www.w3.org/2000/01/rdf-schema#comment> "A conceptual place to store and access information. A datastore might be implemented, for example, using files, a database, flash memory locations, or combinations thereof. A datastore maps to an instantiated YANG data tree." .
+<https://w3id.org/yang/server#Datastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#Datastore> <http://www.w3.org/2000/01/rdf-schema#label> "Datastore" .
+<https://w3id.org/yang/server#Datastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#DynamicDatastore
+<https://w3id.org/yang/server#DynamicDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#DynamicDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Datastore> .
+<https://w3id.org/yang/server#DynamicDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration datastore holding configuration obtained dynamically during the operation of a device through interaction with other systems, rather than through one of the conventional configuration datastores." .
+<https://w3id.org/yang/server#DynamicDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#DynamicDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Dynamic Datastore" .
+<https://w3id.org/yang/server#DynamicDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#IntendedDatastore
+<https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#ConventionalDatastore> .
+<https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration datastore holding the complete intended configuration of the device. This represents the configuration after all configuration transformations to <running> have been performed and is the configuration that the system attempts to apply." .
+<https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Intended Datastore" .
+<https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
 # 
 # https://w3id.org/yang/server#NetconfCapability
 <https://w3id.org/yang/server#NetconfCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -173,8 +221,32 @@
 <https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#YangServer> .
 <https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#comment> "YANG server that can be managed via the NETCONF protocol." .
 <https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#label> "Netconf server." .
+<https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#label> "Netconf Server" .
 <https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
+# https://w3id.org/yang/server#OperationalDatastore
+<https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Datastore> .
+<https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "A datastore holding the complete operational state of the device." .
+<https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Operational Datastore" .
+<https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#RunningDatastore
+<https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#ConventionalDatastore> .
+<https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration datastore holding the current configuration of the device.  It may include configuration that requires further transformations before it can be applied." .
+<https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Running Datastore" .
+<https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#StartupDatastore
+<https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#ConventionalDatastore> .
+<https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration datastore holding the configuration loaded by the device into the running configuration datastore when it boots." .
+<https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Startup Datastore" .
+<https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
 # 
 # https://w3id.org/yang/server#Vendor
 <https://w3id.org/yang/server#Vendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -4,6 +4,7 @@
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rml: <http://w3id.org/rml/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,14 +13,14 @@
 @base <https://w3id.org/yang/server#> .
 
 <https://w3id.org/yang/server#> rdf:type owl:Ontology ;
-                                 dc:created "2024-07-09"^^xsd:date ;
+                                 dc:created "2024-07-11"^^xsd:date ;
                                  dc:creator "Ignacio Dominguez Martinez-Casanueva" ;
                                  dc:title "YANG Server Ontology" ;
                                  dcterms:description "" ;
                                  dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0> ;
                                  vann:preferredNamespaceUri "https://w3id.org/yang/server#" ;
                                  rdfs:label "YANG Server Ontology"@en ;
-                                 owl:versionInfo "1.0.0" ;
+                                 owl:versionInfo "1.1.0" ;
                                  mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -66,6 +67,14 @@ mod:createdWith rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/yang/server#accessDatastore
+ys:accessDatastore rdf:type owl:ObjectProperty ;
+                   rdfs:domain ys:YangServer ;
+                   rdfs:range ys:Datastore ;
+                   rdfs:comment "Indicates the YANG datastore to be selected when accessing the YANG data of a YANG server." ;
+                   rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                   rdfs:label "access datastore" .
+
 
 ###  https://w3id.org/yang/server#capability
 ys:capability rdf:type owl:ObjectProperty ;
@@ -74,6 +83,15 @@ ys:capability rdf:type owl:ObjectProperty ;
               rdfs:comment "Refers to the NETCONF capability supported by the NETCONF server." ;
               rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
               rdfs:label "capability" .
+
+
+###  https://w3id.org/yang/server#datastore
+ys:datastore rdf:type owl:ObjectProperty ;
+             rdfs:domain ys:YangServer ;
+             rdfs:range ys:Datastore ;
+             rdfs:comment "Indicates the YANG datastore used by the YANG server." ;
+             rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+             rdfs:label "datastore" .
 
 
 ###  https://w3id.org/yang/server#profile
@@ -134,14 +152,6 @@ ys:hostKeyVerification rdf:type owl:DatatypeProperty ;
                        rdfs:label "host key verification" .
 
 
-###  https://w3id.org/yang/server#port
-ys:port rdf:type owl:DatatypeProperty ;
-        rdfs:domain ys:YangServer ;
-        rdfs:comment "Port number where the YANG server is listening." ;
-        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-        rdfs:label "port" .
-
-
 ###  https://w3id.org/yang/server#username
 ys:username rdf:type owl:DatatypeProperty ;
             rdfs:domain ys:YangServer ;
@@ -154,6 +164,50 @@ ys:username rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  https://w3id.org/yang/server#CandidateDatastore
+ys:CandidateDatastore rdf:type owl:Class ;
+                      rdfs:subClassOf ys:ConventionalDatastore ;
+                      rdfs:comment "A configuration datastore that can be manipulated without impacting the device's running configuration datastore and that can be committed to the running configuration datastore." ;
+                      rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                      rdfs:label "Candidate Datastore" ;
+                      rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#ConventionalDatastore
+ys:ConventionalDatastore rdf:type owl:Class ;
+                         rdfs:subClassOf ys:Datastore ;
+                         rdfs:comment "One of the following set of configuration datastores: <running>, <startup>, <candidate>, and <intended>.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores." ;
+                         rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                         rdfs:label "Conventional Datastore" ;
+                         rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#Datastore
+ys:Datastore rdf:type owl:Class ;
+             rdfs:comment "A conceptual place to store and access information. A datastore might be implemented, for example, using files, a database, flash memory locations, or combinations thereof. A datastore maps to an instantiated YANG data tree." ;
+             rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+             rdfs:label "Datastore" ;
+             rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#DynamicDatastore
+ys:DynamicDatastore rdf:type owl:Class ;
+                    rdfs:subClassOf ys:Datastore ;
+                    rdfs:comment "A configuration datastore holding configuration obtained dynamically during the operation of a device through interaction with other systems, rather than through one of the conventional configuration datastores." ;
+                    rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                    rdfs:label "Dynamic Datastore" ;
+                    rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#IntendedDatastore
+ys:IntendedDatastore rdf:type owl:Class ;
+                     rdfs:subClassOf ys:ConventionalDatastore ;
+                     rdfs:comment "A configuration datastore holding the complete intended configuration of the device. This represents the configuration after all configuration transformations to <running> have been performed and is the configuration that the system attempts to apply." ;
+                     rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                     rdfs:label "Intended Datastore" ;
+                     rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
 
 ###  https://w3id.org/yang/server#NetconfCapability
 ys:NetconfCapability rdf:type owl:Class ;
@@ -176,8 +230,35 @@ ys:NetconfServer rdf:type owl:Class ;
                  rdfs:subClassOf ys:YangServer ;
                  rdfs:comment "YANG server that can be managed via the NETCONF protocol." ;
                  rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-                 rdfs:label "Netconf server." ;
+                 rdfs:label "Netconf Server" ;
                  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
+
+
+###  https://w3id.org/yang/server#OperationalDatastore
+ys:OperationalDatastore rdf:type owl:Class ;
+                        rdfs:subClassOf ys:Datastore ;
+                        rdfs:comment "A datastore holding the complete operational state of the device." ;
+                        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                        rdfs:label "Operational Datastore" ;
+                        rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#RunningDatastore
+ys:RunningDatastore rdf:type owl:Class ;
+                    rdfs:subClassOf ys:ConventionalDatastore ;
+                    rdfs:comment "A configuration datastore holding the current configuration of the device.  It may include configuration that requires further transformations before it can be applied." ;
+                    rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                    rdfs:label "Running Datastore" ;
+                    rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#StartupDatastore
+ys:StartupDatastore rdf:type owl:Class ;
+                    rdfs:subClassOf ys:ConventionalDatastore ;
+                    rdfs:comment "A configuration datastore holding the configuration loaded by the device into the running configuration datastore when it boots." ;
+                    rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                    rdfs:label "Startup Datastore" ;
+                    rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
 
 
 ###  https://w3id.org/yang/server#Vendor

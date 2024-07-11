@@ -3,12 +3,147 @@ This section provides details for each class and property defined by YANG Server
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
+  <li><a href="#CandidateDatastore" title="https://w3id.org/yang/server#CandidateDatastore">Candidate Datastore</a></li>
+  <li><a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a></li>
+  <li><a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a></li>
+  <li><a href="#DynamicDatastore" title="https://w3id.org/yang/server#DynamicDatastore">Dynamic Datastore</a></li>
+  <li><a href="#IntendedDatastore" title="https://w3id.org/yang/server#IntendedDatastore">Intended Datastore</a></li>
   <li><a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a></li>
   <li><a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a></li>
-  <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf server.</a></li>
+  <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a></li>
+  <li><a href="#OperationalDatastore" title="https://w3id.org/yang/server#OperationalDatastore">Operational Datastore</a></li>
+  <li><a href="#RunningDatastore" title="https://w3id.org/yang/server#RunningDatastore">Running Datastore</a></li>
+  <li><a href="#StartupDatastore" title="https://w3id.org/yang/server#StartupDatastore">Startup Datastore</a></li>
   <li><a href="#Vendor" title="https://w3id.org/yang/server#Vendor">Vendor</a></li>
   <li><a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a></li>
  </ul>
+ <div class="entity" id="CandidateDatastore">
+  <h3>Candidate Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#CandidateDatastore</p>
+  <div class="comment">
+   <span class="markdown">A configuration datastore that can be manipulated without impacting the device's running configuration datastore and that can be committed to the running configuration datastore.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ConventionalDatastore">
+  <h3>Conventional Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#ConventionalDatastore</p>
+  <div class="comment">
+   <span class="markdown">One of the following set of configuration datastores: &lt;running&gt;, &lt;startup&gt;, &lt;candidate&gt;, and &lt;intended&gt;. These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term "conventional" is chosen as a generic umbrella term for these datastores.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CandidateDatastore" title="https://w3id.org/yang/server#CandidateDatastore">Candidate Datastore</a> <sup class="type-c" title="class">c</sup>, <a href="#IntendedDatastore" title="https://w3id.org/yang/server#IntendedDatastore">Intended Datastore</a> <sup class="type-c" title="class">c</sup>, <a href="#RunningDatastore" title="https://w3id.org/yang/server#RunningDatastore">Running Datastore</a> <sup class="type-c" title="class">c</sup>, <a href="#StartupDatastore" title="https://w3id.org/yang/server#StartupDatastore">Startup Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Datastore">
+  <h3>Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#Datastore</p>
+  <div class="comment">
+   <span class="markdown">A conceptual place to store and access information. A datastore might be implemented, for example, using files, a database, flash memory locations, or combinations thereof. A datastore maps to an instantiated YANG data tree.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicDatastore" title="https://w3id.org/yang/server#DynamicDatastore">Dynamic Datastore</a> <sup class="type-c" title="class">c</sup>, <a href="#OperationalDatastore" title="https://w3id.org/yang/server#OperationalDatastore">Operational Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DynamicDatastore">
+  <h3>Dynamic Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#DynamicDatastore</p>
+  <div class="comment">
+   <span class="markdown">A configuration datastore holding configuration obtained dynamically during the operation of a device through interaction with other systems, rather than through one of the conventional configuration datastores.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntendedDatastore">
+  <h3>Intended Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#IntendedDatastore</p>
+  <div class="comment">
+   <span class="markdown">A configuration datastore holding the complete intended configuration of the device. This represents the configuration after all configuration transformations to &lt;running&gt; have been performed and is the configuration that the system attempts to apply.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="NetconfCapability">
   <h3>Netconf Capability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#NetconfCapability</p>
@@ -68,7 +203,7 @@ This section provides details for each class and property defined by YANG Server
   </dl>
  </div>
  <div class="entity" id="NetconfServer">
-  <h3>Netconf server.<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <h3>Netconf Server<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#NetconfServer</p>
   <div class="comment">
    <span class="markdown">YANG server that can be managed via the NETCONF protocol.</span>
@@ -93,6 +228,75 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OperationalDatastore">
+  <h3>Operational Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#OperationalDatastore</p>
+  <div class="comment">
+   <span class="markdown">A datastore holding the complete operational state of the device.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RunningDatastore">
+  <h3>Running Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#RunningDatastore</p>
+  <div class="comment">
+   <span class="markdown">A configuration datastore holding the current configuration of the device. It may include configuration that requires further transformations before it can be applied.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StartupDatastore">
+  <h3>Startup Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#StartupDatastore</p>
+  <div class="comment">
+   <span class="markdown">A configuration datastore holding the configuration loaded by the device into the running configuration datastore when it boots.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -144,23 +348,56 @@ This section provides details for each class and property defined by YANG Server
     has sub-classes
    </dt>
    <dd>
-    <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf server.</a> <sup class="type-c" title="class">c</sup>
+    <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#port" title="https://w3id.org/yang/server#port">port</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
+  <li><a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a></li>
   <li><a href="#capability" title="https://w3id.org/yang/server#capability">capability</a></li>
+  <li><a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a></li>
   <li><a href="#profile" title="https://w3id.org/yang/server#profile">profile</a></li>
   <li><a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a></li>
  </ul>
+ <div class="entity" id="accessDatastore">
+  <h3>access datastore<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#accessDatastore</p>
+  <div class="comment">
+   <span class="markdown">Indicates the YANG datastore to be selected when accessing the YANG data of a YANG server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="capability">
   <h3>capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#capability</p>
@@ -181,13 +418,44 @@ This section provides details for each class and property defined by YANG Server
      has domain
     </dt>
     <dd>
-     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf server.</a> <sup class="type-c" title="class">c</sup>
+     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="datastore">
+  <h3>datastore<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#datastore</p>
+  <div class="comment">
+   <span class="markdown">Indicates the YANG datastore used by the YANG server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -212,7 +480,7 @@ This section provides details for each class and property defined by YANG Server
      has domain
     </dt>
     <dd>
-     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf server.</a> <sup class="type-c" title="class">c</sup>
+     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -261,7 +529,6 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
   <li><a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a></li>
-  <li><a href="#port" title="https://w3id.org/yang/server#port">port</a></li>
   <li><a href="#username" title="https://w3id.org/yang/server#username">username</a></li>
  </ul>
  <div class="entity" id="endpoint">
@@ -323,7 +590,7 @@ This section provides details for each class and property defined by YANG Server
      has domain
     </dt>
     <dd>
-     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf server.</a> <sup class="type-c" title="class">c</sup>
+     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -389,31 +656,6 @@ This section provides details for each class and property defined by YANG Server
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="port">
-  <h3>port<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#port</p>
-  <div class="comment">
-   <span class="markdown">Port number where the YANG server is listening.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
