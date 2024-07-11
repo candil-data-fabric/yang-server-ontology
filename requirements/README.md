@@ -1,16 +1,21 @@
 # Requirements
 
-Set of requirements defined for the YANG Catalog Ontology:
+Set of requirements defined for the YANG Server Ontology:
 
-Identifier (domain+id),Sprint,Competency Question/Natural Language Sentence,Answer,Status,Superseded by,Comments,Provenance
-catalog-1,Sprint 1,A datastore has a datastore schema,,,,,RFC8525
-catalog-2,Sprint 1,A datastore schema includes a list of module sets,,,,,RFC8525
-catalog-3,Sprint 1,A datastore schema has a name,,,,,RFC8525
-catalog-4,Sprint 1,A module set contains a collection of modules and submodules,,,,,RFC8525
-catalog-5,Sprint 1,A module may include a one or more submodules,,,,,RFC7950
-catalog-6,Sprint 1,What is a submodule?,"A submodule provides a partial module definition except for the namespace, which is defined by the module that includes the submodule. ",,,,RFC7950
-catalog-7,Sprint 1,"A module has a name, a revision date, a namespace, and a location",,,,,RFC8525
-catalog-8,Sprint 1,A module set implements one or more modules,,,,,RFC8525
-catalog-9,Sprint 1,A module set can import one or more modules,,,,,RFC8525
-catalog-10,Sprint 1,A module may deviate another module,,,,,RFC8525
-catalog-11,Sprint 1,"Import, include, deviate, and augment are types of dependencies for a YANG module ",,,,,RFC8525
+| Identifier (domain+id) | Sprint   | Competency Question/Natural Language Sentence                                                                                                          | Answer | Status   | Superseded by | Comments | Provenance |
+| ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ | -------- | ------------- | -------- | ---------- |
+| server-1               | Sprint 1 | A YANG server is accesible through an endpoint composed of URL or IP address and port number                                                           |        | Accepted |               |          | RFC6241    |
+| server-2               | Sprint 1 | Access to a YANG server requires username and password credentials                                                                                     |        | Accepted |               |          | RFC6241    |
+| server-3               | Sprint 1 | Access to data of a YANG server can be filtered using XPath                                                                                            |        | Accepted |               |          | RFC6241    |
+| server-4               | Sprint 1 | NETCONF server is a type of YANG server                                                                                                                |        | Accepted |               |          | RFC6241    |
+| server-5               | Sprint 1 | Access to data of a NETCONF server can be filtered using an XML subtree                                                                                |        | Accepted |               |          | RFC6241    |
+| server-6               | Sprint 1 | A NETCONF server may require a device profile defined by a network vendor                                                                              |        | Accepted |               |          | ncclient   |
+| server-7               | Sprint 2 | A NETCONF server implements NETCONF capabilities                                                                                                       |        | Accepted |               |          | RFC6241    |
+| server-8               | Sprint 2 | A NETCONF capability is uniquely identified by a URN                                                                                                   |        | Accepted |               |          | RFC6241    |
+| server-9               | Sprint 2 | Host key verification can be enabled or disabled to access a NETCONF server                                                                            |        | Accepted |               |          | ncclient   |
+| server-10              | Sprint 3 | A YANG server stores YANG data in a datastore                                                                                                          |        | Accepted |               |          | RFC8342    |
+| server-11              | Sprint 3 | A conventional configuration datastore is a type of datatore that holds configuration.                                                                 |        | Accepted |               |          | RFC8342    |
+| server-12              | Sprint 3 | Running, startup, candidate, and intended are types of conventional configuration datastores                                                           |        | Accepted |               |          | RFC8342    |
+| server-13              | Sprint 3 | In addition to convention configuration datastores, a YANG server may have dynamic configuration datastores holding configuration obtained dynamically |        | Accepted |               |          | RFC8342    |
+| server-14              | Sprint 3 | A YANG server stores operational state data in the operational state datastore                                                                         |        | Accepted |               |          | RFC8342    |
+| server-15              | Sprint 3 | A YANG datastore must be specified when accessing data of a YANG server                                                                                |        | Accepted |               |          | RFC8342    |

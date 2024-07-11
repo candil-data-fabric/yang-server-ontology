@@ -1,8 +1,8 @@
-# YANG Source Ontology
+# YANG Server Ontology
 
-Online documentation: https://w3id.org/yang/source
+Online documentation: https://w3id.org/yang/server
 
-![YANG Source Ontology](diagrams/yang-source.svg)
+![YANG Server Ontology](diagrams/yang-server.svg)
 
 ## Local Development
 
