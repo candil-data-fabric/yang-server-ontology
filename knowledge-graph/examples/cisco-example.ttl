@@ -8,8 +8,12 @@
     ys:username "cisco" ;
     ys:password "admin" ;
     ys:hostKeyVerification "false" ;
+    ys:datastore <datastores/cisco-r1/operational> ;
+    ys:datastore <datastores/cisco-r1/running> ;
     ys:profile <networkProfiles/Cisco/IOS-XR> ;
-    ys:capability <netconfCapabilities/yang-library:1.1> .
+    ys:accessDatastore <datastores/cisco-r1/operational> ;
+    ys:xpathFilter "/ietf-yang-library:yang-library"
+    ys:capability <urn:ietf:params:netconf:capability:yang-library:1.1>.
 
 <networkProfiles/Cisco/IOS-XR> a ys:NetconfProfile ;
     dcterms:name "iosxr" ;
@@ -18,9 +22,9 @@
 <vendors/Cisco> a ys:Vendor ;
     dcterms:name "Cisco" .
 
-<netconfCapabilities/yang-library:1.1> a ys:NetconfCapability ;
+<urn:ietf:params:netconf:capability:yang-library:1.1> a ys:NetconfCapability ;
     dcterms:identifier "urn:ietf:params:netconf:capability:yang-library:1.1" .
 
-
-
+<datastores/cisco-r1/operational> a ys:OperationalDatastore .
+<datastores/cisco-r1/running> a ys:RunningDatastore .
 

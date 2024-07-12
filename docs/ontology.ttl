@@ -154,6 +154,15 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "host key verification" .
 
 
+###  https://w3id.org/yang/server#subtreeFilter
+:subtreeFilter rdf:type owl:DatatypeProperty ;
+               rdfs:domain :NetconfServer ;
+               rdfs:range rdf:XMLLiteral ;
+               rdfs:comment "XML Subtree filter used to access YANG data of the NETCONF server." ;
+               rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+               rdfs:label "subtree filter" .
+
+
 ###  https://w3id.org/yang/server#username
 :username rdf:type owl:DatatypeProperty ;
           rdfs:domain :YangServer ;
@@ -161,6 +170,16 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:comment "Username for accessing the YANG server." ;
           rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
           rdfs:label "username" .
+
+
+###  https://w3id.org/yang/server#xpathFilter
+:xpathFilter rdf:type owl:DatatypeProperty ;
+             rdfs:domain :YangServer ;
+             rdfs:range xsd:string ;
+             <http://purl.org/vocab/vann/example> "/ietf-interfaces:interfaces-state/interface" ;
+             rdfs:comment "XPath filter used to access YANG data of the YANG server." ;
+             rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+             rdfs:label "xpath filter" .
 
 
 #################################################################

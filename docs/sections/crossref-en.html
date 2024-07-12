@@ -227,7 +227,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>, <a href="#subtreeFilter" title="https://w3id.org/yang/server#subtreeFilter">subtree filter</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -354,7 +354,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#xpathFilter" title="https://w3id.org/yang/server#xpathFilter">xpath filter</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -529,7 +529,9 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
   <li><a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a></li>
+  <li><a href="#subtreeFilter" title="https://w3id.org/yang/server#subtreeFilter">subtree filter</a></li>
   <li><a href="#username" title="https://w3id.org/yang/server#username">username</a></li>
+  <li><a href="#xpathFilter" title="https://w3id.org/yang/server#xpathFilter">xpath filter</a></li>
  </ul>
  <div class="entity" id="endpoint">
   <h3>endpoint<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
@@ -660,6 +662,37 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
+ <div class="entity" id="subtreeFilter">
+  <h3>subtree filter<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#subtreeFilter</p>
+  <div class="comment">
+   <span class="markdown">XML Subtree filter used to access YANG data of the NETCONF server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral" target="_blank" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">X M L Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="username">
   <h3>username<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#username</p>
@@ -672,6 +705,45 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="xpathFilter">
+  <h3>xpath filter<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#xpathFilter</p>
+  <div class="comment">
+   <span class="markdown">XPath filter used to access YANG data of the YANG server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>/ietf-interfaces:interfaces-state/interface</pre>
    </dd>
   </dl>
   <div class="description">
