@@ -7,14 +7,18 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a></li>
   <li><a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a></li>
   <li><a href="#DynamicDatastore" title="https://w3id.org/yang/server#DynamicDatastore">Dynamic Datastore</a></li>
+  <li><a href="#Filter" title="https://w3id.org/yang/server#Filter">Filter</a></li>
   <li><a href="#IntendedDatastore" title="https://w3id.org/yang/server#IntendedDatastore">Intended Datastore</a></li>
   <li><a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a></li>
   <li><a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a></li>
   <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a></li>
   <li><a href="#OperationalDatastore" title="https://w3id.org/yang/server#OperationalDatastore">Operational Datastore</a></li>
+  <li><a href="#Query" title="https://w3id.org/yang/server#Query">Query</a></li>
   <li><a href="#RunningDatastore" title="https://w3id.org/yang/server#RunningDatastore">Running Datastore</a></li>
   <li><a href="#StartupDatastore" title="https://w3id.org/yang/server#StartupDatastore">Startup Datastore</a></li>
+  <li><a href="#SubtreeFilter" title="https://w3id.org/yang/server#SubtreeFilter">SubtreeFilter</a></li>
   <li><a href="#Vendor" title="https://w3id.org/yang/server#Vendor">Vendor</a></li>
+  <li><a href="#XPathFilter" title="https://w3id.org/yang/server#XPathFilter">XPathFilter</a></li>
   <li><a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a></li>
  </ul>
  <div class="entity" id="CandidateDatastore">
@@ -118,6 +122,35 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Filter">
+  <h3>Filter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#Filter</p>
+  <div class="comment">
+   <span class="markdown">Evaluation criteria that may be applied to fetch data from a given YANG server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#SubtreeFilter" title="https://w3id.org/yang/server#SubtreeFilter">SubtreeFilter</a> <sup class="type-c" title="class">c</sup>, <a href="#XPathFilter" title="https://w3id.org/yang/server#XPathFilter">XPathFilter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -227,7 +260,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>, <a href="#subtreeFilter" title="https://w3id.org/yang/server#subtreeFilter">subtree filter</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -251,6 +284,21 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Query">
+  <h3>Query<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#Query</p>
+  <div class="comment">
+   <span class="markdown">Represents a query operation to a YANG server using the corresponding network management protocol.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
    </dd>
   </dl>
  </div>
@@ -300,6 +348,35 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="SubtreeFilter">
+  <h3>SubtreeFilter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#SubtreeFilter</p>
+  <div class="comment">
+   <span class="markdown">Evaluation criteria based on XML subtree expression.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Filter" title="https://w3id.org/yang/server#Filter">Filter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="Vendor">
   <h3>Vendor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#Vendor</p>
@@ -329,6 +406,35 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="XPathFilter">
+  <h3>XPathFilter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#XPathFilter</p>
+  <div class="comment">
+   <span class="markdown">Evaluation criteria based on XPath expression.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Filter" title="https://w3id.org/yang/server#Filter">Filter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#xpathValue" title="https://w3id.org/yang/server#xpathValue">xpath value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="YangServer">
   <h3>Yang Server<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#YangServer</p>
@@ -354,7 +460,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#xpathFilter" title="https://w3id.org/yang/server#xpathFilter">xpath filter</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -526,12 +632,13 @@ This section provides details for each class and property defined by YANG Server
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a></li>
+  <li><a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a></li>
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
   <li><a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a></li>
-  <li><a href="#subtreeFilter" title="https://w3id.org/yang/server#subtreeFilter">subtree filter</a></li>
+  <li><a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a></li>
   <li><a href="#username" title="https://w3id.org/yang/server#username">username</a></li>
-  <li><a href="#xpathFilter" title="https://w3id.org/yang/server#xpathFilter">xpath filter</a></li>
+  <li><a href="#xpathValue" title="https://w3id.org/yang/server#xpathValue">xpath value</a></li>
  </ul>
  <div class="entity" id="endpoint">
   <h3>endpoint<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
@@ -568,6 +675,37 @@ This section provides details for each class and property defined by YANG Server
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="filterValue">
+  <h3>filter value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#filterValue</p>
+  <div class="comment">
+   <span class="markdown">Value used by filter to access YANG data of the NETCONF server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#xpathValue" title="https://w3id.org/yang/server#xpathValue">xpath value</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Filter" title="https://w3id.org/yang/server#Filter">Filter</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -662,9 +800,9 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
- <div class="entity" id="subtreeFilter">
-  <h3>subtree filter<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#subtreeFilter</p>
+ <div class="entity" id="subtreeValue">
+  <h3>subtree value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#subtreeValue</p>
   <div class="comment">
    <span class="markdown">XML Subtree filter used to access YANG data of the NETCONF server.</span>
   </div>
@@ -679,10 +817,16 @@ This section provides details for each class and property defined by YANG Server
   <div class="description">
    <dl>
     <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
      has domain
     </dt>
     <dd>
-     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubtreeFilter" title="https://w3id.org/yang/server#SubtreeFilter">SubtreeFilter</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -724,11 +868,11 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
- <div class="entity" id="xpathFilter">
-  <h3>xpath filter<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#xpathFilter</p>
+ <div class="entity" id="xpathValue">
+  <h3>xpath value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#xpathValue</p>
   <div class="comment">
-   <span class="markdown">XPath filter used to access YANG data of the YANG server.</span>
+   <span class="markdown">XPath expression used to access YANG data of the YANG server.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -749,10 +893,16 @@ This section provides details for each class and property defined by YANG Server
   <div class="description">
    <dl>
     <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
      has domain
     </dt>
     <dd>
-     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
+     <a href="#XPathFilter" title="https://w3id.org/yang/server#XPathFilter">XPathFilter</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range

@@ -7,14 +7,14 @@
 @base <https://w3id.org/yang/server#> .
 
 <https://w3id.org/yang/server#> rdf:type owl:Ontology ;
-                                 <http://purl.org/dc/elements/1.1/created> "2024-07-11"^^xsd:date ;
+                                 <http://purl.org/dc/elements/1.1/created> "2024-07-15"^^xsd:date ;
                                  <http://purl.org/dc/elements/1.1/creator> "Ignacio Dominguez Martinez-Casanueva" ;
                                  <http://purl.org/dc/elements/1.1/title> "YANG Server Ontology" ;
                                  <http://purl.org/dc/terms/description> "" ;
                                  <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> ;
                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/yang/server#" ;
                                  rdfs:label "YANG Server Ontology"@en ;
-                                 owl:versionInfo "1.1.0" ;
+                                 owl:versionInfo "1.2.0" ;
                                  <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -145,6 +145,15 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "endpoint" .
 
 
+###  https://w3id.org/yang/server#filterValue
+:filterValue rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Filter ;
+             rdfs:comment "Value used by filter to access YANG data of the NETCONF server." ;
+             rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+             rdfs:label "filter value" ;
+             rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
+
+
 ###  https://w3id.org/yang/server#hostKeyVerification
 :hostKeyVerification rdf:type owl:DatatypeProperty ;
                      rdfs:domain :NetconfServer ;
@@ -154,13 +163,14 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "host key verification" .
 
 
-###  https://w3id.org/yang/server#subtreeFilter
-:subtreeFilter rdf:type owl:DatatypeProperty ;
-               rdfs:domain :NetconfServer ;
-               rdfs:range rdf:XMLLiteral ;
-               rdfs:comment "XML Subtree filter used to access YANG data of the NETCONF server." ;
-               rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-               rdfs:label "subtree filter" .
+###  https://w3id.org/yang/server#subtreeValue
+:subtreeValue rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :filterValue ;
+              rdfs:domain :SubtreeFilter ;
+              rdfs:range rdf:XMLLiteral ;
+              rdfs:comment "XML Subtree filter used to access YANG data of the NETCONF server." ;
+              rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+              rdfs:label "subtree value" .
 
 
 ###  https://w3id.org/yang/server#username
@@ -172,14 +182,15 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "username" .
 
 
-###  https://w3id.org/yang/server#xpathFilter
-:xpathFilter rdf:type owl:DatatypeProperty ;
-             rdfs:domain :YangServer ;
-             rdfs:range xsd:string ;
-             <http://purl.org/vocab/vann/example> "/ietf-interfaces:interfaces-state/interface" ;
-             rdfs:comment "XPath filter used to access YANG data of the YANG server." ;
-             rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-             rdfs:label "xpath filter" .
+###  https://w3id.org/yang/server#xpathValue
+:xpathValue rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :filterValue ;
+            rdfs:domain :XPathFilter ;
+            rdfs:range xsd:string ;
+            <http://purl.org/vocab/vann/example> "/ietf-interfaces:interfaces-state/interface" ;
+            rdfs:comment "XPath expression used to access YANG data of the YANG server." ;
+            rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+            rdfs:label "xpath value" .
 
 
 #################################################################
@@ -219,6 +230,14 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                   rdfs:label "Dynamic Datastore" ;
                   rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#Filter
+:Filter rdf:type owl:Class ;
+        rdfs:comment "Evaluation criteria that may be applied to fetch data from a given YANG server." ;
+        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+        rdfs:label "Filter" ;
+        rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
 ###  https://w3id.org/yang/server#IntendedDatastore
@@ -264,6 +283,14 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
 
 
+###  https://w3id.org/yang/server#Query
+:Query rdf:type owl:Class ;
+       rdfs:comment "Represents a query operation to a YANG server using the corresponding network management protocol." ;
+       rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+       rdfs:label "Query" ;
+       rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
+
+
 ###  https://w3id.org/yang/server#RunningDatastore
 :RunningDatastore rdf:type owl:Class ;
                   rdfs:subClassOf :ConventionalDatastore ;
@@ -282,11 +309,29 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
 
 
+###  https://w3id.org/yang/server#SubtreeFilter
+:SubtreeFilter rdf:type owl:Class ;
+               rdfs:subClassOf :Filter ;
+               rdfs:comment "Evaluation criteria based on XML subtree expression." ;
+               rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+               rdfs:label "SubtreeFilter" ;
+               rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
+
+
 ###  https://w3id.org/yang/server#Vendor
 :Vendor rdf:type owl:Class ;
         rdfs:comment "Represents a network vendor." ;
         rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
         rdfs:label "Vendor" .
+
+
+###  https://w3id.org/yang/server#XPathFilter
+:XPathFilter rdf:type owl:Class ;
+             rdfs:subClassOf :Filter ;
+             rdfs:comment "Evaluation criteria based on XPath expression." ;
+             rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+             rdfs:label "XPathFilter" ;
+             rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
 ###  https://w3id.org/yang/server#YangServer

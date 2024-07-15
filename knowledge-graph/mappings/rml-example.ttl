@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix ys: <https://w3id.org/yang/server#> .
+@base <https://example.org/network/> .
+
+
+<devices/cisco-r1> a rml:Source, ys:NetconfServer ;
+    ys:endpoint "192.168.1.10:830" ;
+    ys:username "cisco" ;
+    ys:password "admin" ;
+    ys:hostKeyVerification "false" ;
+    ys:datastore <datastores/cisco-r1/operational> ;
+    ys:datastore <datastores/cisco-r1/running> ;
+    ys:profile <networkProfiles/Cisco/IOS-XR> ;
+.
+
+<datastores/cisco-r1/operational> a ys:OperationalDatastore .
+<datastores/cisco-r1/running> a ys:RunningDatastore .
+
+<#XML> a rml:LogicalSource;
+    rml:source <datastores/cisco-r1/operational> ;
+    rml:referenceFormulation rml:XPath ;
+    rml:iterator "/ietf-yang-library:yang-library" ;
+.

@@ -11,14 +11,14 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/yang/server#">
-        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-11</dc:created>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-15</dc:created>
         <dc:creator>Ignacio Dominguez Martinez-Casanueva</dc:creator>
         <dc:title>YANG Server Ontology</dc:title>
         <terms:description></terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/APACHE2.0"/>
         <vann:preferredNamespaceUri>https://w3id.org/yang/server#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">YANG Server Ontology</rdfs:label>
-        <owl:versionInfo>1.1.0</owl:versionInfo>
+        <owl:versionInfo>1.2.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
@@ -246,6 +246,19 @@
     
 
 
+    <!-- https://w3id.org/yang/server#filterValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#filterValue">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#Filter"/>
+        <rdfs:comment>Value used by filter to access YANG data of the NETCONF server.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>filter value</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/yang/server#hostKeyVerification -->
 
 
@@ -259,15 +272,16 @@
     
 
 
-    <!-- https://w3id.org/yang/server#subtreeFilter -->
+    <!-- https://w3id.org/yang/server#subtreeValue -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#subtreeFilter">
-        <rdfs:domain rdf:resource="https://w3id.org/yang/server#NetconfServer"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#subtreeValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/yang/server#filterValue"/>
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#SubtreeFilter"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
         <rdfs:comment>XML Subtree filter used to access YANG data of the NETCONF server.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
-        <rdfs:label>subtree filter</rdfs:label>
+        <rdfs:label>subtree value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -285,16 +299,17 @@
     
 
 
-    <!-- https://w3id.org/yang/server#xpathFilter -->
+    <!-- https://w3id.org/yang/server#xpathValue -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#xpathFilter">
-        <rdfs:domain rdf:resource="https://w3id.org/yang/server#YangServer"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#xpathValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/yang/server#filterValue"/>
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#XPathFilter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <vann:example>/ietf-interfaces:interfaces-state/interface</vann:example>
-        <rdfs:comment>XPath filter used to access YANG data of the YANG server.</rdfs:comment>
+        <rdfs:comment>XPath expression used to access YANG data of the YANG server.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
-        <rdfs:label>xpath filter</rdfs:label>
+        <rdfs:label>xpath value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -362,6 +377,18 @@
     
 
 
+    <!-- https://w3id.org/yang/server#Filter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#Filter">
+        <rdfs:comment>Evaluation criteria that may be applied to fetch data from a given YANG server.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Filter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/yang/server#IntendedDatastore -->
 
 
@@ -425,6 +452,18 @@
     
 
 
+    <!-- https://w3id.org/yang/server#Query -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#Query">
+        <rdfs:comment>Represents a query operation to a YANG server using the corresponding network management protocol.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Query</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/yang/server#RunningDatastore -->
 
 
@@ -451,6 +490,19 @@
     
 
 
+    <!-- https://w3id.org/yang/server#SubtreeFilter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#SubtreeFilter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/yang/server#Filter"/>
+        <rdfs:comment>Evaluation criteria based on XML subtree expression.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>SubtreeFilter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/yang/server#Vendor -->
 
 
@@ -458,6 +510,19 @@
         <rdfs:comment>Represents a network vendor.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
         <rdfs:label>Vendor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/yang/server#XPathFilter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#XPathFilter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/yang/server#Filter"/>
+        <rdfs:comment>Evaluation criteria based on XPath expression.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>XPathFilter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc6241"/>
     </owl:Class>
     
 

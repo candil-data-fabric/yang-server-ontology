@@ -1,12 +1,12 @@
 <https://w3id.org/yang/server#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/created> "2024-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/created> "2024-07-15"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/creator> "Ignacio Dominguez Martinez-Casanueva" .
 <https://w3id.org/yang/server#> <http://purl.org/dc/elements/1.1/title> "YANG Server Ontology" .
 <https://w3id.org/yang/server#> <http://purl.org/dc/terms/description> "" .
 <https://w3id.org/yang/server#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
 <https://w3id.org/yang/server#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/yang/server#" .
 <https://w3id.org/yang/server#> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
-<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "1.2.0" .
 <https://w3id.org/yang/server#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
@@ -138,6 +138,14 @@
 <https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint" .
 # 
+# https://w3id.org/yang/server#filterValue
+<https://w3id.org/yang/server#filterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#filterValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Filter> .
+<https://w3id.org/yang/server#filterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Value used by filter to access YANG data of the NETCONF server." .
+<https://w3id.org/yang/server#filterValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#filterValue> <http://www.w3.org/2000/01/rdf-schema#label> "filter value" .
+<https://w3id.org/yang/server#filterValue> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
 # https://w3id.org/yang/server#hostKeyVerification
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfServer> .
@@ -146,13 +154,14 @@
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#label> "host key verification" .
 # 
-# https://w3id.org/yang/server#subtreeFilter
-<https://w3id.org/yang/server#subtreeFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#subtreeFilter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfServer> .
-<https://w3id.org/yang/server#subtreeFilter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
-<https://w3id.org/yang/server#subtreeFilter> <http://www.w3.org/2000/01/rdf-schema#comment> "XML Subtree filter used to access YANG data of the NETCONF server." .
-<https://w3id.org/yang/server#subtreeFilter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server#subtreeFilter> <http://www.w3.org/2000/01/rdf-schema#label> "subtree filter" .
+# https://w3id.org/yang/server#subtreeValue
+<https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/yang/server#filterValue> .
+<https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#SubtreeFilter> .
+<https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "XML Subtree filter used to access YANG data of the NETCONF server." .
+<https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#label> "subtree value" .
 # 
 # https://w3id.org/yang/server#username
 <https://w3id.org/yang/server#username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -162,14 +171,15 @@
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#label> "username" .
 # 
-# https://w3id.org/yang/server#xpathFilter
-<https://w3id.org/yang/server#xpathFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#xpathFilter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
-<https://w3id.org/yang/server#xpathFilter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/yang/server#xpathFilter> <http://purl.org/vocab/vann/example> "/ietf-interfaces:interfaces-state/interface" .
-<https://w3id.org/yang/server#xpathFilter> <http://www.w3.org/2000/01/rdf-schema#comment> "XPath filter used to access YANG data of the YANG server." .
-<https://w3id.org/yang/server#xpathFilter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server#xpathFilter> <http://www.w3.org/2000/01/rdf-schema#label> "xpath filter" .
+# https://w3id.org/yang/server#xpathValue
+<https://w3id.org/yang/server#xpathValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/yang/server#filterValue> .
+<https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#XPathFilter> .
+<https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/yang/server#xpathValue> <http://purl.org/vocab/vann/example> "/ietf-interfaces:interfaces-state/interface" .
+<https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#comment> "XPath expression used to access YANG data of the YANG server." .
+<https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#label> "xpath value" .
 # 
 # 
 # 
@@ -211,6 +221,13 @@
 <https://w3id.org/yang/server#DynamicDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Dynamic Datastore" .
 <https://w3id.org/yang/server#DynamicDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
 # 
+# https://w3id.org/yang/server#Filter
+<https://w3id.org/yang/server#Filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Filter> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation criteria that may be applied to fetch data from a given YANG server." .
+<https://w3id.org/yang/server#Filter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#Filter> <http://www.w3.org/2000/01/rdf-schema#label> "Filter" .
+<https://w3id.org/yang/server#Filter> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
 # https://w3id.org/yang/server#IntendedDatastore
 <https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#ConventionalDatastore> .
@@ -249,6 +266,13 @@
 <https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Operational Datastore" .
 <https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
 # 
+# https://w3id.org/yang/server#Query
+<https://w3id.org/yang/server#Query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Query> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a query operation to a YANG server using the corresponding network management protocol." .
+<https://w3id.org/yang/server#Query> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#Query> <http://www.w3.org/2000/01/rdf-schema#label> "Query" .
+<https://w3id.org/yang/server#Query> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
 # https://w3id.org/yang/server#RunningDatastore
 <https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#ConventionalDatastore> .
@@ -265,11 +289,27 @@
 <https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Startup Datastore" .
 <https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
 # 
+# https://w3id.org/yang/server#SubtreeFilter
+<https://w3id.org/yang/server#SubtreeFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#SubtreeFilter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Filter> .
+<https://w3id.org/yang/server#SubtreeFilter> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation criteria based on XML subtree expression." .
+<https://w3id.org/yang/server#SubtreeFilter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#SubtreeFilter> <http://www.w3.org/2000/01/rdf-schema#label> "SubtreeFilter" .
+<https://w3id.org/yang/server#SubtreeFilter> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
 # https://w3id.org/yang/server#Vendor
 <https://w3id.org/yang/server#Vendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#Vendor> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a network vendor." .
 <https://w3id.org/yang/server#Vendor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#Vendor> <http://www.w3.org/2000/01/rdf-schema#label> "Vendor" .
+# 
+# https://w3id.org/yang/server#XPathFilter
+<https://w3id.org/yang/server#XPathFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#XPathFilter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Filter> .
+<https://w3id.org/yang/server#XPathFilter> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation criteria based on XPath expression." .
+<https://w3id.org/yang/server#XPathFilter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#XPathFilter> <http://www.w3.org/2000/01/rdf-schema#label> "XPathFilter" .
+<https://w3id.org/yang/server#XPathFilter> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
 # 
 # https://w3id.org/yang/server#YangServer
 <https://w3id.org/yang/server#YangServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -1,10 +1,10 @@
 Identifier (domain+id),Sprint,Competency Question/Natural Language Sentence,Answer,Status,Superseded by,Comments,Provenance
 server-1,Sprint 1,A YANG server is accesible through an endpoint composed of URL or IP address and port number,,Accepted,,,RFC6241
 server-2,Sprint 1,Access to a YANG server requires username and password credentials,,Accepted,,,RFC6241
-server-3,Sprint 1,Access to data of a YANG server can be filtered using XPath,,Accepted,,,RFC6241
+server-3,Sprint 1,Access to data of a YANG server can be filtered using XPath,,Deprecated,server-17,Out of scope,RFC6241
 server-4,Sprint 1,NETCONF server is a type of YANG server,,Accepted,,,RFC6241
-server-5,Sprint 1,Access to data of a NETCONF server can be filtered using an XML subtree,,Accepted,,,RFC6241
-server-6,Sprint 1,A NETCONF server may require a device profile defined by a network vendor,,Accepted,,,ncclient
+server-5,Sprint 1,Access to data of a NETCONF server can be filtered using an XML subtree,,Deprecated,,Out of scope,RFC6241
+server-6,Sprint 1,A NETCONF server may require a device profile defined by a network vendor,,Accepted,server-18,,ncclient
 server-7,Sprint 2,A NETCONF server implements NETCONF capabilities,,Accepted,,,RFC6241
 server-8,Sprint 2,A NETCONF capability is uniquely identified by a URN,,Accepted,,,RFC6241
 server-9,Sprint 2,Host key verification can be enabled or disabled to access a NETCONF server,,Accepted,,,ncclient
@@ -13,4 +13,7 @@ server-11,Sprint 3,A conventional configuration datastore is a type of datatore 
 server-12,Sprint 3,"Running, startup, candidate, and intended are types of conventional configuration datastores",,Accepted,,,RFC8342
 server-13,Sprint 3,"In addition to convention configuration datastores, a YANG server may have dynamic configuration datastores holding configuration obtained dynamically",,Accepted,,,RFC8342
 server-14,Sprint 3,A YANG server stores operational state data in the operational state datastore,,Accepted,,,RFC8342
-server-15,Sprint 3,A YANG datastore must be specified when accessing data of a YANG server,,Accepted,,,RFC8342
+server-15,Sprint 3,A YANG datastore must be specified when accessing data of a YANG server,,Deprecated,server-16,Out of scope,RFC8342
+server-16,Sprint 4,A query to a YANG server must specify datastore and filter,,Accepted,,,RFC6241
+server-17,Sprint 4,Xpath is a type of filter,,Accepted,,,RFC6241
+server-18,Sprint 4,XML subtree is a type of filter,,Accepted,,,RFC6241

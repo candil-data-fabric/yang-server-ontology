@@ -13,14 +13,14 @@
 @base <https://w3id.org/yang/server#> .
 
 <https://w3id.org/yang/server#> rdf:type owl:Ontology ;
-                                 dc:created "2024-07-11"^^xsd:date ;
+                                 dc:created "2024-07-15"^^xsd:date ;
                                  dc:creator "Ignacio Dominguez Martinez-Casanueva" ;
                                  dc:title "YANG Server Ontology" ;
                                  dcterms:description "" ;
                                  dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0> ;
                                  vann:preferredNamespaceUri "https://w3id.org/yang/server#" ;
                                  rdfs:label "YANG Server Ontology"@en ;
-                                 owl:versionInfo "1.1.0" ;
+                                 owl:versionInfo "1.2.0" ;
                                  mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -152,13 +152,23 @@ ys:hostKeyVerification rdf:type owl:DatatypeProperty ;
                        rdfs:label "host key verification" .
 
 
-###  https://w3id.org/yang/server#subtreeFilter
-ys:subtreeFilter rdf:type owl:DatatypeProperty ;
-                 rdfs:domain ys:NetconfServer ;
-                 rdfs:range rdf:XMLLiteral ;
-                 rdfs:comment "XML Subtree filter used to access YANG data of the NETCONF server." ;
-                 rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-                 rdfs:label "subtree filter" .
+###  https://w3id.org/yang/server#filterValue
+ys:filterValue rdf:type owl:DatatypeProperty ;
+                rdfs:domain ys:Filter ;
+                rdfs:comment "Value used by filter to access YANG data of the NETCONF server." ;
+                rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                rdfs:label "filter value" ;
+                rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
+
+
+###  https://w3id.org/yang/server#subtreeValue
+ys:subtreeValue rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf ys:filterValue ;
+                rdfs:domain ys:SubtreeFilter ;
+                rdfs:range rdf:XMLLiteral ;
+                rdfs:comment "XML Subtree filter used to access YANG data of the NETCONF server." ;
+                rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                rdfs:label "subtree value" .
 
 
 ###  https://w3id.org/yang/server#username
@@ -170,14 +180,15 @@ ys:username rdf:type owl:DatatypeProperty ;
             rdfs:label "username" .
 
 
-###  https://w3id.org/yang/server#xpathFilter
-ys:xpathFilter rdf:type owl:DatatypeProperty ;
-               rdfs:domain ys:YangServer ;
-               rdfs:range xsd:string ;
-               vann:example "/ietf-interfaces:interfaces-state/interface" ;
-               rdfs:comment "XPath filter used to access YANG data of the YANG server." ;
-               rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-               rdfs:label "xpath filter" .
+###  https://w3id.org/yang/server#xpathValue
+ys:xpathValue rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf ys:filterValue ;
+              rdfs:domain ys:XPathFilter ;
+              rdfs:range xsd:string ;
+              vann:example "/ietf-interfaces:interfaces-state/interface" ;
+              rdfs:comment "XPath expression used to access YANG data of the YANG server." ;
+              rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+              rdfs:label "xpath value" .
 
 
 #################################################################
@@ -217,6 +228,14 @@ ys:DynamicDatastore rdf:type owl:Class ;
                     rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                     rdfs:label "Dynamic Datastore" ;
                     rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#Filter
+ys:Filter rdf:type owl:Class ;
+          rdfs:comment "Evaluation criteria that may be applied to fetch data from a given YANG server." ;
+          rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+          rdfs:label "Filter" ;
+          rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
 ###  https://w3id.org/yang/server#IntendedDatastore
@@ -262,6 +281,14 @@ ys:OperationalDatastore rdf:type owl:Class ;
                         rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
 
 
+###  https://w3id.org/yang/server#Query
+ys:Query rdf:type owl:Class ;
+         rdfs:comment "Represents a query operation to a YANG server using the corresponding network management protocol." ;
+         rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+         rdfs:label "Query" ;
+         rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
+
+
 ###  https://w3id.org/yang/server#RunningDatastore
 ys:RunningDatastore rdf:type owl:Class ;
                     rdfs:subClassOf ys:ConventionalDatastore ;
@@ -280,11 +307,29 @@ ys:StartupDatastore rdf:type owl:Class ;
                     rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
 
 
+###  https://w3id.org/yang/server#SubtreeFilter
+ys:SubtreeFilter rdf:type owl:Class ;
+                 rdfs:subClassOf ys:Filter ;
+                 rdfs:comment "Evaluation criteria based on XML subtree expression." ;
+                 rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                 rdfs:label "SubtreeFilter" ;
+                 rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
+
+
 ###  https://w3id.org/yang/server#Vendor
 ys:Vendor rdf:type owl:Class ;
           rdfs:comment "Represents a network vendor." ;
           rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
           rdfs:label "Vendor" .
+
+
+###  https://w3id.org/yang/server#XPathFilter
+ys:XPathFilter rdf:type owl:Class ;
+               rdfs:subClassOf ys:Filter ;
+               rdfs:comment "Evaluation criteria based on XPath expression." ;
+               rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+               rdfs:label "XPathFilter" ;
+               rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
 ###  https://w3id.org/yang/server#YangServer
