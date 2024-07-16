@@ -11,14 +11,14 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/yang/server#">
-        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-15</dc:created>
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-16</dc:created>
         <dc:creator>Ignacio Dominguez Martinez-Casanueva</dc:creator>
         <dc:title>YANG Server Ontology</dc:title>
         <terms:description></terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/APACHE2.0"/>
         <vann:preferredNamespaceUri>https://w3id.org/yang/server#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">YANG Server Ontology</rdfs:label>
-        <owl:versionInfo>1.2.0</owl:versionInfo>
+        <owl:versionInfo>1.3.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
@@ -536,6 +536,144 @@
         <rdfs:label>Yang Server</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc7950"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/yang/server#CandidateCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#CandidateCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:candidate:1.0</terms:identifier>
+        <rdfs:comment>The candidate configuration capability, `:candidate`, indicates that the device supports a candidate configuration datastore, which is used to hold configuration data that can be manipulated without impacting the device&apos;s current configuration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Candidate Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc6241#section-8.3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#ConfirmedCommitCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#ConfirmedCommitCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:confirmed-commit:1.1</terms:identifier>
+        <rdfs:comment>The `:confirmed-commit:1.1` capability indicates that the server will support the `&lt;cancel-commit&gt;` operation and the `&lt;confirmed&gt;`, `&lt;confirm-timeout&gt;`, `&lt;persist&gt;`, and `&lt;persist-id&gt;` parameters for the `&lt;commit&gt;` operation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Confirmed Commit Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc6241#section-8.4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#DistinctStartupCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#DistinctStartupCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:startup:1.0</terms:identifier>
+        <rdfs:comment>The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Distinct Startup Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc6241#section-8.7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#RollbackOnErrorCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#RollbackOnErrorCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:rollback-on-error:1.0</terms:identifier>
+        <rdfs:comment>This capability indicates that the server will support the `rollback-on-error` value in the `&lt;error-option&gt;` parameter to the `&lt;edit-config&gt;` operation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Rollback-on-Error Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc6241#section-8.5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#UrlCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#UrlCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:url:1.0</terms:identifier>
+        <rdfs:comment>The NETCONF peer has the ability to accept the `&lt;url&gt;` element in `&lt;source&gt;` and `&lt;target&gt;` parameters. The capability is further identified by URL arguments indicating the URL schemes supported.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>URL Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc6241#section-8.8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#ValidationCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#ValidationCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:validate:1.1</terms:identifier>
+        <rdfs:comment>Validation consists of checking a complete configuration for syntactical and semantic errors before applying the configuration to the device.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Validation Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc6241#section-8.6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#WritableRunningCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#WritableRunningCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:writable-running:1.0</terms:identifier>
+        <rdfs:comment>The `:writable-running` capability indicates that the device supports direct writes to the `&lt;running&gt;` configuration datastore. In other words, the device supports `&lt;edit-config&gt;` and `&lt;copy-config&gt;` operations where the `&lt;running&gt;` configuration is the target.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Writable Running Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc6241#section-8.2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#XpathCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#XpathCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:xpath:1.0</terms:identifier>
+        <rdfs:comment>The XPath capability indicates that the NETCONF peer supports the use of XPath expressions in the `&lt;filter&gt;` element.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>XPath Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc6241#section-8.9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/yang/server#YangLibraryCapability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/yang/server#YangLibraryCapability">
+        <rdf:type rdf:resource="https://w3id.org/yang/server#NetconfCapability"/>
+        <terms:identifier>urn:ietf:params:netconf:capability:yang-library:1.1</terms:identifier>
+        <rdfs:comment>NETCONF capability that indicates that the NETCONF server implements YANG Library.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>YANG Library Capability</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc8526"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
