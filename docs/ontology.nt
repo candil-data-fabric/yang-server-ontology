@@ -6,7 +6,7 @@
 <https://w3id.org/yang/server#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
 <https://w3id.org/yang/server#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/yang/server#" .
 <https://w3id.org/yang/server#> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
-<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "1.3.0" .
+<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "1.3.1" .
 <https://w3id.org/yang/server#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
@@ -65,14 +65,6 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/yang/server#accessDatastore
-<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
-<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Datastore> .
-<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the YANG datastore to be selected when accessing the YANG data of a YANG server." .
-<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server#accessDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "access datastore" .
-# 
 # https://w3id.org/yang/server#capability
 <https://w3id.org/yang/server#capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/yang/server#capability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfServer> .
@@ -89,6 +81,14 @@
 <https://w3id.org/yang/server#datastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#datastore> <http://www.w3.org/2000/01/rdf-schema#label> "datastore" .
 # 
+# https://w3id.org/yang/server#filter
+<https://w3id.org/yang/server#filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Query> .
+<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Filter> .
+<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG filter used when accessing the YANG server via a given network management protocol." .
+<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#label> "filter" .
+# 
 # https://w3id.org/yang/server#profile
 <https://w3id.org/yang/server#profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfServer> .
@@ -96,6 +96,22 @@
 <https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the network profile used when accessing the YANG server via NETCONF protocol." .
 <https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#profile> <http://www.w3.org/2000/01/rdf-schema#label> "profile" .
+# 
+# https://w3id.org/yang/server#sourceDatastore
+<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Query> .
+<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Datastore> .
+<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG datastore of the source YANG server to be selected in the YANG query." .
+<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "source datastore" .
+# 
+# https://w3id.org/yang/server#sourceServer
+<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Query> .
+<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG server which the YANG query is sent to via a given network management protocol." .
+<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#label> "source server" .
 # 
 # https://w3id.org/yang/server#vendor
 <https://w3id.org/yang/server#vendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -405,7 +421,7 @@
 <https://w3id.org/yang/server#YangLibraryCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:yang-library:1.1" .
 <https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "NETCONF capability that indicates that the NETCONF server implements YANG Library." .
 <https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Library Capability" .
+<https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Yang Library Capability" .
 <https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc8526> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

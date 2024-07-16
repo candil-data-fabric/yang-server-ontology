@@ -14,7 +14,7 @@
                                  <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> ;
                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/yang/server#" ;
                                  rdfs:label "YANG Server Ontology"@en ;
-                                 owl:versionInfo "1.3.0" ;
+                                 owl:versionInfo "1.3.1" ;
                                  <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -69,15 +69,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/yang/server#accessDatastore
-:accessDatastore rdf:type owl:ObjectProperty ;
-                 rdfs:domain :YangServer ;
-                 rdfs:range :Datastore ;
-                 rdfs:comment "Indicates the YANG datastore to be selected when accessing the YANG data of a YANG server." ;
-                 rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-                 rdfs:label "access datastore" .
-
-
 ###  https://w3id.org/yang/server#capability
 :capability rdf:type owl:ObjectProperty ;
             rdfs:domain :NetconfServer ;
@@ -96,6 +87,15 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "datastore" .
 
 
+###  https://w3id.org/yang/server#filter
+:filter rdf:type owl:ObjectProperty ;
+        rdfs:domain :Query ;
+        rdfs:range :Filter ;
+        rdfs:comment "Refers to the YANG filter used when accessing the YANG server via a given network management protocol." ;
+        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+        rdfs:label "filter" .
+
+
 ###  https://w3id.org/yang/server#profile
 :profile rdf:type owl:ObjectProperty ;
          rdfs:domain :NetconfServer ;
@@ -103,6 +103,24 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:comment "Refers to the network profile used when accessing the YANG server via NETCONF protocol." ;
          rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
          rdfs:label "profile" .
+
+
+###  https://w3id.org/yang/server#sourceDatastore
+:sourceDatastore rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Query ;
+                 rdfs:range :Datastore ;
+                 rdfs:comment "Refers to the YANG datastore of the source YANG server to be selected in the YANG query." ;
+                 rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                 rdfs:label "source datastore" .
+
+
+###  https://w3id.org/yang/server#sourceServer
+:sourceServer rdf:type owl:ObjectProperty ;
+              rdfs:domain :Query ;
+              rdfs:range :YangServer ;
+              rdfs:comment "Refers to the YANG server which the YANG query is sent to via a given network management protocol." ;
+              rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+              rdfs:label "source server" .
 
 
 ###  https://w3id.org/yang/server#vendor
@@ -432,7 +450,7 @@ xsd:date rdf:type rdfs:Datatype .
                        <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:yang-library:1.1" ;
                        rdfs:comment "NETCONF capability that indicates that the NETCONF server implements YANG Library." ;
                        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-                       rdfs:label "YANG Library Capability" ;
+                       rdfs:label "Yang Library Capability" ;
                        rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc8526> .
 
 

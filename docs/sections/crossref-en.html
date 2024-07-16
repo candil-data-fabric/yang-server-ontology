@@ -98,7 +98,7 @@ This section provides details for each class and property defined by YANG Server
     is in range of
    </dt>
    <dd>
-    <a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -151,6 +151,12 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#filter" title="https://w3id.org/yang/server#filter">filter</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -208,7 +214,7 @@ This section provides details for each class and property defined by YANG Server
     has members
    </dt>
    <dd>
-    <a href="#CandidateCapability" title="https://w3id.org/yang/server#CandidateCapability">Candidate Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ConfirmedCommitCapability" title="https://w3id.org/yang/server#ConfirmedCommitCapability">Confirmed Commit Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#DistinctStartupCapability" title="https://w3id.org/yang/server#DistinctStartupCapability">Distinct Startup Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RollbackOnErrorCapability" title="https://w3id.org/yang/server#RollbackOnErrorCapability">Rollback-on-Error Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#UrlCapability" title="https://w3id.org/yang/server#UrlCapability">URL Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ValidationCapability" title="https://w3id.org/yang/server#ValidationCapability">Validation Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#WritableRunningCapability" title="https://w3id.org/yang/server#WritableRunningCapability">Writable Running Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#XpathCapability" title="https://w3id.org/yang/server#XpathCapability">XPath Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#YangLibraryCapability" title="https://w3id.org/yang/server#YangLibraryCapability">YANG Library Capability</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#CandidateCapability" title="https://w3id.org/yang/server#CandidateCapability">Candidate Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ConfirmedCommitCapability" title="https://w3id.org/yang/server#ConfirmedCommitCapability">Confirmed Commit Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#DistinctStartupCapability" title="https://w3id.org/yang/server#DistinctStartupCapability">Distinct Startup Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RollbackOnErrorCapability" title="https://w3id.org/yang/server#RollbackOnErrorCapability">Rollback-on-Error Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#UrlCapability" title="https://w3id.org/yang/server#UrlCapability">URL Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ValidationCapability" title="https://w3id.org/yang/server#ValidationCapability">Validation Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#WritableRunningCapability" title="https://w3id.org/yang/server#WritableRunningCapability">Writable Running Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#XpathCapability" title="https://w3id.org/yang/server#XpathCapability">XPath Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#YangLibraryCapability" title="https://w3id.org/yang/server#YangLibraryCapability">Yang Library Capability</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -305,6 +311,14 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#filter" title="https://w3id.org/yang/server#filter">filter</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -466,50 +480,27 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#accessDatastore" title="https://w3id.org/yang/server#accessDatastore">access datastore</a></li>
   <li><a href="#capability" title="https://w3id.org/yang/server#capability">capability</a></li>
   <li><a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a></li>
+  <li><a href="#filter" title="https://w3id.org/yang/server#filter">filter</a></li>
   <li><a href="#profile" title="https://w3id.org/yang/server#profile">profile</a></li>
+  <li><a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a></li>
+  <li><a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a></li>
   <li><a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a></li>
  </ul>
- <div class="entity" id="accessDatastore">
-  <h3>access datastore<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#accessDatastore</p>
-  <div class="comment">
-   <span class="markdown">Indicates the YANG datastore to be selected when accessing the YANG data of a YANG server.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="capability">
   <h3>capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#capability</p>
@@ -572,6 +563,37 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
+ <div class="entity" id="filter">
+  <h3>filter<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#filter</p>
+  <div class="comment">
+   <span class="markdown">Refers to the YANG filter used when accessing the YANG server via a given network management protocol.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Filter" title="https://w3id.org/yang/server#Filter">Filter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="profile">
   <h3>profile<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#profile</p>
@@ -599,6 +621,68 @@ This section provides details for each class and property defined by YANG Server
     </dt>
     <dd>
      <a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sourceDatastore">
+  <h3>source datastore<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#sourceDatastore</p>
+  <div class="comment">
+   <span class="markdown">Refers to the YANG datastore of the source YANG server to be selected in the YANG query.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sourceServer">
+  <h3>source server<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#sourceServer</p>
+  <div class="comment">
+   <span class="markdown">Refers to the YANG server which the YANG query is sent to via a given network management protocol.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -930,7 +1014,7 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#ValidationCapability" title="https://w3id.org/yang/server#ValidationCapability">Validation Capability</a></li>
   <li><a href="#WritableRunningCapability" title="https://w3id.org/yang/server#WritableRunningCapability">Writable Running Capability</a></li>
   <li><a href="#XpathCapability" title="https://w3id.org/yang/server#XpathCapability">XPath Capability</a></li>
-  <li><a href="#YangLibraryCapability" title="https://w3id.org/yang/server#YangLibraryCapability">YANG Library Capability</a></li>
+  <li><a href="#YangLibraryCapability" title="https://w3id.org/yang/server#YangLibraryCapability">Yang Library Capability</a></li>
  </ul>
  <div class="entity" id="CandidateCapability">
   <h3>Candidate Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
@@ -1165,7 +1249,7 @@ This section provides details for each class and property defined by YANG Server
   </dl>
  </div>
  <div class="entity" id="YangLibraryCapability">
-  <h3>YANG Library Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <h3>Yang Library Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#YangLibraryCapability</p>
   <div class="comment">
    <span class="markdown">NETCONF capability that indicates that the NETCONF server implements YANG Library.</span>
