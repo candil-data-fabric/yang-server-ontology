@@ -38,16 +38,16 @@
         "value" : "2024-07-16",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.3.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
         "type" : "label"
       } ],
       "title" : [ {
@@ -444,8 +444,8 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "21", "2" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "2", "21" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "27"
   }, {
     "iri" : "https://w3id.org/yang/server#Filter",
@@ -538,30 +538,6 @@
       "undefined" : "Netconf Capability"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/yang/server#CandidateCapability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.3",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "The candidate configuration capability, `:candidate`, indicates that the device supports a candidate configuration datastore, which is used to hold configuration data that can be manipulated without impacting the device's current configuration."
-      },
-      "labels" : {
-        "IRI-based" : "CandidateCapability",
-        "undefined" : "Candidate Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#WritableRunningCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
@@ -584,6 +560,30 @@
       "labels" : {
         "IRI-based" : "WritableRunningCapability",
         "undefined" : "Writable Running Capability"
+      }
+    }, {
+      "iri" : "https://w3id.org/yang/server#CandidateCapability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server#",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.3",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "The candidate configuration capability, `:candidate`, indicates that the device supports a candidate configuration datastore, which is used to hold configuration data that can be manipulated without impacting the device's current configuration."
+      },
+      "labels" : {
+        "IRI-based" : "CandidateCapability",
+        "undefined" : "Candidate Capability"
       }
     }, {
       "iri" : "https://w3id.org/yang/server#XpathCapability",
@@ -658,30 +658,6 @@
         "undefined" : "Yang Library Capability"
       }
     }, {
-      "iri" : "https://w3id.org/yang/server#DistinctStartupCapability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.7",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots."
-      },
-      "labels" : {
-        "IRI-based" : "DistinctStartupCapability",
-        "undefined" : "Distinct Startup Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#RollbackOnErrorCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
@@ -704,6 +680,30 @@
       "labels" : {
         "IRI-based" : "RollbackOnErrorCapability",
         "undefined" : "Rollback-on-Error Capability"
+      }
+    }, {
+      "iri" : "https://w3id.org/yang/server#DistinctStartupCapability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server#",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.7",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots."
+      },
+      "labels" : {
+        "IRI-based" : "DistinctStartupCapability",
+        "undefined" : "Distinct Startup Capability"
       }
     }, {
       "iri" : "https://w3id.org/yang/server#UrlCapability",
@@ -1104,7 +1104,7 @@
       "undefined" : "name"
     },
     "domain" : "27",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "26"
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
@@ -1123,7 +1123,7 @@
       "undefined" : "identifier"
     },
     "domain" : "30",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "29"
   }, {
     "range" : "10",
