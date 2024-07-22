@@ -1,36 +1,67 @@
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
 @prefix ys: <https://w3id.org/yang/server#> .
-@base <https://example.org/network/> .
+@base <https://example.org/> .
 
-<devices/cisco-r1> a ys:NetconfServer ;
+<server-1> a ys:NetconfServer ;
     ys:endpoint "192.168.1.10:830" ;
-    ys:username "cisco" ;
+    ys:username "admin" ;
     ys:password "admin" ;
     ys:hostKeyVerification "false" ;
-    ys:datastore <datastores/cisco-r1/operational> ;
-    ys:datastore <datastores/cisco-r1/running> ;
-    ys:profile <networkProfiles/Cisco/IOS-XR> ;
-    ys:capability <netconfCapabilities/yang-library/1.1> .
+    ys:datastore <datastores/server/operational> ;
+    ys:datastore <datastores/server/running> ;
+    ys:capability <netconfCapabilities/YangLibraryCapability> .
 
-<networkProfiles/Cisco/IOS-XR> a ys:NetconfProfile ;
-    dcterms:name "iosxr" ;
-    ys:vendor <vendors/Cisco> .
+# In this example the NETCONF server is non-NMDA compatible.
+# Thus, only operational and running datastores are available.
+<datastores/server-1/operational> a ys:OperationalDatastore .
+<datastores/server-1/running> a ys:RunningDatastore .
 
-<vendors/Cisco> a ys:Vendor ;
-    dcterms:name "Cisco" .
-
-<netconfCapabilities/yang-library/1.1> a ys:NetconfCapability ;
-    dcterms:identifier "urn:ietf:params:netconf:capability:yang-library:1.1" .
-
-<datastores/cisco-r1/operational> a ys:OperationalDatastore .
-<datastores/cisco-r1/running> a ys:RunningDatastore .
-
-<Query#1> a ys:Query ;
-    ys:sourceServer <devices/cisco-r1> ;
-    ys:sourceDatastore <datastores/cisco-r1/operational> ;
+# Example 1: Query to fetch YANG library from NETCONF server
+<query-xpath> a ys:Query ;
+    ys:sourceServer <server-1> ;
+    ys:sourceDatastore <datastores/server-1/operational> ;
     ys:filter [
+        a ys:XPathFilter ;
         ys:xpathValue "/ietf-yang-library:yang-library" ;
     ];
 .
 
+# TODO: Example 2: Query with Subtree filter
+<query-subtree> a ys:Query ;
+    ys:sourceServer <server-1> ;
+    ys:sourceDatastore <datastores/server-1/operational> ;
+    ys:filter [
+        a ys:SubtreeFilter ;
+        ys:subtreeValue "..." ;
+    ];
+.
+
+# Example 3: Periodic subscription to output packet counter of interfaces
+# Dynamic subscription is configured to push updated every 10 seconds
+# TODO: XPath expression for counter
+<sub-periodic> a ys:PeriodicSubscription ;
+    ys:sourceServer <server-1> ;
+    ys:sourceDatastore <datastores/server-1/operational> ;
+    ys:filter [
+        a ys:XPathFilter ;
+        ys:xpathValue "/ietf-interfaces:interfaces/.../out-pkts" ;
+    ];
+    ys:period [
+        a ys:Period ;
+        qudt:numericValue "10" ;
+        qudt:unit <https://qudt.org/2.1/vocab/unit/SEC>
+    ];
+.
+
+# Example 4: On-change subscription to interface enabled status
+# TODO: XPath expression
+<sub-onchange> a ys:PeriodicSubscription ;
+    ys:sourceServer <server-1> ;
+    ys:sourceDatastore <datastores/server-1/operational> ;
+    ys:filter [
+        a ys:XPathFilter
+        ys:xpathValue "/ietf-interfaces:interfaces/.../enabled" ;
+    ];
+.

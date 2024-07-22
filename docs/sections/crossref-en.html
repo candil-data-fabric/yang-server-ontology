@@ -10,14 +10,15 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#Filter" title="https://w3id.org/yang/server#Filter">Filter</a></li>
   <li><a href="#IntendedDatastore" title="https://w3id.org/yang/server#IntendedDatastore">Intended Datastore</a></li>
   <li><a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a></li>
-  <li><a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a></li>
   <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a></li>
+  <li><a href="#OnChangeSubscription" title="https://w3id.org/yang/server#OnChangeSubscription">On-change Subscription</a></li>
   <li><a href="#OperationalDatastore" title="https://w3id.org/yang/server#OperationalDatastore">Operational Datastore</a></li>
+  <li><a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a></li>
   <li><a href="#Query" title="https://w3id.org/yang/server#Query">Query</a></li>
   <li><a href="#RunningDatastore" title="https://w3id.org/yang/server#RunningDatastore">Running Datastore</a></li>
   <li><a href="#StartupDatastore" title="https://w3id.org/yang/server#StartupDatastore">Startup Datastore</a></li>
+  <li><a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a></li>
   <li><a href="#SubtreeFilter" title="https://w3id.org/yang/server#SubtreeFilter">SubtreeFilter</a></li>
-  <li><a href="#Vendor" title="https://w3id.org/yang/server#Vendor">Vendor</a></li>
   <li><a href="#XPathFilter" title="https://w3id.org/yang/server#XPathFilter">XPathFilter</a></li>
   <li><a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a></li>
  </ul>
@@ -218,35 +219,6 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
- <div class="entity" id="NetconfProfile">
-  <h3>Netconf Profile<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#NetconfProfile</p>
-  <div class="comment">
-   <span class="markdown">Vendor-specific profile for managing YANG servers via the NETCONF protocol.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="NetconfServer">
   <h3>Netconf Server<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#NetconfServer</p>
@@ -272,7 +244,30 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#profile" title="https://w3id.org/yang/server#profile">profile</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#capability" title="https://w3id.org/yang/server#capability">capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OnChangeSubscription">
+  <h3>On-change Subscription<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#OnChangeSubscription</p>
+  <div class="comment">
+   <span class="markdown">A datastore subscription with updates that are triggered when changes in subscribed datastore nodes are detected.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -296,6 +291,35 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PeriodicSubscription">
+  <h3>Periodic Subscription<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#PeriodicSubscription</p>
+  <div class="comment">
+   <span class="markdown">A datastore subscription with updates that are triggered periodically according to some time interval.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#period" title="https://w3id.org/yang/server#period">period</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -368,6 +392,35 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="Subscription">
+  <h3>Subscription<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#Subscription</p>
+  <div class="comment">
+   <span class="markdown">Represents a subscription operation to a YANG server using the corresponding network management protocol.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#OnChangeSubscription" title="https://w3id.org/yang/server#OnChangeSubscription">On-change Subscription</a> <sup class="type-c" title="class">c</sup>, <a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#filter" title="https://w3id.org/yang/server#filter">filter</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="SubtreeFilter">
   <h3>SubtreeFilter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#SubtreeFilter</p>
@@ -394,35 +447,6 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a> <sup class="type-dp" title="data property">dp</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="Vendor">
-  <h3>Vendor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#Vendor</p>
-  <div class="comment">
-   <span class="markdown">Represents a network vendor.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a> <sup class="type-dp" title="data property">dp</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -496,10 +520,8 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#capability" title="https://w3id.org/yang/server#capability">capability</a></li>
   <li><a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a></li>
   <li><a href="#filter" title="https://w3id.org/yang/server#filter">filter</a></li>
-  <li><a href="#profile" title="https://w3id.org/yang/server#profile">profile</a></li>
   <li><a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a></li>
   <li><a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a></li>
-  <li><a href="#vendor" title="https://w3id.org/yang/server#vendor">vendor</a></li>
  </ul>
  <div class="entity" id="capability">
   <h3>capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -585,6 +607,9 @@ This section provides details for each class and property defined by YANG Server
     <dd>
      <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dd>
+     <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
+    </dd>
     <dt>
      has range
     </dt>
@@ -594,42 +619,11 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
- <div class="entity" id="profile">
-  <h3>profile<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#profile</p>
-  <div class="comment">
-   <span class="markdown">Refers to the network profile used when accessing the YANG server via NETCONF protocol.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="sourceDatastore">
   <h3>source datastore<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#sourceDatastore</p>
   <div class="comment">
-   <span class="markdown">Refers to the YANG datastore of the source YANG server to be selected in the YANG query.</span>
+   <span class="markdown">Refers to the YANG datastore of the source YANG server to be selected in the YANG operation.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -646,6 +640,9 @@ This section provides details for each class and property defined by YANG Server
     </dt>
     <dd>
      <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -678,42 +675,14 @@ This section provides details for each class and property defined by YANG Server
     <dd>
      <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dd>
+     <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
+    </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="vendor">
-  <h3>vendor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#vendor</p>
-  <div class="comment">
-   <span class="markdown">Refers to the network vendor that defines the network profile.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#Vendor" title="https://w3id.org/yang/server#Vendor">Vendor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -725,7 +694,7 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a></li>
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
-  <li><a href="#http://purl.org/dc/terms/name" title="http://purl.org/dc/terms/name">name</a></li>
+  <li><a href="#period" title="https://w3id.org/yang/server#period">period</a></li>
   <li><a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a></li>
   <li><a href="#username" title="https://w3id.org/yang/server#username">username</a></li>
   <li><a href="#xpathValue" title="https://w3id.org/yang/server#xpathValue">xpath value</a></li>
@@ -859,15 +828,18 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
- <div class="entity" id="http://purl.org/dc/terms/name">
-  <h3>name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/dc/terms/name</p>
+ <div class="entity" id="period">
+  <h3>period<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#period</p>
+  <div class="comment">
+   <span class="markdown">The period interval with which to report updates in a periodic subscription. Measured in centiseconds.</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
    </dd>
   </dl>
   <div class="description">
@@ -876,16 +848,13 @@ This section provides details for each class and property defined by YANG Server
      has domain
     </dt>
     <dd>
-     <a href="#NetconfProfile" title="https://w3id.org/yang/server#NetconfProfile">Netconf Profile</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#Vendor" title="https://w3id.org/yang/server#Vendor">Vendor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
    </dl>
   </div>

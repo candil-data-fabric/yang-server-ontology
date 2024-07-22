@@ -3,8 +3,8 @@ server-1,Sprint 1,A YANG server is accesible through an endpoint composed of URL
 server-2,Sprint 1,Access to a YANG server requires username and password credentials,,Accepted,,,RFC6241
 server-3,Sprint 1,Access to data of a YANG server can be filtered using XPath,,Deprecated,server-17,Out of scope,RFC6241
 server-4,Sprint 1,NETCONF server is a type of YANG server,,Accepted,,,RFC6241
-server-5,Sprint 1,Access to data of a NETCONF server can be filtered using an XML subtree,,Deprecated,,Out of scope,RFC6241
-server-6,Sprint 1,A NETCONF server may require a device profile defined by a network vendor,,Accepted,server-18,,ncclient
+server-5,Sprint 1,Access to data of a NETCONF server can be filtered using an XML subtree,,Deprecated,server-18,Out of scope,RFC6241
+server-6,Sprint 1,A NETCONF server may require a device profile defined by a network vendor,,Deprecated,,Left for future releases,ncclient
 server-7,Sprint 2,A NETCONF server implements NETCONF capabilities,,Accepted,,,RFC6241
 server-8,Sprint 2,A NETCONF capability is uniquely identified by a URN,,Accepted,,,RFC6241
 server-9,Sprint 2,Host key verification can be enabled or disabled to access a NETCONF server,,Accepted,,,ncclient
@@ -17,3 +17,7 @@ server-15,Sprint 3,A YANG datastore must be specified when accessing data of a Y
 server-16,Sprint 4,A query to a YANG server must specify datastore and filter,,Accepted,,,RFC6241
 server-17,Sprint 4,Xpath is a type of filter,,Accepted,,,RFC6241
 server-18,Sprint 4,XML subtree is a type of filter,,Accepted,,,RFC6241
+server-19,Sprint 5,A dynamic subscription to a YANG server must specify datastore and filter,,Accepted,,,RFC8641
+server-20,Sprint 5,Periodic is a type of subscription,,Accepted,,,RFC8641
+server-21,Sprint 5,On-change is a type of subscription,,Accepted,,,RFC8641
+server-22,Sprint 5,A periodic subscription has period interval measured in centiseconds,,Accepted,,,RFC8641

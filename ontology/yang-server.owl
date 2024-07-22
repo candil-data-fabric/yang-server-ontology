@@ -3,6 +3,7 @@
 @prefix ys: <https://w3id.org/yang/server#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rml: <http://w3id.org/rml/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -13,14 +14,14 @@
 @base <https://w3id.org/yang/server#> .
 
 <https://w3id.org/yang/server#> rdf:type owl:Ontology ;
-                                 dc:created "2024-07-16"^^xsd:date ;
+                                 dc:created "2024-07-21"^^xsd:date ;
                                  dc:creator "Ignacio Dominguez Martinez-Casanueva" ;
                                  dc:title "YANG Server Ontology" ;
                                  dcterms:description "" ;
                                  dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0> ;
                                  vann:preferredNamespaceUri "https://w3id.org/yang/server#" ;
                                  rdfs:label "YANG Server Ontology"@en ;
-                                 owl:versionInfo "1.3.1" ;
+                                 owl:versionInfo "1.4.1" ;
                                  mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -67,7 +68,6 @@ mod:createdWith rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-
 ###  https://w3id.org/yang/server#capability
 ys:capability rdf:type owl:ObjectProperty ;
               rdfs:domain ys:NetconfServer ;
@@ -88,47 +88,39 @@ ys:datastore rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/yang/server#filter
 ys:filter rdf:type owl:ObjectProperty ;
-          rdfs:domain ys:Query ;
+          rdfs:domain ys:Query ,
+                      ys:Subscription ;
           rdfs:range ys:Filter ;
           rdfs:comment "Refers to the YANG filter used when accessing the YANG server via a given network management protocol." ;
           rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
           rdfs:label "filter" .
 
 
-###  https://w3id.org/yang/server#profile
-ys:profile rdf:type owl:ObjectProperty ;
-           rdfs:domain ys:NetconfServer ;
-           rdfs:range ys:NetconfProfile ;
-           rdfs:comment "Refers to the network profile used when accessing the YANG server via NETCONF protocol." ;
-           rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-           rdfs:label "profile" .
+###  http://qudt.org/2.1/schema/qudt/unit
+qudt:unit rdf:type owl:ObjectProperty ;
+        rdfs:range <http://qudt.org/2.1/schema/qudt/Unit> ;
+        rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt/> ;
+        rdfs:label "unit" .
 
 
 ###  https://w3id.org/yang/server#sourceDatastore
 ys:sourceDatastore rdf:type owl:ObjectProperty ;
-                   rdfs:domain ys:Query ;
+                   rdfs:domain ys:Query ,
+                               ys:Subscription ;
                    rdfs:range ys:Datastore ;
-                   rdfs:comment "Refers to the YANG datastore of the source YANG server to be selected in the YANG query." ;
+                   rdfs:comment "Refers to the YANG datastore of the source YANG server to be selected in the YANG operation." ;
                    rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                    rdfs:label "source datastore" .
 
 
 ###  https://w3id.org/yang/server#sourceServer
 ys:sourceServer rdf:type owl:ObjectProperty ;
-                rdfs:domain ys:Query ;
+                rdfs:domain ys:Query ,
+                            ys:Subscription ;
                 rdfs:range ys:YangServer ;
                 rdfs:comment "Refers to the YANG server which the YANG query is sent to via a given network management protocol." ;
                 rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                 rdfs:label "source server" .
-
-
-###  https://w3id.org/yang/server#vendor
-ys:vendor rdf:type owl:ObjectProperty ;
-          rdfs:domain ys:NetconfProfile ;
-          rdfs:range ys:Vendor ;
-          rdfs:comment "Refers to the network vendor that defines the network profile." ;
-          rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-          rdfs:label "vendor" .
 
 
 #################################################################
@@ -143,13 +135,10 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
                    rdfs:label "identifier" .
 
 
-###  http://purl.org/dc/terms/name
-dcterms:name rdf:type owl:DatatypeProperty ;
-             rdfs:domain ys:NetconfProfile ,
-                         ys:Vendor ;
-             rdfs:range xsd:string ;
-             rdfs:isDefinedBy dcterms: ;
-             rdfs:label "name" .
+###  http://qudt.org/2.1/schema/qudt#numericValue
+qudt:numericValue rdf:type owl:DatatypeProperty ;
+                  rdfs:isDefinedBy qudt: ;
+                  rdfs:label "numeric value".
 
 
 ###  https://w3id.org/yang/server#endpoint
@@ -178,6 +167,16 @@ ys:hostKeyVerification rdf:type owl:DatatypeProperty ;
                        rdfs:comment "Indicates whether SSH host key is verified to access the NETCONF server." ;
                        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                        rdfs:label "host key verification" .
+
+
+###  https://w3id.org/yang/server#period
+ys:period rdf:type owl:DatatypeProperty ;
+          rdfs:domain ys:PeriodicSubscription ;
+          rdfs:range ys:Period ;
+          rdfs:comment "Refers to period interval with which to report updates in a periodic subscription." ;
+          rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+          rdfs:label "period" ;
+          rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
 
 
 ###  https://w3id.org/yang/server#subtreeValue
@@ -274,14 +273,6 @@ ys:NetconfCapability rdf:type owl:Class ;
                      rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
-###  https://w3id.org/yang/server#NetconfProfile
-ys:NetconfProfile rdf:type owl:Class ;
-                  rdfs:comment "Vendor-specific profile for managing YANG servers via the NETCONF protocol." ;
-                  rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-                  rdfs:label "Netconf Profile" ;
-                  rdfs:seeAlso <https://github.com/ncclient/ncclient/tree/master> .
-
-
 ###  https://w3id.org/yang/server#NetconfServer
 ys:NetconfServer rdf:type owl:Class ;
                  rdfs:subClassOf ys:YangServer ;
@@ -291,6 +282,15 @@ ys:NetconfServer rdf:type owl:Class ;
                  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
+###  https://w3id.org/yang/server#OnChangeSubscription
+ys:OnChangeSubscription rdf:type owl:Class ;
+                        rdfs:subClassOf ys:Subscription ;
+                        rdfs:comment "A datastore subscription with updates that are triggered when changes in subscribed datastore nodes are detected." ;
+                        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                        rdfs:label "On-change Subscription" ;
+                        rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
+
+
 ###  https://w3id.org/yang/server#OperationalDatastore
 ys:OperationalDatastore rdf:type owl:Class ;
                         rdfs:subClassOf ys:Datastore ;
@@ -298,6 +298,15 @@ ys:OperationalDatastore rdf:type owl:Class ;
                         rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                         rdfs:label "Operational Datastore" ;
                         rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#PeriodicSubscription
+ys:PeriodicSubscription rdf:type owl:Class ;
+                        rdfs:subClassOf ys:Subscription ;
+                        rdfs:comment "A datastore subscription with updates that are triggered periodically according to some time interval." ;
+                        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                        rdfs:label "Periodic Subscription" ;
+                        rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
 
 
 ###  https://w3id.org/yang/server#Query
@@ -326,6 +335,14 @@ ys:StartupDatastore rdf:type owl:Class ;
                     rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
 
 
+###  https://w3id.org/yang/server#Subscription
+ys:Subscription rdf:type owl:Class ;
+                rdfs:comment "Represents a subscription operation to a YANG server using the corresponding network management protocol." ;
+                rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                rdfs:label "Subscription" ;
+                rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
+
+
 ###  https://w3id.org/yang/server#SubtreeFilter
 ys:SubtreeFilter rdf:type owl:Class ;
                  rdfs:subClassOf ys:Filter ;
@@ -335,11 +352,10 @@ ys:SubtreeFilter rdf:type owl:Class ;
                  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
-###  https://w3id.org/yang/server#Vendor
-ys:Vendor rdf:type owl:Class ;
-          rdfs:comment "Represents a network vendor." ;
-          rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-          rdfs:label "Vendor" .
+###  http://qudt.org/2.1/schema/qudt/Unit
+qudt:Unit rdf:type owl:Class ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt/Unit> ;
+    rdfs:label "Unit" .
 
 
 ###  https://w3id.org/yang/server#XPathFilter
