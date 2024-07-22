@@ -1,0 +1,38 @@
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
+@prefix ys: <https://w3id.org/yang/server#> .
+@base <https://example.org/> .
+
+# Basic details for connecting to NETCONF server
+<server-1> a ys:NetconfServer, rml:Source ;
+    ys:endpoint "192.168.1.10:830" ;
+    ys:username "admin" ;
+    ys:password "admin" ;
+    ys:hostKeyVerification "false" ;
+
+# In this example the NETCONF server is non-NMDA compatible.
+# Thus, only operational and running datastores are available.
+<datastores/server-1/operational> a ys:OperationalDatastore .
+<datastores/server-1/running> a ys:RunningDatastore .
+
+# Example 4-1: Map results from periodic subscription to
+# output packet counter of interfaces
+# Dynamic subscription is configured to push notifications when enabled changes
+<sub-onchange> a ys:PeriodicSubscription ;
+    ys:sourceServer <server-1> ;
+    ys:sourceDatastore <datastores/server-1/operational> ;
+    ys:filter [
+        a ys:XPathFilter
+        ys:xpathValue "/ietf-interfaces:interfaces/.../enabled" ;
+    ];
+.
+
+# Example 4-2: Note that ys:Subscription is processed as part of the RML mapping
+# rml:iterator replaces the ys:Filter in the YANG subscription
+<#RML-onchange> a rml:LogicalSource;
+    rml:source <sub-onchange> ;
+    rml:referenceFormulation rml:XPath;
+    rml:iterator "/ietf-interfaces:interfaces/.../enabled";
+.
