@@ -13,12 +13,14 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a></li>
   <li><a href="#OnChangeSubscription" title="https://w3id.org/yang/server#OnChangeSubscription">On-change Subscription</a></li>
   <li><a href="#OperationalDatastore" title="https://w3id.org/yang/server#OperationalDatastore">Operational Datastore</a></li>
+  <li><a href="#Period" title="https://w3id.org/yang/server#Period">Period</a></li>
   <li><a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a></li>
   <li><a href="#Query" title="https://w3id.org/yang/server#Query">Query</a></li>
   <li><a href="#RunningDatastore" title="https://w3id.org/yang/server#RunningDatastore">Running Datastore</a></li>
   <li><a href="#StartupDatastore" title="https://w3id.org/yang/server#StartupDatastore">Startup Datastore</a></li>
   <li><a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a></li>
   <li><a href="#SubtreeFilter" title="https://w3id.org/yang/server#SubtreeFilter">SubtreeFilter</a></li>
+  <li><a href="#http://qudt.org/2.1/schema/qudt#Unit" title="http://qudt.org/2.1/schema/qudt#Unit">Unit</a></li>
   <li><a href="#XPathFilter" title="https://w3id.org/yang/server#XPathFilter">XPathFilter</a></li>
   <li><a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a></li>
  </ul>
@@ -294,6 +296,29 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="Period">
+  <h3>Period<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#Period</p>
+  <div class="comment">
+   <span class="markdown">Represents the period interval with which to report updates in a periodic subscription.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#period" title="https://w3id.org/yang/server#period">period</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="PeriodicSubscription">
   <h3>Periodic Subscription<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#PeriodicSubscription</p>
@@ -319,7 +344,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#period" title="https://w3id.org/yang/server#period">period</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#period" title="https://w3id.org/yang/server#period">period</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -450,6 +475,26 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="http://qudt.org/2.1/schema/qudt#Unit">
+  <h3>Unit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/2.1/schema/qudt#Unit</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://qudt.org/2.1/schema/qudt/">http://qudt.org/2.1/schema/qudt/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://qudt.org/2.1/schema/qudt#unit" title="http://qudt.org/2.1/schema/qudt#unit">unit</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="XPathFilter">
   <h3>XPathFilter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#XPathFilter</p>
@@ -520,8 +565,10 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#capability" title="https://w3id.org/yang/server#capability">capability</a></li>
   <li><a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a></li>
   <li><a href="#filter" title="https://w3id.org/yang/server#filter">filter</a></li>
+  <li><a href="#period" title="https://w3id.org/yang/server#period">period</a></li>
   <li><a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a></li>
   <li><a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a></li>
+  <li><a href="#http://qudt.org/2.1/schema/qudt#unit" title="http://qudt.org/2.1/schema/qudt#unit">unit</a></li>
  </ul>
  <div class="entity" id="capability">
   <h3>capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -619,6 +666,37 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
+ <div class="entity" id="period">
+  <h3>period<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#period</p>
+  <div class="comment">
+   <span class="markdown">Refers to period interval with which to report updates in a periodic subscription.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Period" title="https://w3id.org/yang/server#Period">Period</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="sourceDatastore">
   <h3>source datastore<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#sourceDatastore</p>
@@ -687,6 +765,28 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
+ <div class="entity" id="http://qudt.org/2.1/schema/qudt#unit">
+  <h3>unit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/2.1/schema/qudt#unit</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://qudt.org/2.1/schema/qudt/">http://qudt.org/2.1/schema/qudt/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/2.1/schema/qudt#Unit" title="http://qudt.org/2.1/schema/qudt#Unit">Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
@@ -694,7 +794,7 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a></li>
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
-  <li><a href="#period" title="https://w3id.org/yang/server#period">period</a></li>
+  <li><a href="#http://qudt.org/2.1/schema/qudt#numericValue" title="http://qudt.org/2.1/schema/qudt#numericValue">numeric value</a></li>
   <li><a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a></li>
   <li><a href="#username" title="https://w3id.org/yang/server#username">username</a></li>
   <li><a href="#xpathValue" title="https://w3id.org/yang/server#xpathValue">xpath value</a></li>
@@ -828,36 +928,17 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
- <div class="entity" id="period">
-  <h3>period<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#period</p>
-  <div class="comment">
-   <span class="markdown">The period interval with which to report updates in a periodic subscription. Measured in centiseconds.</span>
-  </div>
+ <div class="entity" id="http://qudt.org/2.1/schema/qudt#numericValue">
+  <h3>numeric value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/2.1/schema/qudt#numericValue</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+    <a href="http://qudt.org/2.1/schema/qudt#">http://qudt.org/2.1/schema/qudt#</a>
    </dd>
   </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
  </div>
  <div class="entity" id="subtreeValue">
   <h3>subtree value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>

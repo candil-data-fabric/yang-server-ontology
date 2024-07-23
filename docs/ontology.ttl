@@ -69,6 +69,13 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://qudt.org/2.1/schema/qudt#unit
+<http://qudt.org/2.1/schema/qudt#unit> rdf:type owl:ObjectProperty ;
+                                       rdfs:range <http://qudt.org/2.1/schema/qudt#Unit> ;
+                                       rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt/> ;
+                                       rdfs:label "unit" .
+
+
 ###  https://w3id.org/yang/server#capability
 :capability rdf:type owl:ObjectProperty ;
             rdfs:domain :NetconfServer ;
@@ -95,6 +102,16 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:comment "Refers to the YANG filter used when accessing the YANG server via a given network management protocol." ;
         rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
         rdfs:label "filter" .
+
+
+###  https://w3id.org/yang/server#period
+:period rdf:type owl:ObjectProperty ;
+        rdfs:domain :PeriodicSubscription ;
+        rdfs:range :Period ;
+        rdfs:comment "Refers to period interval with which to report updates in a periodic subscription." ;
+        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+        rdfs:label "period" ;
+        rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
 
 
 ###  https://w3id.org/yang/server#sourceDatastore
@@ -129,6 +146,12 @@ xsd:date rdf:type rdfs:Datatype .
                                       rdfs:label "identifier" .
 
 
+###  http://qudt.org/2.1/schema/qudt#numericValue
+<http://qudt.org/2.1/schema/qudt#numericValue> rdf:type owl:DatatypeProperty ;
+                                               rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt#> ;
+                                               rdfs:label "numeric value" .
+
+
 ###  https://w3id.org/yang/server#endpoint
 :endpoint rdf:type owl:DatatypeProperty ;
           rdfs:domain :YangServer ;
@@ -155,16 +178,6 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:comment "Indicates whether SSH host key is verified to access the NETCONF server." ;
                      rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                      rdfs:label "host key verification" .
-
-
-###  https://w3id.org/yang/server#period
-:period rdf:type owl:DatatypeProperty ;
-        rdfs:domain :PeriodicSubscription ;
-        rdfs:range xsd:decimal ;
-        rdfs:comment "The period interval with which to report updates in a periodic subscription. Measured in centiseconds." ;
-        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-        rdfs:label "period" ;
-        rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
 
 
 ###  https://w3id.org/yang/server#subtreeValue
@@ -200,6 +213,12 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://qudt.org/2.1/schema/qudt#Unit
+<http://qudt.org/2.1/schema/qudt#Unit> rdf:type owl:Class ;
+                                       rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt/> ;
+                                       rdfs:label "Unit" .
+
 
 ###  https://w3id.org/yang/server#CandidateDatastore
 :CandidateDatastore rdf:type owl:Class ;
@@ -286,6 +305,14 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                       rdfs:label "Operational Datastore" ;
                       rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#Period
+:Period rdf:type owl:Class ;
+        rdfs:comment "Represents the period interval with which to report updates in a periodic subscription." ;
+        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+        rdfs:label "Period" ;
+        rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
 
 
 ###  https://w3id.org/yang/server#PeriodicSubscription

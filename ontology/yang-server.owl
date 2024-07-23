@@ -3,11 +3,11 @@
 @prefix ys: <https://w3id.org/yang/server#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rml: <http://w3id.org/rml/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -68,6 +68,13 @@ mod:createdWith rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://qudt.org/2.1/schema/qudt#unit
+qudt:unit rdf:type owl:ObjectProperty ;
+          rdfs:range qudt:Unit ;
+          rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt/> ;
+          rdfs:label "unit" .
+
+
 ###  https://w3id.org/yang/server#capability
 ys:capability rdf:type owl:ObjectProperty ;
               rdfs:domain ys:NetconfServer ;
@@ -96,11 +103,14 @@ ys:filter rdf:type owl:ObjectProperty ;
           rdfs:label "filter" .
 
 
-###  http://qudt.org/2.1/schema/qudt/unit
-qudt:unit rdf:type owl:ObjectProperty ;
-        rdfs:range <http://qudt.org/2.1/schema/qudt/Unit> ;
-        rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt/> ;
-        rdfs:label "unit" .
+###  https://w3id.org/yang/server#period
+ys:period rdf:type owl:ObjectProperty ;
+          rdfs:domain ys:PeriodicSubscription ;
+          rdfs:range ys:Period ;
+          rdfs:comment "Refers to period interval with which to report updates in a periodic subscription." ;
+          rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+          rdfs:label "period" ;
+          rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
 
 
 ###  https://w3id.org/yang/server#sourceDatastore
@@ -138,7 +148,7 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
 ###  http://qudt.org/2.1/schema/qudt#numericValue
 qudt:numericValue rdf:type owl:DatatypeProperty ;
                   rdfs:isDefinedBy qudt: ;
-                  rdfs:label "numeric value".
+                  rdfs:label "numeric value" .
 
 
 ###  https://w3id.org/yang/server#endpoint
@@ -167,16 +177,6 @@ ys:hostKeyVerification rdf:type owl:DatatypeProperty ;
                        rdfs:comment "Indicates whether SSH host key is verified to access the NETCONF server." ;
                        rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                        rdfs:label "host key verification" .
-
-
-###  https://w3id.org/yang/server#period
-ys:period rdf:type owl:DatatypeProperty ;
-          rdfs:domain ys:PeriodicSubscription ;
-          rdfs:range ys:Period ;
-          rdfs:comment "Refers to period interval with which to report updates in a periodic subscription." ;
-          rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
-          rdfs:label "period" ;
-          rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
 
 
 ###  https://w3id.org/yang/server#subtreeValue
@@ -212,6 +212,12 @@ ys:xpathValue rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://qudt.org/2.1/schema/qudt#Unit
+qudt:Unit rdf:type owl:Class ;
+          rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt/> ;
+          rdfs:label "Unit" .
+
 
 ###  https://w3id.org/yang/server#CandidateDatastore
 ys:CandidateDatastore rdf:type owl:Class ;
@@ -300,6 +306,14 @@ ys:OperationalDatastore rdf:type owl:Class ;
                         rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
 
 
+###  https://w3id.org/yang/server#Period
+ys:Period rdf:type owl:Class ;
+          rdfs:comment "Represents the period interval with which to report updates in a periodic subscription." ;
+          rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+          rdfs:label "Period" ;
+          rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
+
+
 ###  https://w3id.org/yang/server#PeriodicSubscription
 ys:PeriodicSubscription rdf:type owl:Class ;
                         rdfs:subClassOf ys:Subscription ;
@@ -350,12 +364,6 @@ ys:SubtreeFilter rdf:type owl:Class ;
                  rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                  rdfs:label "SubtreeFilter" ;
                  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
-
-
-###  http://qudt.org/2.1/schema/qudt/Unit
-qudt:Unit rdf:type owl:Class ;
-    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt/Unit> ;
-    rdfs:label "Unit" .
 
 
 ###  https://w3id.org/yang/server#XPathFilter

@@ -65,6 +65,12 @@
 # #################################################################
 # 
 # 
+# http://qudt.org/2.1/schema/qudt#unit
+<http://qudt.org/2.1/schema/qudt#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://qudt.org/2.1/schema/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.1/schema/qudt#Unit> .
+<http://qudt.org/2.1/schema/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt/> .
+<http://qudt.org/2.1/schema/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit" .
+# 
 # https://w3id.org/yang/server#capability
 <https://w3id.org/yang/server#capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/yang/server#capability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfServer> .
@@ -89,6 +95,15 @@
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG filter used when accessing the YANG server via a given network management protocol." .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#label> "filter" .
+# 
+# https://w3id.org/yang/server#period
+<https://w3id.org/yang/server#period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#PeriodicSubscription> .
+<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Period> .
+<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to period interval with which to report updates in a periodic subscription." .
+<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#label> "period" .
+<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8641> .
 # 
 # https://w3id.org/yang/server#sourceDatastore
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -124,6 +139,11 @@
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
 # 
+# http://qudt.org/2.1/schema/qudt#numericValue
+<http://qudt.org/2.1/schema/qudt#numericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://qudt.org/2.1/schema/qudt#numericValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt#> .
+<http://qudt.org/2.1/schema/qudt#numericValue> <http://www.w3.org/2000/01/rdf-schema#label> "numeric value" .
+# 
 # https://w3id.org/yang/server#endpoint
 <https://w3id.org/yang/server#endpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
@@ -148,15 +168,6 @@
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether SSH host key is verified to access the NETCONF server." .
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#label> "host key verification" .
-# 
-# https://w3id.org/yang/server#period
-<https://w3id.org/yang/server#period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#PeriodicSubscription> .
-<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#comment> "The period interval with which to report updates in a periodic subscription. Measured in centiseconds." .
-<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#label> "period" .
-<https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8641> .
 # 
 # https://w3id.org/yang/server#subtreeValue
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -193,6 +204,11 @@
 # #
 # #################################################################
 # 
+# 
+# http://qudt.org/2.1/schema/qudt#Unit
+<http://qudt.org/2.1/schema/qudt#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/2.1/schema/qudt#Unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt/> .
+<http://qudt.org/2.1/schema/qudt#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
 # 
 # https://w3id.org/yang/server#CandidateDatastore
 <https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -270,6 +286,13 @@
 <https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Operational Datastore" .
 <https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#Period
+<https://w3id.org/yang/server#Period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Period> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the period interval with which to report updates in a periodic subscription." .
+<https://w3id.org/yang/server#Period> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#Period> <http://www.w3.org/2000/01/rdf-schema#label> "Period" .
+<https://w3id.org/yang/server#Period> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8641> .
 # 
 # https://w3id.org/yang/server#PeriodicSubscription
 <https://w3id.org/yang/server#PeriodicSubscription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
