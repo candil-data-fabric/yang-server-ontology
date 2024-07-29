@@ -96,6 +96,14 @@
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#label> "filter" .
 # 
+# https://w3id.org/yang/server#namespace
+<https://w3id.org/yang/server#namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#XPathFilter> .
+<https://w3id.org/yang/server#namespace> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Namespace> .
+<https://w3id.org/yang/server#namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to an XML namespace used in the XPath expression." .
+<https://w3id.org/yang/server#namespace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#namespace> <http://www.w3.org/2000/01/rdf-schema#label> "namespace" .
+# 
 # https://w3id.org/yang/server#period
 <https://w3id.org/yang/server#period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#PeriodicSubscription> .
@@ -168,6 +176,22 @@
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether SSH host key is verified to access the NETCONF server." .
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#hostKeyVerification> <http://www.w3.org/2000/01/rdf-schema#label> "host key verification" .
+# 
+# https://w3id.org/yang/server#namespacePrefix
+<https://w3id.org/yang/server#namespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Namespace> .
+<https://w3id.org/yang/server#namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/yang/server#namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "Prefix of the XML namespace." .
+<https://w3id.org/yang/server#namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#label> "namespace prefix" .
+# 
+# https://w3id.org/yang/server#namespaceURL
+<https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Namespace> .
+<https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of the XML namespace." .
+<https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#label> "namespace url" .
 # 
 # https://w3id.org/yang/server#subtreeValue
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -255,6 +279,12 @@
 <https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Intended Datastore" .
 <https://w3id.org/yang/server#IntendedDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#Namespace
+<https://w3id.org/yang/server#Namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an XML namespace used in the XPath expression." .
+<https://w3id.org/yang/server#Namespace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#Namespace> <http://www.w3.org/2000/01/rdf-schema#label> "Namespace" .
 # 
 # https://w3id.org/yang/server#NetconfCapability
 <https://w3id.org/yang/server#NetconfCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

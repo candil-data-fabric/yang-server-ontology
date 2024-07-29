@@ -104,6 +104,15 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "filter" .
 
 
+###  https://w3id.org/yang/server#namespace
+:namespace rdf:type owl:ObjectProperty ;
+           rdfs:domain :XPathFilter ;
+           rdfs:range :Namespace ;
+           rdfs:comment "Refers to an XML namespace used in the XPath expression." ;
+           rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+           rdfs:label "namespace" .
+
+
 ###  https://w3id.org/yang/server#period
 :period rdf:type owl:ObjectProperty ;
         rdfs:domain :PeriodicSubscription ;
@@ -178,6 +187,24 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:comment "Indicates whether SSH host key is verified to access the NETCONF server." ;
                      rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                      rdfs:label "host key verification" .
+
+
+###  https://w3id.org/yang/server#namespacePrefix
+:namespacePrefix rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Namespace ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Prefix of the XML namespace." ;
+                 rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+                 rdfs:label "namespace prefix" .
+
+
+###  https://w3id.org/yang/server#namespaceURL
+:namespaceURL rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Namespace ;
+              rdfs:range xsd:anyURI ;
+              rdfs:comment "URL of the XML namespace." ;
+              rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+              rdfs:label "namespace url" .
 
 
 ###  https://w3id.org/yang/server#subtreeValue
@@ -270,6 +297,13 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
                    rdfs:label "Intended Datastore" ;
                    rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#Namespace
+:Namespace rdf:type owl:Class ;
+           rdfs:comment "Represents an XML namespace used in the XPath expression." ;
+           rdfs:isDefinedBy <https://w3id.org/yang/server#> ;
+           rdfs:label "Namespace" .
 
 
 ###  https://w3id.org/yang/server#NetconfCapability

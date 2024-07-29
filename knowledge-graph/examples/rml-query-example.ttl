@@ -11,6 +11,7 @@
     ys:username "admin" ;
     ys:password "admin" ;
     ys:hostKeyVerification "false" ;
+.
 
 # In this example the NETCONF server is non-NMDA compatible.
 # Thus, only operational and running datastores are available.
@@ -27,6 +28,11 @@
 # rml:iterator replaces the ys:Filter in the YANG query
 <RML-query-xpath> a rml:LogicalSource;
     rml:source <query-xpath> ;
-    rml:referenceFormulation rml:XPath;
-    rml:iterator "/ietf-yang-library:yang-library";
+    rml:referenceFormulation rml:YANG_XPath;
+    rml:iterator "/yanglib:yang-library";
+    rml:namespace [
+        a rml:Namespace ;
+        rml:namespacePrefix "yanglib" ;
+        rml:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-yang-library" ;
+    ];
 .

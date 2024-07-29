@@ -9,6 +9,7 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#DynamicDatastore" title="https://w3id.org/yang/server#DynamicDatastore">Dynamic Datastore</a></li>
   <li><a href="#Filter" title="https://w3id.org/yang/server#Filter">Filter</a></li>
   <li><a href="#IntendedDatastore" title="https://w3id.org/yang/server#IntendedDatastore">Intended Datastore</a></li>
+  <li><a href="#Namespace" title="https://w3id.org/yang/server#Namespace">Namespace</a></li>
   <li><a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a></li>
   <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a></li>
   <li><a href="#OnChangeSubscription" title="https://w3id.org/yang/server#OnChangeSubscription">On-change Subscription</a></li>
@@ -183,6 +184,35 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Namespace">
+  <h3>Namespace<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#Namespace</p>
+  <div class="comment">
+   <span class="markdown">Represents an XML namespace used in the XPath expression.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#namespacePrefix" title="https://w3id.org/yang/server#namespacePrefix">namespace prefix</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#namespaceURL" title="https://w3id.org/yang/server#namespaceURL">namespace url</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#namespace" title="https://w3id.org/yang/server#namespace">namespace</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -520,7 +550,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#xpathValue" title="https://w3id.org/yang/server#xpathValue">xpath value</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#namespace" title="https://w3id.org/yang/server#namespace">namespace</a> <sup class="type-op" title="object property">op</sup>, <a href="#xpathValue" title="https://w3id.org/yang/server#xpathValue">xpath value</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -565,6 +595,7 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#capability" title="https://w3id.org/yang/server#capability">capability</a></li>
   <li><a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a></li>
   <li><a href="#filter" title="https://w3id.org/yang/server#filter">filter</a></li>
+  <li><a href="#namespace" title="https://w3id.org/yang/server#namespace">namespace</a></li>
   <li><a href="#period" title="https://w3id.org/yang/server#period">period</a></li>
   <li><a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a></li>
   <li><a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a></li>
@@ -662,6 +693,37 @@ This section provides details for each class and property defined by YANG Server
     </dt>
     <dd>
      <a href="#Filter" title="https://w3id.org/yang/server#Filter">Filter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="namespace">
+  <h3>namespace<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#namespace</p>
+  <div class="comment">
+   <span class="markdown">Refers to an XML namespace used in the XPath expression.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#XPathFilter" title="https://w3id.org/yang/server#XPathFilter">XPathFilter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Namespace" title="https://w3id.org/yang/server#Namespace">Namespace</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -794,6 +856,8 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a></li>
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
+  <li><a href="#namespacePrefix" title="https://w3id.org/yang/server#namespacePrefix">namespace prefix</a></li>
+  <li><a href="#namespaceURL" title="https://w3id.org/yang/server#namespaceURL">namespace url</a></li>
   <li><a href="#http://qudt.org/2.1/schema/qudt#numericValue" title="http://qudt.org/2.1/schema/qudt#numericValue">numeric value</a></li>
   <li><a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a></li>
   <li><a href="#username" title="https://w3id.org/yang/server#username">username</a></li>
@@ -924,6 +988,68 @@ This section provides details for each class and property defined by YANG Server
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="namespacePrefix">
+  <h3>namespace prefix<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#namespacePrefix</p>
+  <div class="comment">
+   <span class="markdown">Prefix of the XML namespace.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Namespace" title="https://w3id.org/yang/server#Namespace">Namespace</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="namespaceURL">
+  <h3>namespace url<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#namespaceURL</p>
+  <div class="comment">
+   <span class="markdown">URL of the XML namespace.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server#">https://w3id.org/yang/server#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Namespace" title="https://w3id.org/yang/server#Namespace">Namespace</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
     </dd>
    </dl>
   </div>

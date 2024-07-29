@@ -181,6 +181,19 @@
     
 
 
+    <!-- https://w3id.org/yang/server#namespace -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/yang/server#namespace">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#XPathFilter"/>
+        <rdfs:range rdf:resource="https://w3id.org/yang/server#Namespace"/>
+        <rdfs:comment>Refers to an XML namespace used in the XPath expression.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>namespace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/yang/server#period -->
 
 
@@ -293,6 +306,32 @@
         <rdfs:comment>Indicates whether SSH host key is verified to access the NETCONF server.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
         <rdfs:label>host key verification</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/yang/server#namespacePrefix -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#namespacePrefix">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#Namespace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Prefix of the XML namespace.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>namespace prefix</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/yang/server#namespaceURL -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/yang/server#namespaceURL">
+        <rdfs:domain rdf:resource="https://w3id.org/yang/server#Namespace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>URL of the XML namespace.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>namespace url</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -433,6 +472,17 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
         <rdfs:label>Intended Datastore</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/rfc8342"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/yang/server#Namespace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/yang/server#Namespace">
+        <rdfs:comment>Represents an XML namespace used in the XPath expression.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/yang/server#"/>
+        <rdfs:label>Namespace</rdfs:label>
     </owl:Class>
     
 

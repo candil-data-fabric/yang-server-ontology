@@ -24,7 +24,12 @@
     ys:sourceDatastore <datastores/server-1/operational> ;
     ys:filter [
         a ys:XPathFilter ;
-        ys:xpathValue "/ietf-yang-library:yang-library" ;
+        ys:xpathValue "/yanglib:yang-library" ;
+        ys:namespace [
+            a ys:Namespace ;
+            ys:namespacePrefix "yanglib" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-yang-library" ;
+        ];
     ];
 .
 
@@ -38,7 +43,7 @@
     ];
 .
 
-# Example 3: Periodic subscription to output packet counter of interfaces
+# Example 3: Periodic subscription to output octets counter of interfaces
 # Dynamic subscription is configured to push updated every 10 seconds
 # TODO: XPath expression for counter
 <sub-periodic> a ys:PeriodicSubscription ;
@@ -46,7 +51,12 @@
     ys:sourceDatastore <datastores/server-1/operational> ;
     ys:filter [
         a ys:XPathFilter ;
-        ys:xpathValue "/ietf-interfaces:interfaces/.../out-pkts" ;
+        ys:xpathValue "/ietf-interfaces:interfaces-state/interface/statistics/out-octets" ;
+        ys:namespace [
+            a ys:Namespace ;
+            ys:namespacePrefix "if" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
+        ];
     ];
     ys:period [
         a ys:Period ;
@@ -62,6 +72,11 @@
     ys:sourceDatastore <datastores/server-1/operational> ;
     ys:filter [
         a ys:XPathFilter
-        ys:xpathValue "/ietf-interfaces:interfaces/.../enabled" ;
+        ys:xpathValue "/ietf-interfaces:interfaces/enabled" ;
+        ys:namespace [
+            a ys:Namespace ;
+            ys:namespacePrefix "if" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
+        ];
     ];
 .

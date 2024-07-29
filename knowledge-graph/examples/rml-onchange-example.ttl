@@ -23,16 +23,17 @@
 <sub-onchange> a ys:PeriodicSubscription ;
     ys:sourceServer <server-1> ;
     ys:sourceDatastore <datastores/server-1/operational> ;
-    ys:filter [
-        a ys:XPathFilter
-        ys:xpathValue "/ietf-interfaces:interfaces/.../enabled" ;
-    ];
 .
 
 # Example 4-2: Note that ys:Subscription is processed as part of the RML mapping
 # rml:iterator replaces the ys:Filter in the YANG subscription
 <#RML-onchange> a rml:LogicalSource;
     rml:source <sub-onchange> ;
-    rml:referenceFormulation rml:XPath;
-    rml:iterator "/ietf-interfaces:interfaces/.../enabled";
+    rml:referenceFormulation rml:YANG_XPath;
+    rml:iterator "/ietf-interfaces:interfaces/enabled" ;
+    rml:namespace [
+        a rml:Namespace ;
+        rml:namespacePrefix "if" ;
+        rml:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
+    ];
 .

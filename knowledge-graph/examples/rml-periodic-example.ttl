@@ -35,6 +35,11 @@
 # rml:iterator replaces the ys:Filter in the YANG subscription
 <#RML-periodic> a rml:LogicalSource;
     rml:source <server-1> ;
-    rml:referenceFormulation rml:XPath;
-    rml:iterator "/ietf-interfaces:interfaces/.../out-pkts";
+    rml:referenceFormulation rml:YANG_XPath;
+    rml:iterator "/ietf-interfaces:interfaces-state/interface/statistics/out-octets" ;
+    rml:namespace [
+        a rml:Namespace ;
+        rml:namespacePrefix "if" ;
+        rml:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
+    ];
 .
