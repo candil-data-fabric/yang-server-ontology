@@ -24,7 +24,7 @@
     ys:sourceDatastore <datastores/server-1/operational> ;
     ys:filter [
         a ys:XPathFilter ;
-        ys:xpathValue "/yanglib:yang-library" ;
+        ys:xpathValue "/yanglib:modules-state" ;
         ys:namespace [
             a ys:Namespace ;
             ys:namespacePrefix "yanglib" ;
