@@ -3,12 +3,12 @@
 @prefix rml: <http://w3id.org/rml/> .
 @prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
 @prefix ys: <https://w3id.org/yang/server#> .
-@prefix yl: <https://w3id.org/yang/library#> .
-@base <https://example.org/> .
+@prefix ifaces: <https://w3id.org/interfaces#> .
+@base <https://interfaces.org/> .
 
 # Basic details for connecting to NETCONF server
 <server-1> a ys:NetconfServer, rml:Source ;
-    ys:endpoint "10.90.90.70:830" ;
+    ys:endpoint "192.168.1.10:830" ;
     ys:username "admin" ;
     ys:password "admin" ;
     ys:hostKeyVerification "false" ;
@@ -28,34 +28,46 @@
   rml:logicalSource [ a rml:LogicalSource;
     rml:source [ a ys:Query ;
       ys:sourceServer <server-1> ;
-      ys:sourceDatastore <datastores/server-1/operational> ;
+      ys:sourceDatastore <datastores/server-1/running> ;
     ];
-    rml:referenceFormulation rml:YANG_XPath ;
-    rml:iterator "/yanglib:modules-state/yanglib:module";
-    rml:namespace [
-        a rml:Namespace ;
-        rml:namespacePrefix "yanglib" ;
-        rml:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-yang-library" ;
+    rml:referenceFormulation [ a rml:XPathReferenceFormulation;
+      rml:namespace [ a rml:Namespace ;
+        rml:namespacePrefix "if" ;
+        rml:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
+      ];
+      rml:namespace [ a rml:Namespace ;
+          rml:namespacePrefix "ip" ;
+          rml:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-ip" ;
+      ];
     ];
+    rml:iterator "/if:interfaces/if:interface";
   ];
   rml:subjectMap [ a rml:SubjectMap;
-    rml:template "http://example.org/module/{name/text()}:{revision/text()}";
-    rml:class yl:Module;
+    rml:template "http://example.org/module/{if:name/text()}";
+    rml:class ifaces:Interface;
   ];
   rml:predicateObjectMap [ a rml:PredicateObjectMap;
     rml:predicateMap [ a rml:PredicateMap;
-      rml:constant yl:name;
+      rml:constant ifaces:name;
     ];
     rml:objectMap [ a rml:ObjectMap;
-      rml:reference "name/text()";
+      rml:reference "if:name/text()";
     ];
   ];
   rml:predicateObjectMap [ a rml:PredicateObjectMap;
     rml:predicateMap [ a rml:PredicateMap;
-      rml:constant yl:revision;
+      rml:constant ifaces:enabled;
     ];
     rml:objectMap [ a rml:ObjectMap;
-      rml:reference "revision/text()";
+      rml:reference "if:enabled/text()";
+    ];
+  ];
+  rml:predicateObjectMap [ a rml:PredicateObjectMap;
+    rml:predicateMap [ a rml:PredicateMap;
+      rml:constant ifaces:ipv4enabled;
+    ];
+    rml:objectMap [ a rml:ObjectMap;
+      rml:reference "ip:ipv4/ip:enabled/text()";
     ];
   ];
 .

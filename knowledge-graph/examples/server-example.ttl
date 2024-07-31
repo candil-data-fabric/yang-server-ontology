@@ -11,7 +11,7 @@
     ys:hostKeyVerification "false" ;
     ys:datastore <datastores/server/operational> ;
     ys:datastore <datastores/server/running> ;
-    ys:capability <netconfCapabilities/YangLibraryCapability> .
+    ys:capability <netconfCapabilities/XPathCapability> .
 
 # In this example the NETCONF server is non-NMDA compatible.
 # Thus, only operational and running datastores are available.
@@ -22,11 +22,9 @@
 <query-xpath> a ys:Query ;
     ys:sourceServer <server-1> ;
     ys:sourceDatastore <datastores/server-1/operational> ;
-    ys:filter [
-        a ys:XPathFilter ;
-        ys:xpathValue "/yanglib:modules-state" ;
-        ys:namespace [
-            a ys:Namespace ;
+    ys:filter [ a ys:XPathFilter ;
+        ys:xpathValue "/yanglib:modules-state/yanglib:module" ;
+        ys:namespace [ a ys:Namespace ;
             ys:namespacePrefix "yanglib" ;
             ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-yang-library" ;
         ];
@@ -36,10 +34,14 @@
 # TODO: Example 2: Query with Subtree filter
 <query-subtree> a ys:Query ;
     ys:sourceServer <server-1> ;
-    ys:sourceDatastore <datastores/server-1/operational> ;
-    ys:filter [
-        a ys:SubtreeFilter ;
-        ys:subtreeValue "..." ;
+    ys:sourceDatastore <datastores/server-1/running> ;
+    ys:filter [ a ys:SubtreeFilter ;
+        ys:subtreeValue """
+        <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+          <interface>
+          </interface>
+        </interfaces>
+        """;
     ];
 .
 
@@ -49,34 +51,36 @@
 <sub-periodic> a ys:PeriodicSubscription ;
     ys:sourceServer <server-1> ;
     ys:sourceDatastore <datastores/server-1/operational> ;
-    ys:filter [
-        a ys:XPathFilter ;
-        ys:xpathValue "/ietf-interfaces:interfaces-state/interface/statistics/out-octets" ;
-        ys:namespace [
-            a ys:Namespace ;
+    ys:filter [ a ys:XPathFilter ;
+        ys:xpathValue "/if:interfaces-state/if:interface/if:statistics/if:out-octets" ;
+        ys:namespace [ a ys:Namespace ;
             ys:namespacePrefix "if" ;
             ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
         ];
+        ys:namespace [ a ys:Namespace ;
+            ys:namespacePrefix "ip" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-ip" ;
+        ];
     ];
-    ys:period [
-        a ys:Period ;
+    ys:period [ a ys:Period ;
         qudt:numericValue "10" ;
         qudt:unit <https://qudt.org/2.1/vocab/unit/SEC>
     ];
 .
 
 # Example 4: On-change subscription to interface enabled status
-# TODO: XPath expression
-<sub-onchange> a ys:PeriodicSubscription ;
+<sub-onchange> a ys:OnChangeSubscription ;
     ys:sourceServer <server-1> ;
-    ys:sourceDatastore <datastores/server-1/operational> ;
-    ys:filter [
-        a ys:XPathFilter
-        ys:xpathValue "/ietf-interfaces:interfaces/enabled" ;
-        ys:namespace [
-            a ys:Namespace ;
+    ys:sourceDatastore <datastores/server-1/running> ;
+    ys:filter [ a ys:XPathFilter
+        ys:xpathValue "/if:interfaces/if:interface/if:enabled" ;
+        ys:namespace [ a ys:Namespace ;
             ys:namespacePrefix "if" ;
             ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
+        ];
+        ys:namespace [ a ys:Namespace ;
+            ys:namespacePrefix "ip" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-ip" ;
         ];
     ];
 .
