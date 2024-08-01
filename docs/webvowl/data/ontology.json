@@ -9,7 +9,9 @@
     "iri" : "https://w3id.org/yang/server#",
     "version" : "1.4.1",
     "author" : [ "Ignacio Dominguez Martinez-Casanueva" ],
-    "description" : { },
+    "description" : {
+      "undefined" : "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 "
+    },
     "labels" : {
       "en" : "YANG Server Ontology"
     },
@@ -441,12 +443,12 @@
   }, {
     "instances" : 0,
     "union" : [ "50", "1" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "30"
   }, {
     "instances" : 0,
     "union" : [ "50", "1" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "41"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -458,7 +460,7 @@
   }, {
     "instances" : 0,
     "union" : [ "50", "1" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "53"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -658,30 +660,6 @@
       "undefined" : "Netconf Capability"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/yang/server#WritableRunningCapability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.2",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "The `:writable-running` capability indicates that the device supports direct writes to the `<running>` configuration datastore. In other words, the device supports `<edit-config>` and `<copy-config>` operations where the `<running>` configuration is the target."
-      },
-      "labels" : {
-        "IRI-based" : "WritableRunningCapability",
-        "undefined" : "Writable Running Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#CandidateCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
@@ -704,6 +682,30 @@
       "labels" : {
         "IRI-based" : "CandidateCapability",
         "undefined" : "Candidate Capability"
+      }
+    }, {
+      "iri" : "https://w3id.org/yang/server#WritableRunningCapability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server#",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.2",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "The `:writable-running` capability indicates that the device supports direct writes to the `<running>` configuration datastore. In other words, the device supports `<edit-config>` and `<copy-config>` operations where the `<running>` configuration is the target."
+      },
+      "labels" : {
+        "IRI-based" : "WritableRunningCapability",
+        "undefined" : "Writable Running Capability"
       }
     }, {
       "iri" : "https://w3id.org/yang/server#XpathCapability",

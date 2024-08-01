@@ -1,5 +1,7 @@
 # YANG Server Ontology
 
+Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.
+
 Online documentation: https://w3id.org/yang/server
 
 ![YANG Server Ontology](diagrams/yang-server.svg)
@@ -11,8 +13,5 @@ We encourage to locally develop the ontology documentation before publishing it 
 To generate the documentation, issue the following command:
 
 ```bash
-docker run -ti --rm \
-  -v `pwd`/ontology:/usr/local/widoco/in \
-  -v `pwd`/docs:/usr/local/widoco/out \
-  ghcr.io/dgarijo/widoco:v1.4.25 -ontFile in/yang-server.owl -outFolder out -webVowl -oops  -getOntologyMetadata -htaccess -licensius
+./generate-docs.sh
 ```

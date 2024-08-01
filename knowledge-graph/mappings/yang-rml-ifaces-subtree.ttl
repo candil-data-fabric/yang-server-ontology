@@ -8,7 +8,7 @@
 
 # Basic details for connecting to NETCONF server
 <server-1> a ys:NetconfServer, rml:Source ;
-    ys:endpoint "10.70.90.70:830" ;
+    ys:endpoint "192.168.1.10:830" ;
     ys:username "admin" ;
     ys:password "admin" ;
     ys:hostKeyVerification "false" ;

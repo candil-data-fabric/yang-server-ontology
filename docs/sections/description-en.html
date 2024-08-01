@@ -1,5 +1,26 @@
 <h2 id="desc" class="list">YANG Server Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.
+<span class="markdown">
 
+Figure 1 depicts the YANG Server ontology following the [Chowlk](https://chowlk.linkeddata.es) notation.
+
+</span>
+
+<center>
+    <img src="resources/images/yang-server.svg" alt="General overview of the YANG Server ontology" width="75%"> <figcaption><b>Figure 1.</b> - General overview of the YANG Server ontology.</figcaption>
+</center>
+
+<span class="markdown">
+
+The ontology revolves around the core concept of `ys:YangServer`, which represents a YANG server such as a network device or an SDN controller. This class includes the necessary details for connecting to the YANG server using basic authentication mechanism, i.e., username (`ys:username`), password (`ys:password`), and endpoint (`ys:endpoint`) where the YANG server is listening to, expressed in the form _host:port_. Additionally, taking inspiration from the Network Management Datastore Architecture (NMDA) [RFC 8342](https://datatracker.ietf.org/doc/rfc8342/), the ontology models the different types of YANG datastores (`ys:Datastore`) that a YANG server could have.
+
+Basic management operations for retrieving YANG data from the YANG server are covered in the ontology. In particular, queries (`ys:Query`) and subscriptions (`ys:Subscription`) are represented.
+
+A YANG query indicates the target YANG server and YANG datastore to obtain the data from, as well as a filter (`ys:Filter`) for selecting a subset of YANG data from the server. There are two possible types of filters that can be used in a query: XPath filter (`ys:XPathFilter) and XML subtree filter (`ys:SubtreeFilter`). An XPath filter describes the selection of YANG data using an XPath expression along with a map of XML namespaces and prefixes. Please, note that support for this types of filters will be determined by the capabilities of the YANG server and the network management protocols used (e.g., subtree filters are only possible in NETCONF).
+
+Similarly, a YANG subcription specifies the target YANG server, datastore, and filters, but also indicates additional aspects based on the type of subscription. A YANG subscription could trigger notification events upon changes on the selected data (`ys:OnChangeSubscription`) or could trigger notification events periodically based on the specified time interval (`ys:PeriodicSubscription`).
+
+For the moment, the ontology has been extended with additional concepts related to the NETCONF network management protocol [RFC 6241](https://datatracker.ietf.org/doc/rfc6241/). Support of NETCONF protocol is represented by the concept of a NETCONF server (`ys:NetconfServer`) as a type of YANG server. Additionally, other NETCONF aspects are represented such as NETCONF capabilities (`ys:NetconfCapability`). In this regard, a set of standard NETCONF capabilities have been incorporated into the ontology such as `ys:XpathCapability`, which indicates that the NETCONF server supports XPath filters.
+
+Future releases are expected to extend this ontology with new concepts that cover other network management protocols like RESTCONF and gNMI.
 </span>

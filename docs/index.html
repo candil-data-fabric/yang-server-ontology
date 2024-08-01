@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/yang/server#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/yang/server#","name":"YANG Server Ontology", "headline":"Document describing the ontology https://w3id.org/yang/server#", "dateReleased":"Mon Jul 29 09:03:17 UTC 2024", "version":"1.4.1", "license":"http://purl.org/NET/rdflicense/APACHE2.0", "author":[{"@type":"Person","name":"Ignacio Dominguez Martinez-Casanueva"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/yang/server#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/yang/server#","name":"YANG Server Ontology", "headline":"Document describing the ontology https://w3id.org/yang/server#", "dateReleased":"Thu Aug 01 09:47:02 UTC 2024", "version":"1.4.1", "license":"http://purl.org/NET/rdflicense/APACHE2.0", "author":[{"@type":"Person","name":"Ignacio Dominguez Martinez-Casanueva"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -57,8 +57,6 @@ function loadTOC(){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
       $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#nstable").load("sections/ns-en.html"); 
       $("#overview").load("sections/overview-en.html"); 
       $("#description").load("sections/description-en.html"); 
       $("#references").load("sections/references-en.html"); 
@@ -93,9 +91,7 @@ function loadTOC(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"></div>
-<div id="toc"></div>     <div id="introduction"></div>
-	  <div id="nstable"></div>
-     <div id="overview"></div>
+<div id="toc"></div>     <div id="overview"></div>
      <div id="description"></div>
      <div id="crossref"></div>
      <div id="references"></div>
