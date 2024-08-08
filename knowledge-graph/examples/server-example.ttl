@@ -1,27 +1,25 @@
-
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
 @prefix ys: <https://w3id.org/yang/server#> .
 @base <https://example.org/> .
 
-<server-1> a ys:NetconfServer ;
+<netconf-server-1> a ys:NetconfServer ;
     ys:endpoint "192.168.1.10:830" ;
     ys:username "admin" ;
     ys:password "admin" ;
     ys:hostKeyVerification "false" ;
-    ys:datastore <datastores/server/operational> ;
-    ys:datastore <datastores/server/running> ;
-    ys:capability <netconfCapabilities/XPathCapability> .
+    ys:datastore <datastores/netconf-server-1/operational> ;
+    ys:datastore <datastores/netconf-server-1/running> ;
+    ys:capability <netconfCapabilities/XpathCapability> .
 
 # In this example the NETCONF server is non-NMDA compatible.
 # Thus, only operational and running datastores are available.
-<datastores/server-1/operational> a ys:OperationalDatastore .
-<datastores/server-1/running> a ys:RunningDatastore .
+<datastores/netconf-server-1/operational> a ys:OperationalDatastore .
+<datastores/netconf-server-1/running> a ys:RunningDatastore .
 
-# Example 1: Query to fetch YANG library from NETCONF server
+# Example 1: Query with XPath filter to NETCONF server
 <query-xpath> a ys:Query ;
-    ys:sourceServer <server-1> ;
-    ys:sourceDatastore <datastores/server-1/operational> ;
+    ys:sourceServer <netconf-server-1> ;
+    ys:sourceDatastore <datastores/netconf-server-1/operational> ;
     ys:filter [ a ys:XPathFilter ;
         ys:xpathValue "/yanglib:modules-state/yanglib:module" ;
         ys:namespace [ a ys:Namespace ;
@@ -31,26 +29,25 @@
     ];
 .
 
-# TODO: Example 2: Query with Subtree filter
+# Example 2: Query with Subtree filter to NETCONF server
 <query-subtree> a ys:Query ;
-    ys:sourceServer <server-1> ;
-    ys:sourceDatastore <datastores/server-1/running> ;
+    ys:sourceServer <netconf-server-1> ;
+    ys:sourceDatastore <datastores/netconf-server-1/running> ;
     ys:filter [ a ys:SubtreeFilter ;
-        ys:subtreeValue """
+        ys:subtreeValue '''
         <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
           <interface>
           </interface>
         </interfaces>
-        """;
+        ''';
     ];
 .
 
 # Example 3: Periodic subscription to output octets counter of interfaces
 # Dynamic subscription is configured to push updated every 10 seconds
-# TODO: XPath expression for counter
 <sub-periodic> a ys:PeriodicSubscription ;
-    ys:sourceServer <server-1> ;
-    ys:sourceDatastore <datastores/server-1/operational> ;
+    ys:sourceServer <netconf-server-1> ;
+    ys:sourceDatastore <datastores/netconf-server-1/operational> ;
     ys:filter [ a ys:XPathFilter ;
         ys:xpathValue "/if:interfaces-state/if:interface/if:statistics/if:out-octets" ;
         ys:namespace [ a ys:Namespace ;
@@ -70,8 +67,8 @@
 
 # Example 4: On-change subscription to interface enabled status
 <sub-onchange> a ys:OnChangeSubscription ;
-    ys:sourceServer <server-1> ;
-    ys:sourceDatastore <datastores/server-1/running> ;
+    ys:sourceServer <netconf-server-1> ;
+    ys:sourceDatastore <datastores/netconf-server-1/running> ;
     ys:filter [ a ys:XPathFilter
         ys:xpathValue "/if:interfaces/if:interface/if:enabled" ;
         ys:namespace [ a ys:Namespace ;
