@@ -6,7 +6,7 @@
     "title" : {
       "undefined" : "YANG Server Ontology"
     },
-    "iri" : "https://w3id.org/yang/server#",
+    "iri" : "https://w3id.org/yang/server",
     "version" : "1.4.1",
     "author" : [ "Ignacio Dominguez Martinez-Casanueva" ],
     "description" : {
@@ -40,10 +40,10 @@
         "value" : "2024-07-21",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "ys",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -51,6 +51,12 @@
         "language" : "undefined",
         "value" : "1.4.1",
         "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -68,13 +74,13 @@
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "6",
@@ -92,23 +98,38 @@
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "41",
-    "type" : "owl:Class"
-  }, {
-    "id" : "14",
+    "id" : "50",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "53",
-    "type" : "owl:Class"
+    "id" : "51",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Thing"
   }, {
     "id" : "25",
-    "type" : "owl:Thing"
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "9",
     "type" : "rdfs:Datatype"
@@ -116,49 +137,34 @@
     "id" : "43",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "55",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "18",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "56",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "22",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "57",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "58",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "13",
-    "type" : "owl:Class"
-  }, {
-    "id" : "46",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "59",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "21",
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "56",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "24",
     "type" : "owl:Class"
   }, {
     "id" : "45",
     "type" : "owl:Class"
   }, {
-    "id" : "50",
+    "id" : "57",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "39",
@@ -178,7 +184,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -205,7 +211,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -232,7 +238,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -249,8 +255,8 @@
     "comment" : {
       "undefined" : "A configuration datastore holding the current configuration of the device.  It may include configuration that requires further transformations before it can be applied."
     },
-    "id" : "10",
-    "superClasses" : [ "11" ]
+    "id" : "13",
+    "superClasses" : [ "14" ]
   }, {
     "iri" : "https://w3id.org/yang/server#IntendedDatastore",
     "baseIri" : "https://w3id.org/yang/server",
@@ -259,7 +265,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -276,8 +282,8 @@
     "comment" : {
       "undefined" : "A configuration datastore holding the complete intended configuration of the device. This represents the configuration after all configuration transformations to <running> have been performed and is the configuration that the system attempts to apply."
     },
-    "id" : "15",
-    "superClasses" : [ "11" ]
+    "id" : "21",
+    "superClasses" : [ "14" ]
   }, {
     "iri" : "https://w3id.org/yang/server#YangServer",
     "baseIri" : "https://w3id.org/yang/server",
@@ -286,7 +292,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -304,7 +310,7 @@
     "comment" : {
       "undefined" : "An entity that provides access to YANG-defined data to a client, over some network management protocol."
     },
-    "id" : "19"
+    "id" : "22"
   }, {
     "iri" : "https://w3id.org/yang/server#Datastore",
     "baseIri" : "https://w3id.org/yang/server",
@@ -313,7 +319,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -327,7 +333,7 @@
       "IRI-based" : "Datastore",
       "undefined" : "Datastore"
     },
-    "subClasses" : [ "32", "11", "5" ],
+    "subClasses" : [ "32", "14", "5" ],
     "comment" : {
       "undefined" : "A conceptual place to store and access information. A datastore might be implemented, for example, using files, a database, flash memory locations, or combinations thereof. A datastore maps to an instantiated YANG data tree."
     },
@@ -340,7 +346,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -358,7 +364,7 @@
       "undefined" : "A configuration datastore holding the configuration loaded by the device into the running configuration datastore when it boots."
     },
     "id" : "28",
-    "superClasses" : [ "11" ]
+    "superClasses" : [ "14" ]
   }, {
     "iri" : "https://w3id.org/yang/server#DynamicDatastore",
     "baseIri" : "https://w3id.org/yang/server",
@@ -367,7 +373,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -394,7 +400,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -412,7 +418,7 @@
       "undefined" : "A configuration datastore that can be manipulated without impacting the device's running configuration datastore and that can be committed to the running configuration datastore."
     },
     "id" : "37",
-    "superClasses" : [ "11" ]
+    "superClasses" : [ "14" ]
   }, {
     "iri" : "https://w3id.org/yang/server#PeriodicSubscription",
     "baseIri" : "https://w3id.org/yang/server",
@@ -421,7 +427,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -441,34 +447,58 @@
     "id" : "3",
     "superClasses" : [ "1" ]
   }, {
-    "instances" : 0,
-    "union" : [ "50", "1" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "30"
-  }, {
-    "instances" : 0,
-    "union" : [ "50", "1" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "41"
-  }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "14",
+    "id" : "50",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
   }, {
-    "instances" : 0,
-    "union" : [ "50", "1" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "53"
-  }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "25",
+    "id" : "51",
     "label" : {
       "undefined" : "Thing"
     }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "16",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://qudt.org/2.1/schema/qudt/Unit",
+    "baseIri" : "http://qudt.org/2.1/schema/qudt",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://qudt.org/2.1/schema/qudt",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Unit",
+      "undefined" : "Unit"
+    },
+    "attributes" : [ "external" ],
+    "id" : "17"
   }, {
     "iri" : "https://w3id.org/yang/server#Period",
     "baseIri" : "https://w3id.org/yang/server",
@@ -477,7 +507,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -496,6 +526,32 @@
     },
     "id" : "4"
   }, {
+    "instances" : 0,
+    "union" : [ "57", "1" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "9",
@@ -512,62 +568,16 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "55",
+    "id" : "59",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
-    "id" : "18",
+    "id" : "20",
     "label" : {
       "IRI-based" : "XMLLiteral"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "56",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "22",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://qudt.org/2.1/schema/qudt#Unit",
-    "baseIri" : "http://qudt.org/2.1/schema/qudt",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://qudt.org/2.1/schema/qudt/",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Unit",
-      "undefined" : "Unit"
-    },
-    "attributes" : [ "external" ],
-    "id" : "26"
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "57",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "58",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
     }
   }, {
     "iri" : "https://w3id.org/yang/server#Filter",
@@ -577,7 +587,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -591,25 +601,21 @@
       "IRI-based" : "Filter",
       "undefined" : "Filter"
     },
-    "subClasses" : [ "21", "17" ],
+    "subClasses" : [ "24", "19" ],
     "comment" : {
       "undefined" : "Evaluation criteria that may be applied to fetch data from a given YANG server."
     },
-    "id" : "13"
+    "id" : "11"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "46",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "instances" : 0,
+    "union" : [ "57", "1" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "30"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "59",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "instances" : 0,
+    "union" : [ "57", "1" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "56"
   }, {
     "iri" : "https://w3id.org/yang/server#XPathFilter",
     "baseIri" : "https://w3id.org/yang/server",
@@ -618,7 +624,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -630,13 +636,13 @@
     },
     "label" : {
       "IRI-based" : "XPathFilter",
-      "undefined" : "XPathFilter"
+      "undefined" : "XPath Filter"
     },
     "comment" : {
       "undefined" : "Evaluation criteria based on XPath expression."
     },
-    "id" : "21",
-    "superClasses" : [ "13" ]
+    "id" : "24",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "https://w3id.org/yang/server#NetconfCapability",
     "baseIri" : "https://w3id.org/yang/server",
@@ -645,7 +651,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -666,7 +672,7 @@
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
+          "value" : "https://w3id.org/yang/server",
           "type" : "iri"
         } ],
         "seeAlso" : [ {
@@ -690,7 +696,7 @@
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
+          "value" : "https://w3id.org/yang/server",
           "type" : "iri"
         } ],
         "seeAlso" : [ {
@@ -714,7 +720,7 @@
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
+          "value" : "https://w3id.org/yang/server",
           "type" : "iri"
         } ],
         "seeAlso" : [ {
@@ -738,7 +744,7 @@
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
+          "value" : "https://w3id.org/yang/server",
           "type" : "iri"
         } ],
         "seeAlso" : [ {
@@ -762,7 +768,7 @@
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
+          "value" : "https://w3id.org/yang/server",
           "type" : "iri"
         } ],
         "seeAlso" : [ {
@@ -780,37 +786,13 @@
         "undefined" : "Yang Library Capability"
       }
     }, {
-      "iri" : "https://w3id.org/yang/server#DistinctStartupCapability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.7",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots."
-      },
-      "labels" : {
-        "IRI-based" : "DistinctStartupCapability",
-        "undefined" : "Distinct Startup Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#RollbackOnErrorCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
+          "value" : "https://w3id.org/yang/server",
           "type" : "iri"
         } ],
         "seeAlso" : [ {
@@ -828,13 +810,37 @@
         "undefined" : "Rollback-on-Error Capability"
       }
     }, {
+      "iri" : "https://w3id.org/yang/server#DistinctStartupCapability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.7",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots."
+      },
+      "labels" : {
+        "IRI-based" : "DistinctStartupCapability",
+        "undefined" : "Distinct Startup Capability"
+      }
+    }, {
       "iri" : "https://w3id.org/yang/server#UrlCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
+          "value" : "https://w3id.org/yang/server",
           "type" : "iri"
         } ],
         "seeAlso" : [ {
@@ -858,7 +864,7 @@
         "isDefinedBy" : [ {
           "identifier" : "isDefinedBy",
           "language" : "undefined",
-          "value" : "https://w3id.org/yang/server#",
+          "value" : "https://w3id.org/yang/server",
           "type" : "iri"
         } ],
         "seeAlso" : [ {
@@ -888,7 +894,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -905,7 +911,7 @@
     "comment" : {
       "undefined" : "Represents a query operation to a YANG server using the corresponding network management protocol."
     },
-    "id" : "50"
+    "id" : "57"
   }, {
     "iri" : "https://w3id.org/yang/server#ConventionalDatastore",
     "baseIri" : "https://w3id.org/yang/server",
@@ -914,7 +920,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -928,11 +934,11 @@
       "IRI-based" : "ConventionalDatastore",
       "undefined" : "Conventional Datastore"
     },
-    "subClasses" : [ "10", "37", "15", "28" ],
+    "subClasses" : [ "13", "37", "21", "28" ],
     "comment" : {
       "undefined" : "One of the following set of configuration datastores: <running>, <startup>, <candidate>, and <intended>.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores."
     },
-    "id" : "11",
+    "id" : "14",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "https://w3id.org/yang/server#SubtreeFilter",
@@ -942,7 +948,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -954,13 +960,13 @@
     },
     "label" : {
       "IRI-based" : "SubtreeFilter",
-      "undefined" : "SubtreeFilter"
+      "undefined" : "Subtree Filter"
     },
     "comment" : {
       "undefined" : "Evaluation criteria based on XML subtree expression."
     },
-    "id" : "17",
-    "superClasses" : [ "13" ]
+    "id" : "19",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "https://w3id.org/yang/server#Namespace",
     "baseIri" : "https://w3id.org/yang/server",
@@ -969,7 +975,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -989,7 +995,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -1016,7 +1022,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -1034,7 +1040,7 @@
       "undefined" : "YANG server that can be managed via the NETCONF protocol."
     },
     "id" : "8",
-    "superClasses" : [ "19" ]
+    "superClasses" : [ "22" ]
   } ],
   "property" : [ {
     "id" : "2",
@@ -1043,20 +1049,20 @@
     "id" : "7",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "12",
+    "id" : "10",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "16",
-    "type" : "owl:datatypeProperty"
+    "id" : "15",
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "20",
+    "id" : "18",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "23",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "24",
-    "type" : "owl:objectProperty"
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "27",
     "type" : "rdfs:SubClassOf"
@@ -1100,13 +1106,13 @@
     "id" : "49",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "51",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "52",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "54",
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
     "type" : "owl:objectProperty"
   }, {
     "id" : "60",
@@ -1119,10 +1125,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "63",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "64",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "65",
     "type" : "owl:datatypeProperty"
@@ -1135,7 +1141,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -1163,7 +1169,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1180,12 +1186,12 @@
   }, {
     "iri" : "https://w3id.org/yang/server#filterValue",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "14",
+    "range" : "12",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -1199,21 +1205,40 @@
       "IRI-based" : "filterValue",
       "undefined" : "filter value"
     },
-    "domain" : "13",
+    "domain" : "11",
     "comment" : {
       "undefined" : "Value used by filter to access YANG data of the NETCONF server."
     },
     "attributes" : [ "datatype" ],
-    "id" : "12"
+    "id" : "10"
   }, {
-    "iri" : "https://w3id.org/yang/server#subtreeValue",
-    "baseIri" : "https://w3id.org/yang/server",
-    "range" : "18",
+    "iri" : "http://qudt.org/2.1/schema/qudt/unit",
+    "baseIri" : "http://qudt.org/2.1/schema/qudt",
+    "range" : "17",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "http://qudt.org/2.1/schema/qudt",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "unit",
+      "undefined" : "unit"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/yang/server#subtreeValue",
+    "baseIri" : "https://w3id.org/yang/server",
+    "range" : "20",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1221,21 +1246,21 @@
       "IRI-based" : "subtreeValue",
       "undefined" : "subtree value"
     },
-    "domain" : "17",
+    "domain" : "19",
     "comment" : {
       "undefined" : "XML Subtree filter used to access YANG data of the NETCONF server."
     },
     "attributes" : [ "datatype" ],
-    "id" : "16"
+    "id" : "18"
   }, {
     "iri" : "https://w3id.org/yang/server#xpathValue",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "22",
+    "range" : "25",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "example" : [ {
@@ -1249,50 +1274,31 @@
       "IRI-based" : "xpathValue",
       "undefined" : "xpath value"
     },
-    "domain" : "21",
+    "domain" : "24",
     "comment" : {
       "undefined" : "XPath expression used to access YANG data of the YANG server."
     },
     "attributes" : [ "datatype" ],
-    "id" : "20"
+    "id" : "23"
   }, {
     "range" : "1",
     "domain" : "0",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "23"
+    "id" : "26"
   }, {
-    "iri" : "http://qudt.org/2.1/schema/qudt#unit",
-    "baseIri" : "http://qudt.org/2.1/schema/qudt",
-    "range" : "26",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://qudt.org/2.1/schema/qudt/",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "unit",
-      "undefined" : "unit"
-    },
-    "domain" : "25",
-    "attributes" : [ "object", "external" ],
-    "id" : "24"
-  }, {
-    "range" : "11",
+    "range" : "14",
     "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
     "id" : "27"
   }, {
     "iri" : "https://w3id.org/yang/server#filter",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "13",
+    "range" : "11",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1302,7 +1308,7 @@
     },
     "domain" : "30",
     "comment" : {
-      "undefined" : "Refers to the YANG filter used when accessing the YANG server via a given network management protocol."
+      "undefined" : "Refers to the YANG filter used when accessing the YANG server using a network management protocol."
     },
     "attributes" : [ "object" ],
     "id" : "29"
@@ -1312,22 +1318,22 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "31"
   }, {
-    "range" : "11",
-    "domain" : "10",
+    "range" : "14",
+    "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
     "id" : "33"
   }, {
-    "range" : "13",
-    "domain" : "17",
+    "range" : "11",
+    "domain" : "19",
     "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
-    "range" : "11",
-    "domain" : "15",
+    "range" : "14",
+    "domain" : "21",
     "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
-    "range" : "11",
+    "range" : "14",
     "domain" : "37",
     "attributes" : [ "object", "anonymous" ],
     "id" : "36"
@@ -1339,7 +1345,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1347,7 +1353,7 @@
       "IRI-based" : "namespace",
       "undefined" : "namespace"
     },
-    "domain" : "21",
+    "domain" : "24",
     "comment" : {
       "undefined" : "Refers to an XML namespace used in the XPath expression."
     },
@@ -1356,12 +1362,12 @@
   }, {
     "iri" : "https://w3id.org/yang/server#sourceServer",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "19",
+    "range" : "22",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1371,7 +1377,7 @@
     },
     "domain" : "41",
     "comment" : {
-      "undefined" : "Refers to the YANG server which the YANG query is sent to via a given network management protocol."
+      "undefined" : "Refers to the YANG server which the YANG operation is sent to using a network management protocol."
     },
     "attributes" : [ "object" ],
     "id" : "40"
@@ -1383,7 +1389,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1423,24 +1429,24 @@
     "id" : "47"
   }, {
     "range" : "6",
-    "domain" : "11",
+    "domain" : "14",
     "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
-    "range" : "13",
-    "domain" : "21",
+    "range" : "11",
+    "domain" : "24",
     "attributes" : [ "object", "anonymous" ],
     "id" : "49"
   }, {
     "range" : "6",
     "domain" : "32",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "51"
+    "id" : "52"
   }, {
-    "range" : "19",
+    "range" : "22",
     "domain" : "8",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "52"
+    "id" : "53"
   }, {
     "iri" : "https://w3id.org/yang/server#sourceDatastore",
     "baseIri" : "https://w3id.org/yang/server",
@@ -1449,7 +1455,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1457,21 +1463,21 @@
       "IRI-based" : "sourceDatastore",
       "undefined" : "source datastore"
     },
-    "domain" : "53",
+    "domain" : "56",
     "comment" : {
       "undefined" : "Refers to the YANG datastore of the source YANG server to be selected in the YANG operation."
     },
     "attributes" : [ "object" ],
-    "id" : "54"
+    "id" : "55"
   }, {
     "iri" : "https://w3id.org/yang/server#username",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "56",
+    "range" : "54",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1479,7 +1485,7 @@
       "IRI-based" : "username",
       "undefined" : "username"
     },
-    "domain" : "19",
+    "domain" : "22",
     "comment" : {
       "undefined" : "Username for accessing the YANG server."
     },
@@ -1488,12 +1494,12 @@
   }, {
     "iri" : "https://w3id.org/yang/server#namespaceURL",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "55",
+    "range" : "59",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1515,7 +1521,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1523,31 +1529,12 @@
       "IRI-based" : "datastore",
       "undefined" : "datastore"
     },
-    "domain" : "19",
+    "domain" : "22",
     "comment" : {
       "undefined" : "Indicates the YANG datastore used by the YANG server."
     },
     "attributes" : [ "object" ],
     "id" : "62"
-  }, {
-    "iri" : "http://qudt.org/2.1/schema/qudt#numericValue",
-    "baseIri" : "http://qudt.org/2.1/schema/qudt",
-    "range" : "58",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://qudt.org/2.1/schema/qudt#",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "numericValue",
-      "undefined" : "numeric value"
-    },
-    "domain" : "57",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "63"
   }, {
     "iri" : "https://w3id.org/yang/server#capability",
     "baseIri" : "https://w3id.org/yang/server",
@@ -1556,7 +1543,7 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ]
     },
@@ -1569,16 +1556,16 @@
       "undefined" : "Refers to the NETCONF capability supported by the NETCONF server."
     },
     "attributes" : [ "object" ],
-    "id" : "64"
+    "id" : "63"
   }, {
     "iri" : "https://w3id.org/yang/server#endpoint",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "59",
+    "range" : "58",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
+        "value" : "https://w3id.org/yang/server",
         "type" : "iri"
       } ],
       "example" : [ {
@@ -1592,11 +1579,30 @@
       "IRI-based" : "endpoint",
       "undefined" : "endpoint"
     },
-    "domain" : "19",
+    "domain" : "22",
     "comment" : {
       "undefined" : "YANG server endpoint. "
     },
     "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://qudt.org/2.1/schema/qudt/numericValue",
+    "baseIri" : "http://qudt.org/2.1/schema/qudt",
+    "range" : "50",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://qudt.org/2.1/schema/qudt",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "numericValue",
+      "undefined" : "numeric value"
+    },
+    "domain" : "51",
+    "attributes" : [ "datatype", "external" ],
     "id" : "65"
   } ]
 }

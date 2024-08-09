@@ -1,5 +1,4 @@
 @prefix : <https://w3id.org/yang/server#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ys: <https://w3id.org/yang/server#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,17 +10,19 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/yang/server#> .
+@base <https://w3id.org/yang/server> .
 
 <https://w3id.org/yang/server> rdf:type owl:Ontology ;
-                                dc:created "2024-07-21"^^xsd:date ;
-                                dc:creator "Ignacio Dominguez Martinez-Casanueva" ;
-                                dc:title "YANG Server Ontology" ;
+                                owl:versionIRI <https://w3id.org/yang/server> ;
+                                dcterms:created "2024-07-21"^^xsd:date ;
+                                dcterms:creator "Ignacio Dominguez Martinez-Casanueva" ;
                                 dcterms:description """
                                  Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.
                                  """ ;
                                 dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0> ;
-                                vann:preferredNamespaceUri "https://w3id.org/yang/server#" ;
+                                dcterms:title "YANG Server Ontology" ;
+                                vann:preferredNamespacePrefix "ys" ;
+                                vann:preferredNamespaceUri ys: ;
                                 rdfs:label "YANG Server Ontology"@en ;
                                 owl:versionInfo "1.4.1" ;
                                 mod:createdWith <https://chowlk.linkeddata.es/> .
@@ -30,16 +31,12 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/created
-dc:created rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
@@ -50,8 +47,16 @@ dcterms:description rdf:type owl:AnnotationProperty .
 dcterms:license rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/example
 vann:example rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
@@ -97,10 +102,13 @@ ys:datastore rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/yang/server#filter
 ys:filter rdf:type owl:ObjectProperty ;
-          rdfs:domain ys:Query ,
-                      ys:Subscription ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( ys:Query
+                                      ys:Subscription
+                                    )
+                      ] ;
           rdfs:range ys:Filter ;
-          rdfs:comment "Refers to the YANG filter used when accessing the YANG server via a given network management protocol." ;
+          rdfs:comment "Refers to the YANG filter used when accessing the YANG server using a network management protocol." ;
           rdfs:isDefinedBy <https://w3id.org/yang/server> ;
           rdfs:label "filter" .
 
@@ -126,8 +134,11 @@ ys:period rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/yang/server#sourceDatastore
 ys:sourceDatastore rdf:type owl:ObjectProperty ;
-                   rdfs:domain ys:Query ,
-                               ys:Subscription ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( ys:Query
+                                               ys:Subscription
+                                             )
+                               ] ;
                    rdfs:range ys:Datastore ;
                    rdfs:comment "Refers to the YANG datastore of the source YANG server to be selected in the YANG operation." ;
                    rdfs:isDefinedBy <https://w3id.org/yang/server> ;
@@ -136,10 +147,13 @@ ys:sourceDatastore rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/yang/server#sourceServer
 ys:sourceServer rdf:type owl:ObjectProperty ;
-                rdfs:domain ys:Query ,
-                            ys:Subscription ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( ys:Query
+                                            ys:Subscription
+                                          )
+                            ] ;
                 rdfs:range ys:YangServer ;
-                rdfs:comment "Refers to the YANG server which the YANG query is sent to via a given network management protocol." ;
+                rdfs:comment "Refers to the YANG server which the YANG operation is sent to using a network management protocol." ;
                 rdfs:isDefinedBy <https://w3id.org/yang/server> ;
                 rdfs:label "source server" .
 
@@ -175,6 +189,7 @@ ys:endpoint rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/yang/server#filterValue
 ys:filterValue rdf:type owl:DatatypeProperty ;
                rdfs:domain ys:Filter ;
+               rdfs:range xsd:string ;
                rdfs:comment "Value used by filter to access YANG data of the NETCONF server." ;
                rdfs:isDefinedBy <https://w3id.org/yang/server> ;
                rdfs:label "filter value" ;
@@ -398,7 +413,7 @@ ys:SubtreeFilter rdf:type owl:Class ;
                  rdfs:subClassOf ys:Filter ;
                  rdfs:comment "Evaluation criteria based on XML subtree expression." ;
                  rdfs:isDefinedBy <https://w3id.org/yang/server> ;
-                 rdfs:label "SubtreeFilter" ;
+                 rdfs:label "Subtree Filter" ;
                  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
@@ -407,7 +422,7 @@ ys:XPathFilter rdf:type owl:Class ;
                rdfs:subClassOf ys:Filter ;
                rdfs:comment "Evaluation criteria based on XPath expression." ;
                rdfs:isDefinedBy <https://w3id.org/yang/server> ;
-               rdfs:label "XPathFilter" ;
+               rdfs:label "XPath Filter" ;
                rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
