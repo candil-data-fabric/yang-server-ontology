@@ -6,7 +6,7 @@
 @prefix rml: <http://w3id.org/rml/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix qudt: <http://qudt.org/2.1/schema/qudt/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -21,7 +21,7 @@
                                  """ ;
                                 dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0> ;
                                 dcterms:title "YANG Server Ontology" ;
-                                vann:preferredNamespacePrefix "ys" ;
+                                vann:preferredNamespacePrefix "yangserv" ;
                                 vann:preferredNamespaceUri ys: ;
                                 rdfs:label "YANG Server Ontology"@en ;
                                 owl:versionInfo "1.4.1" ;
@@ -75,7 +75,7 @@ mod:createdWith rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://qudt.org/2.1/schema/qudt/unit
+###  http://qudt.org/schema/qudt/unit
 qudt:unit rdf:type owl:ObjectProperty ;
           rdfs:range qudt:Unit ;
           rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
@@ -170,7 +170,7 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
                    rdfs:label "identifier" .
 
 
-###  http://qudt.org/2.1/schema/qudt/numericValue
+###  http://qudt.org/schema/qudt/numericValue
 qudt:numericValue rdf:type owl:DatatypeProperty ;
                   rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
                   rdfs:label "numeric value" .
@@ -257,7 +257,7 @@ ys:xpathValue rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://qudt.org/2.1/schema/qudt/Unit
+###  http://qudt.org/schema/qudt/Unit
 qudt:Unit rdf:type owl:Class ;
           rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
           rdfs:label "Unit" .

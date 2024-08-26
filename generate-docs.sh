@@ -13,7 +13,8 @@ git checkout docs/sections/abstract-en.html
 git checkout docs/sections/description-en.html
 
 # Copy ontology diagram into resources folder
-cp diagrams/yang-server.svg docs/resources/images
+mkdir docs/resources/images
+cp diagrams/yang-server-*.svg docs/resources/images
 
 # Rename index html file
 mv docs/index-en.html docs/index.html

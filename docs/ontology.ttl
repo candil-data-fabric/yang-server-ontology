@@ -15,7 +15,7 @@
                                  """ ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> ;
                                 <http://purl.org/dc/terms/title> "YANG Server Ontology" ;
-                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "ys" ;
+                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "yangserv" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                                 rdfs:label "YANG Server Ontology"@en ;
                                 owl:versionInfo "1.4.1" ;
@@ -77,11 +77,11 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://qudt.org/2.1/schema/qudt/unit
-<http://qudt.org/2.1/schema/qudt/unit> rdf:type owl:ObjectProperty ;
-                                       rdfs:range <http://qudt.org/2.1/schema/qudt/Unit> ;
-                                       rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
-                                       rdfs:label "unit" .
+###  http://qudt.org/schema/qudt/unit
+<http://qudt.org/schema/qudt/unit> rdf:type owl:ObjectProperty ;
+                                   rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+                                   rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
+                                   rdfs:label "unit" .
 
 
 ###  https://w3id.org/yang/server#capability
@@ -172,10 +172,10 @@ xsd:date rdf:type rdfs:Datatype .
                                       rdfs:label "identifier" .
 
 
-###  http://qudt.org/2.1/schema/qudt/numericValue
-<http://qudt.org/2.1/schema/qudt/numericValue> rdf:type owl:DatatypeProperty ;
-                                               rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
-                                               rdfs:label "numeric value" .
+###  http://qudt.org/schema/qudt/numericValue
+<http://qudt.org/schema/qudt/numericValue> rdf:type owl:DatatypeProperty ;
+                                           rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
+                                           rdfs:label "numeric value" .
 
 
 ###  https://w3id.org/yang/server#endpoint
@@ -259,10 +259,10 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://qudt.org/2.1/schema/qudt/Unit
-<http://qudt.org/2.1/schema/qudt/Unit> rdf:type owl:Class ;
-                                       rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
-                                       rdfs:label "Unit" .
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
+                                   rdfs:label "Unit" .
 
 
 ###  https://w3id.org/yang/server#CandidateDatastore

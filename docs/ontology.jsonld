@@ -68,7 +68,7 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://qudt.org/2.1/schema/qudt/Unit",
+  "@id" : "http://qudt.org/schema/qudt/Unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://qudt.org/2.1/schema/qudt"
@@ -77,7 +77,7 @@
     "@value" : "Unit"
   } ]
 }, {
-  "@id" : "http://qudt.org/2.1/schema/qudt/numericValue",
+  "@id" : "http://qudt.org/schema/qudt/numericValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://qudt.org/2.1/schema/qudt"
@@ -86,7 +86,7 @@
     "@value" : "numeric value"
   } ]
 }, {
-  "@id" : "http://qudt.org/2.1/schema/qudt/unit",
+  "@id" : "http://qudt.org/schema/qudt/unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://qudt.org/2.1/schema/qudt"
@@ -95,7 +95,7 @@
     "@value" : "unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://qudt.org/2.1/schema/qudt/Unit"
+    "@id" : "http://qudt.org/schema/qudt/Unit"
   } ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
@@ -126,7 +126,7 @@
     "@value" : "YANG Server Ontology"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "ys"
+    "@value" : "yangserv"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@id" : "https://w3id.org/yang/server#"
