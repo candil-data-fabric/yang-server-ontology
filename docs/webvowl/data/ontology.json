@@ -52,6 +52,12 @@
         "value" : "1.4.1",
         "type" : "label"
       } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://github.com/candil-data-fabric/yang-server-ontology",
+        "type" : "iri"
+      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
@@ -77,7 +83,7 @@
     "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "19",
@@ -128,7 +134,7 @@
     "id" : "59",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "15",
+    "id" : "13",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "10",
@@ -143,7 +149,7 @@
     "id" : "18",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "14",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "28",
@@ -161,7 +167,7 @@
     "id" : "57",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "17",
@@ -273,8 +279,8 @@
     "comment" : {
       "undefined" : "A configuration datastore holding the current configuration of the device.  It may include configuration that requires further transformations before it can be applied."
     },
-    "id" : "11",
-    "superClasses" : [ "12" ]
+    "id" : "14",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "https://w3id.org/yang/server#IntendedDatastore",
     "baseIri" : "https://w3id.org/yang/server",
@@ -301,7 +307,7 @@
       "undefined" : "A configuration datastore holding the complete intended configuration of the device. This represents the configuration after all configuration transformations to <running> have been performed and is the configuration that the system attempts to apply."
     },
     "id" : "19",
-    "superClasses" : [ "12" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "https://w3id.org/yang/server#YangServer",
     "baseIri" : "https://w3id.org/yang/server",
@@ -351,7 +357,7 @@
       "IRI-based" : "Datastore",
       "undefined" : "Datastore"
     },
-    "subClasses" : [ "30", "12", "5" ],
+    "subClasses" : [ "30", "15", "5" ],
     "comment" : {
       "undefined" : "A conceptual place to store and access information. A datastore might be implemented, for example, using files, a database, flash memory locations, or combinations thereof. A datastore maps to an instantiated YANG data tree."
     },
@@ -382,7 +388,7 @@
       "undefined" : "A configuration datastore holding the configuration loaded by the device into the running configuration datastore when it boots."
     },
     "id" : "26",
-    "superClasses" : [ "12" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "https://w3id.org/yang/server#DynamicDatastore",
     "baseIri" : "https://w3id.org/yang/server",
@@ -436,7 +442,7 @@
       "undefined" : "A configuration datastore that can be manipulated without impacting the device's running configuration datastore and that can be committed to the running configuration datastore."
     },
     "id" : "35",
-    "superClasses" : [ "12" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "https://w3id.org/yang/server#PeriodicSubscription",
     "baseIri" : "https://w3id.org/yang/server",
@@ -547,7 +553,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "15",
+    "id" : "13",
     "label" : {
       "IRI-based" : "string"
     }
@@ -605,7 +611,7 @@
     "comment" : {
       "undefined" : "Evaluation criteria that may be applied to fetch data from a given YANG server."
     },
-    "id" : "14"
+    "id" : "12"
   }, {
     "instances" : 0,
     "union" : [ "57", "1" ],
@@ -642,7 +648,7 @@
       "undefined" : "Evaluation criteria based on XPath expression."
     },
     "id" : "22",
-    "superClasses" : [ "14" ]
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://w3id.org/yang/server#NetconfCapability",
     "baseIri" : "https://w3id.org/yang/server",
@@ -666,30 +672,6 @@
       "undefined" : "Netconf Capability"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/yang/server#WritableRunningCapability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.2",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "The `:writable-running` capability indicates that the device supports direct writes to the `<running>` configuration datastore. In other words, the device supports `<edit-config>` and `<copy-config>` operations where the `<running>` configuration is the target."
-      },
-      "labels" : {
-        "IRI-based" : "WritableRunningCapability",
-        "undefined" : "Writable Running Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#CandidateCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
@@ -712,6 +694,30 @@
       "labels" : {
         "IRI-based" : "CandidateCapability",
         "undefined" : "Candidate Capability"
+      }
+    }, {
+      "iri" : "https://w3id.org/yang/server#WritableRunningCapability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.2",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "The `:writable-running` capability indicates that the device supports direct writes to the `<running>` configuration datastore. In other words, the device supports `<edit-config>` and `<copy-config>` operations where the `<running>` configuration is the target."
+      },
+      "labels" : {
+        "IRI-based" : "WritableRunningCapability",
+        "undefined" : "Writable Running Capability"
       }
     }, {
       "iri" : "https://w3id.org/yang/server#XpathCapability",
@@ -786,30 +792,6 @@
         "undefined" : "Yang Library Capability"
       }
     }, {
-      "iri" : "https://w3id.org/yang/server#RollbackOnErrorCapability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.5",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "This capability indicates that the server will support the `rollback-on-error` value in the `<error-option>` parameter to the `<edit-config>` operation."
-      },
-      "labels" : {
-        "IRI-based" : "RollbackOnErrorCapability",
-        "undefined" : "Rollback-on-Error Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#DistinctStartupCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
@@ -832,6 +814,30 @@
       "labels" : {
         "IRI-based" : "DistinctStartupCapability",
         "undefined" : "Distinct Startup Capability"
+      }
+    }, {
+      "iri" : "https://w3id.org/yang/server#RollbackOnErrorCapability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.5",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "This capability indicates that the server will support the `rollback-on-error` value in the `<error-option>` parameter to the `<edit-config>` operation."
+      },
+      "labels" : {
+        "IRI-based" : "RollbackOnErrorCapability",
+        "undefined" : "Rollback-on-Error Capability"
       }
     }, {
       "iri" : "https://w3id.org/yang/server#UrlCapability",
@@ -934,11 +940,11 @@
       "IRI-based" : "ConventionalDatastore",
       "undefined" : "Conventional Datastore"
     },
-    "subClasses" : [ "11", "35", "19", "26" ],
+    "subClasses" : [ "14", "35", "19", "26" ],
     "comment" : {
       "undefined" : "One of the following set of configuration datastores: <running>, <startup>, <candidate>, and <intended>.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores."
     },
-    "id" : "12",
+    "id" : "15",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "https://w3id.org/yang/server#SubtreeFilter",
@@ -966,7 +972,7 @@
       "undefined" : "Evaluation criteria based on XML subtree expression."
     },
     "id" : "17",
-    "superClasses" : [ "14" ]
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://w3id.org/yang/server#Namespace",
     "baseIri" : "https://w3id.org/yang/server",
@@ -1049,7 +1055,7 @@
     "id" : "8",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "13",
+    "id" : "11",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "16",
@@ -1186,7 +1192,7 @@
   }, {
     "iri" : "https://w3id.org/yang/server#filterValue",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "15",
+    "range" : "13",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1205,12 +1211,12 @@
       "IRI-based" : "filterValue",
       "undefined" : "filter value"
     },
-    "domain" : "14",
+    "domain" : "12",
     "comment" : {
       "undefined" : "Value used by filter to access YANG data of the NETCONF server."
     },
     "attributes" : [ "datatype" ],
-    "id" : "13"
+    "id" : "11"
   }, {
     "iri" : "https://w3id.org/yang/server#subtreeValue",
     "baseIri" : "https://w3id.org/yang/server",
@@ -1267,14 +1273,14 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "24"
   }, {
-    "range" : "12",
+    "range" : "15",
     "domain" : "26",
     "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
     "iri" : "https://w3id.org/yang/server#filter",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "14",
+    "range" : "12",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1299,22 +1305,22 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "29"
   }, {
-    "range" : "12",
-    "domain" : "11",
+    "range" : "15",
+    "domain" : "14",
     "attributes" : [ "object", "anonymous" ],
     "id" : "31"
   }, {
-    "range" : "14",
+    "range" : "12",
     "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
-    "range" : "12",
+    "range" : "15",
     "domain" : "19",
     "attributes" : [ "object", "anonymous" ],
     "id" : "33"
   }, {
-    "range" : "12",
+    "range" : "15",
     "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
     "id" : "34"
@@ -1420,7 +1426,7 @@
       "undefined" : "unit"
     },
     "domain" : "46",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "45"
   }, {
     "range" : "6",
@@ -1429,11 +1435,11 @@
     "id" : "47"
   }, {
     "range" : "6",
-    "domain" : "12",
+    "domain" : "15",
     "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
-    "range" : "14",
+    "range" : "12",
     "domain" : "22",
     "attributes" : [ "object", "anonymous" ],
     "id" : "49"

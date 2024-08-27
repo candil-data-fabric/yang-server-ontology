@@ -4,6 +4,7 @@
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/creator> "Ignacio Dominguez Martinez-Casanueva" .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/description> "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 " .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
+<https://w3id.org/yang/server> <http://purl.org/dc/terms/source> <https://github.com/candil-data-fabric/yang-server-ontology> .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/title> "YANG Server Ontology" .
 <https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespacePrefix> "yangserv" .
 <https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/yang/server#> .
@@ -30,6 +31,9 @@
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

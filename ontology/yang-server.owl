@@ -21,6 +21,7 @@
                                  """ ;
                                 dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0> ;
                                 dcterms:title "YANG Server Ontology" ;
+                                dcterms:source <https://github.com/candil-data-fabric/yang-server-ontology> ;
                                 vann:preferredNamespacePrefix "yangserv" ;
                                 vann:preferredNamespaceUri ys: ;
                                 rdfs:label "YANG Server Ontology"@en ;

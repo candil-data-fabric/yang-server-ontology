@@ -56,6 +56,9 @@
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -121,6 +124,9 @@
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "http://purl.org/NET/rdflicense/APACHE2.0"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@id" : "https://github.com/candil-data-fabric/yang-server-ontology"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "YANG Server Ontology"
