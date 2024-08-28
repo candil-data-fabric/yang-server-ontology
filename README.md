@@ -4,7 +4,13 @@ Ontology that defines core concepts for representing YANG servers, including con
 
 Online documentation: https://w3id.org/yang/server
 
-![YANG Server Ontology](diagrams/yang-server-figures.svg)
+## Ontology overview
+
+![YANG Server Ontology Figures](diagrams/yang-server-figures.svg)
+
+## Ontology usage example
+
+![YANG Server Ontology Examples](diagrams/yang-server-examples.svg)
 
 ## Local Development
 
