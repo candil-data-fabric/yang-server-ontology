@@ -9,7 +9,7 @@
     ys:hostKeyVerification "false" ;
     ys:datastore <datastores/netconf-server-1/operational> ;
     ys:datastore <datastores/netconf-server-1/running> ;
-    ys:capability <netconfCapabilities/XpathCapability> .
+    ys:capability ys:XpathCapability .
 
 # In this example the NETCONF server is non-NMDA compatible.
 # Thus, only operational and running datastores are available.
