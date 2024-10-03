@@ -1,12 +1,17 @@
 <https://w3id.org/yang/server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/created> "2024-07-21"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/creator> "Ignacio Dominguez Martinez-Casanueva" .
+<https://w3id.org/yang/server> <http://purl.org/dc/terms/created> "2024-10-03"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/yang/server> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-8573-127X> .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/description> "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 " .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
+<https://w3id.org/yang/server> <http://purl.org/dc/terms/publisher> _:genid2 .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "CANDIL Data Fabric" .
+_:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fabric> .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/source> <https://github.com/candil-data-fabric/yang-server-ontology> .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/title> "YANG Server Ontology" .
-<https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespacePrefix> "yangserv" .
+<https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ys" .
 <https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
 <https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionInfo> "1.4.1" .
@@ -32,6 +37,9 @@
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/source
 <http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -49,6 +57,15 @@
 # 
 # http://www.w3.org/2002/07/owl#versionInfo
 <http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/identifier
+<https://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://w3id.org/mod#createdWith
 <https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -98,15 +115,15 @@
 # 
 # https://w3id.org/yang/server#filter
 <https://w3id.org/yang/server#filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Filter> .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG filter used when accessing the YANG server using a network management protocol." .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
@@ -131,15 +148,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/yang/server#sourceDatastore
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Datastore> .
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG datastore of the source YANG server to be selected in the YANG operation." .
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
@@ -147,15 +164,15 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/yang/server#sourceServer
 <https://w3id.org/yang/server#sourceServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#YangServer> .
 <https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG server which the YANG operation is sent to using a network management protocol." .
 <https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .

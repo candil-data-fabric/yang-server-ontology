@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/yang/server",
     "version" : "1.4.1",
-    "author" : [ "Ignacio Dominguez Martinez-Casanueva" ],
+    "author" : [ "_:genid2147483649" ],
     "description" : {
       "undefined" : "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 "
     },
@@ -25,7 +25,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Ignacio Dominguez Martinez-Casanueva",
+        "value" : "_:genid2147483649",
         "type" : "label"
       } ],
       "createdWith" : [ {
@@ -37,25 +37,31 @@
       "created" : [ {
         "identifier" : "created",
         "language" : "undefined",
-        "value" : "2024-07-21",
+        "value" : "2024-10-03",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
-        "value" : "yangserv",
+        "value" : "ys",
         "type" : "label"
       } ],
-      "source" : [ {
-        "identifier" : "source",
+      "publisher" : [ {
+        "identifier" : "publisher",
         "language" : "undefined",
-        "value" : "https://github.com/candil-data-fabric/yang-server-ontology",
-        "type" : "iri"
+        "value" : "_:genid2147483648",
+        "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://github.com/candil-data-fabric/yang-server-ontology",
         "type" : "iri"
       } ],
       "versionInfo" : [ {
@@ -792,30 +798,6 @@
         "undefined" : "Yang Library Capability"
       }
     }, {
-      "iri" : "https://w3id.org/yang/server#RollbackOnErrorCapability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.5",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "This capability indicates that the server will support the `rollback-on-error` value in the `<error-option>` parameter to the `<edit-config>` operation."
-      },
-      "labels" : {
-        "IRI-based" : "RollbackOnErrorCapability",
-        "undefined" : "Rollback-on-Error Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#DistinctStartupCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
@@ -838,6 +820,30 @@
       "labels" : {
         "IRI-based" : "DistinctStartupCapability",
         "undefined" : "Distinct Startup Capability"
+      }
+    }, {
+      "iri" : "https://w3id.org/yang/server#RollbackOnErrorCapability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.5",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "This capability indicates that the server will support the `rollback-on-error` value in the `<error-option>` parameter to the `<edit-config>` operation."
+      },
+      "labels" : {
+        "IRI-based" : "RollbackOnErrorCapability",
+        "undefined" : "Rollback-on-Error Capability"
       }
     }, {
       "iri" : "https://w3id.org/yang/server#UrlCapability",

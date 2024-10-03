@@ -1,5 +1,21 @@
 [ {
   "@id" : "_:genid1",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Ignacio Dominguez Martinez-Casanueva"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@id" : "https://orcid.org/0000-0002-8573-127X"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://github.com/candil-data-fabric"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "CANDIL Data Fabric"
+  } ]
+}, {
+  "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -9,7 +25,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -19,7 +35,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -54,6 +70,9 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/source",
@@ -107,6 +126,15 @@
   "@id" : "http://www.w3.org/2002/07/owl#versionInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/mod#createdWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -114,16 +142,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-07-21"
+    "@value" : "2024-10-03"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Ignacio Dominguez Martinez-Casanueva"
+    "@id" : "_:genid1"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 "
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "http://purl.org/NET/rdflicense/APACHE2.0"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "_:genid2"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@id" : "https://github.com/candil-data-fabric/yang-server-ontology"
@@ -132,7 +163,7 @@
     "@value" : "YANG Server Ontology"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "yangserv"
+    "@value" : "ys"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@id" : "https://w3id.org/yang/server#"
@@ -736,7 +767,7 @@
     "@value" : "Refers to the YANG filter used when accessing the YANG server using a network management protocol."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid1"
+    "@id" : "_:genid3"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/yang/server"
@@ -868,7 +899,7 @@
     "@value" : "Refers to the YANG datastore of the source YANG server to be selected in the YANG operation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid6"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/yang/server"
@@ -886,7 +917,7 @@
     "@value" : "Refers to the YANG server which the YANG operation is sent to using a network management protocol."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid7"
+    "@id" : "_:genid9"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/yang/server"
