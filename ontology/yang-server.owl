@@ -233,6 +233,15 @@ ys:namespaceURL rdf:type owl:DatatypeProperty ;
                 rdfs:label "namespace url" .
 
 
+###  https://w3id.org/yang/server#password
+ys:password rdf:type owl:DatatypeProperty ;
+            rdfs:domain ys:YangServer ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Password for accessing the YANG server." ;
+            rdfs:isDefinedBy <https://w3id.org/yang/server> ;
+            rdfs:label "password" .
+
+
 ###  https://w3id.org/yang/server#subtreeValue
 ys:subtreeValue rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf ys:filterValue ;

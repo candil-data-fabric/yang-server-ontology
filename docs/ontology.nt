@@ -241,6 +241,14 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#label> "namespace url" .
 # 
+# https://w3id.org/yang/server#password
+<https://w3id.org/yang/server#password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#comment> "Password for accessing the YANG server." .
+<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#label> "password" .
+# 
 # https://w3id.org/yang/server#subtreeValue
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/yang/server#filterValue> .
