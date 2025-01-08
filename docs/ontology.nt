@@ -1,6 +1,6 @@
 <https://w3id.org/yang/server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/created> "2024-10-03"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/yang/server> <http://purl.org/dc/terms/created> "2025-01-08"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-8573-127X> .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" .
@@ -14,7 +14,7 @@ _:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fa
 <https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ys" .
 <https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/yang/server#> .
 <https://w3id.org/yang/server> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
-<https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionInfo> "1.4.1" .
+<https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionInfo> "1.5.0" .
 <https://w3id.org/yang/server> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
@@ -199,6 +199,16 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> .
 <http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/2000/01/rdf-schema#label> "numeric value" .
 # 
+# http://xmlns.com/foaf/0.1/accountName
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#label> "account name" .
+# 
+# https://ontology.unifiedcyberontology.org/uco/observable/userName
+<https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
+<https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/2000/01/rdf-schema#label> "userName" .
+# 
 # https://w3id.org/yang/server#endpoint
 <https://w3id.org/yang/server#endpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
@@ -241,14 +251,6 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#label> "namespace url" .
 # 
-# https://w3id.org/yang/server#password
-<https://w3id.org/yang/server#password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#comment> "Password for accessing the YANG server." .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#label> "password" .
-# 
 # https://w3id.org/yang/server#subtreeValue
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/yang/server#filterValue> .
@@ -260,7 +262,9 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/yang/server#username
 <https://w3id.org/yang/server#username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/accountName> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ontology.unifiedcyberontology.org/uco/observable/userName> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#ServerAccount> .
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#comment> "Username for accessing the YANG server." .
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
@@ -289,6 +293,16 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> .
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
+# 
+# http://xmlns.com/foaf/0.1/OnlineAccount
+<http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+<http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/2000/01/rdf-schema#label> "Online Account" .
+# 
+# https://ontology.unifiedcyberontology.org/uco/observable/UserAccount
+<https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
+<https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> <http://www.w3.org/2000/01/rdf-schema#label> "UserAccount" .
 # 
 # https://w3id.org/yang/server#CandidateDatastore
 <https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -402,6 +416,15 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Running Datastore" .
 <https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
+# 
+# https://w3id.org/yang/server#ServerAccount
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/OnlineAccount> .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an account used for accessing the YANG server." .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#label> "Server Account" .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
 # 
 # https://w3id.org/yang/server#StartupDatastore
 <https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

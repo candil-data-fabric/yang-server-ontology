@@ -6,35 +6,34 @@
 @prefix rml: <http://w3id.org/rml/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @base <https://w3id.org/yang/server> .
 
 <https://w3id.org/yang/server> rdf:type owl:Ontology ;
                                 owl:versionIRI <https://w3id.org/yang/server> ;
-                                dcterms:created "2024-10-03"^^xsd:date ;
-                                dcterms:creator [
-                                  foaf:name "Ignacio Dominguez Martinez-Casanueva" ;
-                                  schema:identifier <https://orcid.org/0000-0002-8573-127X> ;
-                                ];
-                                dcterms:publisher [
-                                  foaf:homepage <https://github.com/candil-data-fabric> ;
-                                  foaf:name "CANDIL Data Fabric" ;
-                                ];
+                                dcterms:created "2025-01-08"^^xsd:date ;
+                                dcterms:creator [ foaf:name "Ignacio Dominguez Martinez-Casanueva" ;
+                                                  schema:identifier <https://orcid.org/0000-0002-8573-127X>
+                                                ] ;
                                 dcterms:description """
                                  Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.
                                  """ ;
                                 dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0> ;
-                                dcterms:title "YANG Server Ontology" ;
+                                dcterms:publisher [ foaf:homepage <https://github.com/candil-data-fabric> ;
+                                                    foaf:name "CANDIL Data Fabric"
+                                                  ] ;
                                 dcterms:source <https://github.com/candil-data-fabric/yang-server-ontology> ;
+                                dcterms:title "YANG Server Ontology" ;
                                 vann:preferredNamespacePrefix "ys" ;
-                                vann:preferredNamespaceUri <https://w3id.org/yang/server#> ;
+                                vann:preferredNamespaceUri ys: ;
                                 rdfs:label "YANG Server Ontology"@en ;
-                                owl:versionInfo "1.4.1" ;
+                                owl:versionInfo "1.5.0" ;
                                 mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -57,6 +56,14 @@ dcterms:description rdf:type owl:AnnotationProperty .
 dcterms:license rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/title
 dcterms:title rdf:type owl:AnnotationProperty .
 
@@ -75,6 +82,18 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/identifier
+schema:identifier rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/mod#createdWith
@@ -186,6 +205,18 @@ qudt:numericValue rdf:type owl:DatatypeProperty ;
                   rdfs:label "numeric value" .
 
 
+###  http://xmlns.com/foaf/0.1/accountName
+foaf:accountName rdf:type owl:DatatypeProperty ;
+                 rdfs:isDefinedBy foaf: ;
+                 rdfs:label "account name" .
+
+
+###  https://ontology.unifiedcyberontology.org/uco/observable/userName
+observable:userName rdf:type owl:DatatypeProperty ;
+                    rdfs:isDefinedBy observable: ;
+                    rdfs:label "userName" .
+
+
 ###  https://w3id.org/yang/server#endpoint
 ys:endpoint rdf:type owl:DatatypeProperty ;
             rdfs:domain ys:YangServer ;
@@ -233,15 +264,6 @@ ys:namespaceURL rdf:type owl:DatatypeProperty ;
                 rdfs:label "namespace url" .
 
 
-###  https://w3id.org/yang/server#password
-ys:password rdf:type owl:DatatypeProperty ;
-            rdfs:domain ys:YangServer ;
-            rdfs:range xsd:string ;
-            rdfs:comment "Password for accessing the YANG server." ;
-            rdfs:isDefinedBy <https://w3id.org/yang/server> ;
-            rdfs:label "password" .
-
-
 ###  https://w3id.org/yang/server#subtreeValue
 ys:subtreeValue rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf ys:filterValue ;
@@ -254,7 +276,9 @@ ys:subtreeValue rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/yang/server#username
 ys:username rdf:type owl:DatatypeProperty ;
-            rdfs:domain ys:YangServer ;
+            rdfs:subPropertyOf foaf:accountName ,
+                               observable:userName ;
+            rdfs:domain ys:ServerAccount ;
             rdfs:range xsd:string ;
             rdfs:comment "Username for accessing the YANG server." ;
             rdfs:isDefinedBy <https://w3id.org/yang/server> ;
@@ -280,6 +304,18 @@ ys:xpathValue rdf:type owl:DatatypeProperty ;
 qudt:Unit rdf:type owl:Class ;
           rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
           rdfs:label "Unit" .
+
+
+###  http://xmlns.com/foaf/0.1/OnlineAccount
+foaf:OnlineAccount rdf:type owl:Class ;
+                   rdfs:isDefinedBy foaf: ;
+                   rdfs:label "Online Account" .
+
+
+###  https://ontology.unifiedcyberontology.org/uco/observable/UserAccount
+observable:UserAccount rdf:type owl:Class ;
+                       rdfs:isDefinedBy observable: ;
+                       rdfs:label "UserAccount" .
 
 
 ###  https://w3id.org/yang/server#CandidateDatastore
@@ -408,6 +444,16 @@ ys:RunningDatastore rdf:type owl:Class ;
                     rdfs:isDefinedBy <https://w3id.org/yang/server> ;
                     rdfs:label "Running Datastore" ;
                     rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#ServerAccount
+ys:ServerAccount rdf:type owl:Class ;
+                 rdfs:subClassOf foaf:OnlineAccount ,
+                                 observable:UserAccount ;
+                 rdfs:comment "Represents an account used for accessing the YANG server." ;
+                 rdfs:isDefinedBy <https://w3id.org/yang/server> ;
+                 rdfs:label "Server Account" ;
+                 rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
 ###  https://w3id.org/yang/server#StartupDatastore
@@ -545,6 +591,5 @@ ys:YangLibraryCapability rdf:type owl:NamedIndividual ,
                          rdfs:isDefinedBy <https://w3id.org/yang/server> ;
                          rdfs:label "Yang Library Capability" ;
                          rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc8526> .
-
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

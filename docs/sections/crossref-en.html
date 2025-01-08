@@ -13,15 +13,18 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a></li>
   <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a></li>
   <li><a href="#OnChangeSubscription" title="https://w3id.org/yang/server#OnChangeSubscription">On-change Subscription</a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/OnlineAccount" title="http://xmlns.com/foaf/0.1/OnlineAccount">Online Account</a></li>
   <li><a href="#OperationalDatastore" title="https://w3id.org/yang/server#OperationalDatastore">Operational Datastore</a></li>
   <li><a href="#Period" title="https://w3id.org/yang/server#Period">Period</a></li>
   <li><a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a></li>
   <li><a href="#Query" title="https://w3id.org/yang/server#Query">Query</a></li>
   <li><a href="#RunningDatastore" title="https://w3id.org/yang/server#RunningDatastore">Running Datastore</a></li>
+  <li><a href="#ServerAccount" title="https://w3id.org/yang/server#ServerAccount">Server Account</a></li>
   <li><a href="#StartupDatastore" title="https://w3id.org/yang/server#StartupDatastore">Startup Datastore</a></li>
   <li><a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a></li>
   <li><a href="#SubtreeFilter" title="https://w3id.org/yang/server#SubtreeFilter">Subtree Filter</a></li>
   <li><a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a></li>
+  <li><a href="#https://ontology.unifiedcyberontology.org/uco/observable/UserAccount" title="https://ontology.unifiedcyberontology.org/uco/observable/UserAccount">UserAccount</a></li>
   <li><a href="#XPathFilter" title="https://w3id.org/yang/server#XPathFilter">XPath Filter</a></li>
   <li><a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a></li>
  </ul>
@@ -303,6 +306,26 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/OnlineAccount">
+  <h3>Online Account<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/OnlineAccount</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ServerAccount" title="https://w3id.org/yang/server#ServerAccount">Server Account</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="OperationalDatastore">
   <h3>Operational Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#OperationalDatastore</p>
@@ -424,6 +447,35 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="ServerAccount">
+  <h3>Server Account<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#ServerAccount</p>
+  <div class="comment">
+   <span class="markdown">Represents an account used for accessing the YANG server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://xmlns.com/foaf/0.1/OnlineAccount" title="http://xmlns.com/foaf/0.1/OnlineAccount">Online Account</a> <sup class="type-c" title="class">c</sup>, <a href="#https://ontology.unifiedcyberontology.org/uco/observable/UserAccount" title="https://ontology.unifiedcyberontology.org/uco/observable/UserAccount">UserAccount</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="StartupDatastore">
   <h3>Startup Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#StartupDatastore</p>
@@ -525,6 +577,26 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="https://ontology.unifiedcyberontology.org/uco/observable/UserAccount">
+  <h3>UserAccount<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ontology.unifiedcyberontology.org/uco/observable/UserAccount</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://ontology.unifiedcyberontology.org/uco/observable/">https://ontology.unifiedcyberontology.org/uco/observable/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ServerAccount" title="https://w3id.org/yang/server#ServerAccount">Server Account</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="XPathFilter">
   <h3>XPath Filter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#XPathFilter</p>
@@ -579,7 +651,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#password" title="https://w3id.org/yang/server#password">password</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -843,6 +915,7 @@ This section provides details for each class and property defined by YANG Server
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
+  <li><a href="#http://xmlns.com/foaf/0.1/accountName" title="http://xmlns.com/foaf/0.1/accountName">account name</a></li>
   <li><a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a></li>
   <li><a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a></li>
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
@@ -850,11 +923,33 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#namespacePrefix" title="https://w3id.org/yang/server#namespacePrefix">namespace prefix</a></li>
   <li><a href="#namespaceURL" title="https://w3id.org/yang/server#namespaceURL">namespace url</a></li>
   <li><a href="#http://qudt.org/schema/qudt/numericValue" title="http://qudt.org/schema/qudt/numericValue">numeric value</a></li>
-  <li><a href="#password" title="https://w3id.org/yang/server#password">password</a></li>
   <li><a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a></li>
+  <li><a href="#https://ontology.unifiedcyberontology.org/uco/observable/userName" title="https://ontology.unifiedcyberontology.org/uco/observable/userName">userName</a></li>
   <li><a href="#username" title="https://w3id.org/yang/server#username">username</a></li>
   <li><a href="#xpathValue" title="https://w3id.org/yang/server#xpathValue">xpath value</a></li>
  </ul>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/accountName">
+  <h3>account name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/accountName</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="endpoint">
   <h3>endpoint<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#endpoint</p>
@@ -1064,37 +1159,6 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
- <div class="entity" id="password">
-  <h3>password<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#password</p>
-  <div class="comment">
-   <span class="markdown">Password for accessing the YANG server.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="subtreeValue">
   <h3>subtree value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#subtreeValue</p>
@@ -1132,6 +1196,28 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://ontology.unifiedcyberontology.org/uco/observable/userName">
+  <h3>userName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ontology.unifiedcyberontology.org/uco/observable/userName</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://ontology.unifiedcyberontology.org/uco/observable/">https://ontology.unifiedcyberontology.org/uco/observable/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#username" title="https://w3id.org/yang/server#username">username</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="username">
   <h3>username<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#username</p>
@@ -1149,10 +1235,16 @@ This section provides details for each class and property defined by YANG Server
   <div class="description">
    <dl>
     <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://xmlns.com/foaf/0.1/accountName" title="http://xmlns.com/foaf/0.1/accountName">account name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://ontology.unifiedcyberontology.org/uco/observable/userName" title="https://ontology.unifiedcyberontology.org/uco/observable/userName">userName</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
      has domain
     </dt>
     <dd>
-     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ServerAccount" title="https://w3id.org/yang/server#ServerAccount">Server Account</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range

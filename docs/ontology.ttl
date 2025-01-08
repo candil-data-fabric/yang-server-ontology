@@ -8,7 +8,7 @@
 
 <https://w3id.org/yang/server> rdf:type owl:Ontology ;
                                 owl:versionIRI <https://w3id.org/yang/server> ;
-                                <http://purl.org/dc/terms/created> "2024-10-03"^^xsd:date ;
+                                <http://purl.org/dc/terms/created> "2025-01-08"^^xsd:date ;
                                 <http://purl.org/dc/terms/creator> _:genid1 ;
                                 <http://purl.org/dc/terms/description> """
                                  Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.
@@ -20,7 +20,7 @@
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "ys" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                                 rdfs:label "YANG Server Ontology"@en ;
-                                owl:versionInfo "1.4.1" ;
+                                owl:versionInfo "1.5.0" ;
                                 <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" ;
@@ -206,6 +206,18 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdfs:label "numeric value" .
 
 
+###  http://xmlns.com/foaf/0.1/accountName
+<http://xmlns.com/foaf/0.1/accountName> rdf:type owl:DatatypeProperty ;
+                                        rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                        rdfs:label "account name" .
+
+
+###  https://ontology.unifiedcyberontology.org/uco/observable/userName
+<https://ontology.unifiedcyberontology.org/uco/observable/userName> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:isDefinedBy <https://ontology.unifiedcyberontology.org/uco/observable/> ;
+                                                                    rdfs:label "userName" .
+
+
 ###  https://w3id.org/yang/server#endpoint
 :endpoint rdf:type owl:DatatypeProperty ;
           rdfs:domain :YangServer ;
@@ -253,15 +265,6 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "namespace url" .
 
 
-###  https://w3id.org/yang/server#password
-:password rdf:type owl:DatatypeProperty ;
-          rdfs:domain :YangServer ;
-          rdfs:range xsd:string ;
-          rdfs:comment "Password for accessing the YANG server." ;
-          rdfs:isDefinedBy <https://w3id.org/yang/server> ;
-          rdfs:label "password" .
-
-
 ###  https://w3id.org/yang/server#subtreeValue
 :subtreeValue rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :filterValue ;
@@ -274,7 +277,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/yang/server#username
 :username rdf:type owl:DatatypeProperty ;
-          rdfs:domain :YangServer ;
+          rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/accountName> ,
+                             <https://ontology.unifiedcyberontology.org/uco/observable/userName> ;
+          rdfs:domain :ServerAccount ;
           rdfs:range xsd:string ;
           rdfs:comment "Username for accessing the YANG server." ;
           rdfs:isDefinedBy <https://w3id.org/yang/server> ;
@@ -300,6 +305,18 @@ xsd:date rdf:type rdfs:Datatype .
 <http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
                                    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
                                    rdfs:label "Unit" .
+
+
+###  http://xmlns.com/foaf/0.1/OnlineAccount
+<http://xmlns.com/foaf/0.1/OnlineAccount> rdf:type owl:Class ;
+                                          rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                          rdfs:label "Online Account" .
+
+
+###  https://ontology.unifiedcyberontology.org/uco/observable/UserAccount
+<https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> rdf:type owl:Class ;
+                                                                       rdfs:isDefinedBy <https://ontology.unifiedcyberontology.org/uco/observable/> ;
+                                                                       rdfs:label "UserAccount" .
 
 
 ###  https://w3id.org/yang/server#CandidateDatastore
@@ -428,6 +445,16 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:isDefinedBy <https://w3id.org/yang/server> ;
                   rdfs:label "Running Datastore" ;
                   rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .
+
+
+###  https://w3id.org/yang/server#ServerAccount
+:ServerAccount rdf:type owl:Class ;
+               rdfs:subClassOf <http://xmlns.com/foaf/0.1/OnlineAccount> ,
+                               <https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> ;
+               rdfs:comment "Represents an account used for accessing the YANG server." ;
+               rdfs:isDefinedBy <https://w3id.org/yang/server> ;
+               rdfs:label "Server Account" ;
+               rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6241> .
 
 
 ###  https://w3id.org/yang/server#StartupDatastore
