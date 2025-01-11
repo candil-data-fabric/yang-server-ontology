@@ -342,7 +342,7 @@ ys:CandidateDatastore rdf:type owl:Class ;
 ###  https://w3id.org/yang/server#ConventionalDatastore
 ys:ConventionalDatastore rdf:type owl:Class ;
                          rdfs:subClassOf ys:Datastore ;
-                         rdfs:comment "One of the following set of configuration datastores: <running>, <startup>, <candidate>, and <intended>.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores." ;
+                         rdfs:comment "One of the following set of configuration datastores: `<running>`, `<startup>`, `<candidate>`, and `<intended>`.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores." ;
                          rdfs:isDefinedBy <https://w3id.org/yang/server> ;
                          rdfs:label "Conventional Datastore" ;
                          rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8342> .

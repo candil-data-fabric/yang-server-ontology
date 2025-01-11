@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/yang/server",
     "version" : "1.5.0",
-    "author" : [ "_:genid2147483648" ],
+    "author" : [ "_:genid2147483649" ],
     "description" : {
       "undefined" : "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 "
     },
@@ -25,7 +25,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
+        "value" : "_:genid2147483649",
         "type" : "label"
       } ],
       "createdWith" : [ {
@@ -49,7 +49,7 @@
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
-        "value" : "_:genid2147483649",
+        "value" : "_:genid2147483648",
         "type" : "label"
       } ],
       "source" : [ {
@@ -101,7 +101,7 @@
     "id" : "26",
     "type" : "owl:Class"
   }, {
-    "id" : "33",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
     "id" : "7",
@@ -173,7 +173,7 @@
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
+    "id" : "34",
     "type" : "owl:unionOf"
   }, {
     "id" : "64",
@@ -197,10 +197,10 @@
     "id" : "44",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "12",
@@ -396,7 +396,7 @@
     },
     "subClasses" : [ "10" ],
     "attributes" : [ "external" ],
-    "id" : "33"
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/yang/server#Datastore",
     "baseIri" : "https://w3id.org/yang/server",
@@ -710,7 +710,7 @@
     "instances" : 0,
     "union" : [ "65", "1" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "35"
+    "id" : "34"
   }, {
     "instances" : 0,
     "union" : [ "65", "1" ],
@@ -1036,7 +1036,7 @@
     },
     "subClasses" : [ "17", "37", "25", "21" ],
     "comment" : {
-      "undefined" : "One of the following set of configuration datastores: <running>, <startup>, <candidate>, and <intended>.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores."
+      "undefined" : "One of the following set of configuration datastores: `<running>`, `<startup>`, `<candidate>`, and `<intended>`.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores."
     },
     "id" : "18",
     "superClasses" : [ "7" ]
@@ -1088,33 +1088,6 @@
     },
     "id" : "44"
   }, {
-    "iri" : "https://w3id.org/yang/server#ServerAccount",
-    "baseIri" : "https://w3id.org/yang/server",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/yang/server",
-        "type" : "iri"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://datatracker.ietf.org/doc/rfc6241",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ServerAccount",
-      "undefined" : "Server Account"
-    },
-    "comment" : {
-      "undefined" : "Represents an account used for accessing the YANG server."
-    },
-    "id" : "10",
-    "superClasses" : [ "9", "33" ]
-  }, {
     "iri" : "https://w3id.org/yang/server#Subscription",
     "baseIri" : "https://w3id.org/yang/server",
     "instances" : 0,
@@ -1141,6 +1114,33 @@
       "undefined" : "Represents a subscription operation to a YANG server using the corresponding network management protocol."
     },
     "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/yang/server#ServerAccount",
+    "baseIri" : "https://w3id.org/yang/server",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://datatracker.ietf.org/doc/rfc6241",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServerAccount",
+      "undefined" : "Server Account"
+    },
+    "comment" : {
+      "undefined" : "Represents an account used for accessing the YANG server."
+    },
+    "id" : "10",
+    "superClasses" : [ "9", "35" ]
   }, {
     "iri" : "https://w3id.org/yang/server#NetconfServer",
     "baseIri" : "https://w3id.org/yang/server",
@@ -1203,7 +1203,7 @@
     "id" : "32",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "34",
+    "id" : "33",
     "type" : "owl:objectProperty"
   }, {
     "id" : "36",
@@ -1449,12 +1449,12 @@
       "IRI-based" : "filter",
       "undefined" : "filter"
     },
-    "domain" : "35",
+    "domain" : "34",
     "comment" : {
       "undefined" : "Refers to the YANG filter used when accessing the YANG server using a network management protocol."
     },
     "attributes" : [ "object" ],
-    "id" : "34"
+    "id" : "33"
   }, {
     "range" : "18",
     "domain" : "37",
@@ -1595,7 +1595,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "56"
   }, {
-    "range" : "33",
+    "range" : "35",
     "domain" : "10",
     "attributes" : [ "object", "anonymous" ],
     "id" : "57"
@@ -1663,28 +1663,9 @@
     "attributes" : [ "datatype" ],
     "id" : "69"
   }, {
-    "iri" : "http://xmlns.com/foaf/0.1/accountName",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "59",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://xmlns.com/foaf/0.1/",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "accountName",
-      "undefined" : "account name"
-    },
-    "domain" : "62",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "70"
-  }, {
     "iri" : "https://ontology.unifiedcyberontology.org/uco/observable/addressValue",
     "baseIri" : "https://ontology.unifiedcyberontology.org/uco/observable",
-    "range" : "58",
+    "range" : "59",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1702,6 +1683,25 @@
     "label" : {
       "IRI-based" : "addressValue",
       "undefined" : "addressValue"
+    },
+    "domain" : "62",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/accountName",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "58",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "accountName",
+      "undefined" : "account name"
     },
     "domain" : "62",
     "attributes" : [ "datatype", "external" ],

@@ -325,7 +325,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/yang/server#ConventionalDatastore
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Datastore> .
-<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the following set of configuration datastores: <running>, <startup>, <candidate>, and <intended>.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores." .
+<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the following set of configuration datastores: `<running>`, `<startup>`, `<candidate>`, and `<intended>`.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores." .
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Conventional Datastore" .
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
