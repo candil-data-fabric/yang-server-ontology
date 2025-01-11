@@ -1,15 +1,18 @@
-@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
 @prefix ys: <https://w3id.org/yang/server#> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @base <https://example.org/> .
 
 <netconf-server-1> a ys:NetconfServer ;
-    ys:endpoint "192.168.1.10:830" ;
+    ys:socketAddress <netconf-server-1/socket-address> ;
     ys:serverAccount <netconf-server-1/account> ;
     ys:hostKeyVerification "false" ;
     ys:datastore <netconf-server-1/datastores/operational> ;
     ys:datastore <netconf-server-1/datastores/running> ;
     ys:capability ys:XpathCapability .
+
+<netconf-server-1/socket-address> a observable:SocketAddress ;
+    observable:addressValue "192.168.1.10:830" .
 
 <netconf-server-1/account> a ys:ServerAccount ;
     ys:username "admin" ;

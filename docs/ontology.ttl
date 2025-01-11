@@ -8,7 +8,7 @@
 
 <https://w3id.org/yang/server> rdf:type owl:Ontology ;
                                 owl:versionIRI <https://w3id.org/yang/server> ;
-                                <http://purl.org/dc/terms/created> "2025-01-08"^^xsd:date ;
+                                <http://purl.org/dc/terms/created> "2025-01-09"^^xsd:date ;
                                 <http://purl.org/dc/terms/creator> _:genid1 ;
                                 <http://purl.org/dc/terms/description> """
                                  Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.
@@ -162,6 +162,15 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8641> .
 
 
+###  https://w3id.org/yang/server#socketAddress
+:socketAddress rdf:type owl:ObjectProperty ;
+               rdfs:domain :YangServer ;
+               rdfs:range <https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> ;
+               rdfs:comment "Refers to the socket address for connecting to the YANG server." ;
+               rdfs:isDefinedBy <https://w3id.org/yang/server> ;
+               rdfs:label "socket address" .
+
+
 ###  https://w3id.org/yang/server#sourceDatastore
 :sourceDatastore rdf:type owl:ObjectProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
@@ -212,20 +221,17 @@ xsd:date rdf:type rdfs:Datatype .
                                         rdfs:label "account name" .
 
 
+###  https://ontology.unifiedcyberontology.org/uco/observable/addressValue
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> rdf:type owl:DatatypeProperty ;
+                                                                        <http://purl.org/vocab/vann/example> "192.168.1.10:830" ;
+                                                                        rdfs:isDefinedBy <https://ontology.unifiedcyberontology.org/uco/observable/> ;
+                                                                        rdfs:label "addressValue" .
+
+
 ###  https://ontology.unifiedcyberontology.org/uco/observable/userName
 <https://ontology.unifiedcyberontology.org/uco/observable/userName> rdf:type owl:DatatypeProperty ;
                                                                     rdfs:isDefinedBy <https://ontology.unifiedcyberontology.org/uco/observable/> ;
                                                                     rdfs:label "userName" .
-
-
-###  https://w3id.org/yang/server#endpoint
-:endpoint rdf:type owl:DatatypeProperty ;
-          rdfs:domain :YangServer ;
-          rdfs:range xsd:string ;
-          <http://purl.org/vocab/vann/example> "192.168.1.10:830" ;
-          rdfs:comment "YANG server endpoint. " ;
-          rdfs:isDefinedBy <https://w3id.org/yang/server> ;
-          rdfs:label "endpoint" .
 
 
 ###  https://w3id.org/yang/server#filterValue
@@ -311,6 +317,12 @@ xsd:date rdf:type rdfs:Datatype .
 <http://xmlns.com/foaf/0.1/OnlineAccount> rdf:type owl:Class ;
                                           rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
                                           rdfs:label "Online Account" .
+
+
+###  https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress
+<https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> rdf:type owl:Class ;
+                                                                         rdfs:isDefinedBy <https://ontology.unifiedcyberontology.org/uco/observable/> ;
+                                                                         rdfs:label "SocketAddress" .
 
 
 ###  https://ontology.unifiedcyberontology.org/uco/observable/UserAccount

@@ -1,6 +1,6 @@
 <https://w3id.org/yang/server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/created> "2025-01-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/yang/server> <http://purl.org/dc/terms/created> "2025-01-09"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/yang/server> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-8573-127X> .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" .
@@ -146,6 +146,14 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#label> "period" .
 <https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8641> .
 # 
+# https://w3id.org/yang/server#socketAddress
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#range> <https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the socket address for connecting to the YANG server." .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#label> "socket address" .
+# 
 # https://w3id.org/yang/server#sourceDatastore
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid6 .
@@ -204,19 +212,16 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
 <http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#label> "account name" .
 # 
+# https://ontology.unifiedcyberontology.org/uco/observable/addressValue
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> <http://purl.org/vocab/vann/example> "192.168.1.10:830" .
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> <http://www.w3.org/2000/01/rdf-schema#label> "addressValue" .
+# 
 # https://ontology.unifiedcyberontology.org/uco/observable/userName
 <https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
 <https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/2000/01/rdf-schema#label> "userName" .
-# 
-# https://w3id.org/yang/server#endpoint
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/yang/server#endpoint> <http://purl.org/vocab/vann/example> "192.168.1.10:830" .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "YANG server endpoint. " .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint" .
 # 
 # https://w3id.org/yang/server#filterValue
 <https://w3id.org/yang/server#filterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -298,6 +303,11 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
 <http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/2000/01/rdf-schema#label> "Online Account" .
+# 
+# https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress
+<https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
+<https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> <http://www.w3.org/2000/01/rdf-schema#label> "SocketAddress" .
 # 
 # https://ontology.unifiedcyberontology.org/uco/observable/UserAccount
 <https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

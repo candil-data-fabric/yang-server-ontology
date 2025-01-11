@@ -150,6 +150,15 @@
   "@id" : "http://xmlns.com/foaf/0.1/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://ontology.unifiedcyberontology.org/uco/observable/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SocketAddress"
+  } ]
+}, {
   "@id" : "https://ontology.unifiedcyberontology.org/uco/observable/UserAccount",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -157,6 +166,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "UserAccount"
+  } ]
+}, {
+  "@id" : "https://ontology.unifiedcyberontology.org/uco/observable/addressValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@value" : "192.168.1.10:830"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://ontology.unifiedcyberontology.org/uco/observable/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "addressValue"
   } ]
 }, {
   "@id" : "https://ontology.unifiedcyberontology.org/uco/observable/userName",
@@ -178,7 +199,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-01-08"
+    "@value" : "2025-01-09"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "_:genid1"
@@ -796,27 +817,6 @@
     "@id" : "https://w3id.org/yang/server#Datastore"
   } ]
 }, {
-  "@id" : "https://w3id.org/yang/server#endpoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.org/vocab/vann/example" : [ {
-    "@value" : "192.168.1.10:830"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "YANG server endpoint. "
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/yang/server#YangServer"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/yang/server"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "endpoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "https://w3id.org/yang/server#filter",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -947,6 +947,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/rfc8641"
+  } ]
+}, {
+  "@id" : "https://w3id.org/yang/server#socketAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the socket address for connecting to the YANG server."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/yang/server#YangServer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "socket address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#sourceDatastore",

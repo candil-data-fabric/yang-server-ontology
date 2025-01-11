@@ -20,6 +20,7 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#Query" title="https://w3id.org/yang/server#Query">Query</a></li>
   <li><a href="#RunningDatastore" title="https://w3id.org/yang/server#RunningDatastore">Running Datastore</a></li>
   <li><a href="#ServerAccount" title="https://w3id.org/yang/server#ServerAccount">Server Account</a></li>
+  <li><a href="#https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress" title="https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress">SocketAddress</a></li>
   <li><a href="#StartupDatastore" title="https://w3id.org/yang/server#StartupDatastore">Startup Datastore</a></li>
   <li><a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a></li>
   <li><a href="#SubtreeFilter" title="https://w3id.org/yang/server#SubtreeFilter">Subtree Filter</a></li>
@@ -476,6 +477,26 @@ This section provides details for each class and property defined by YANG Server
    </dd>
   </dl>
  </div>
+ <div class="entity" id="https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress">
+  <h3>SocketAddress<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://ontology.unifiedcyberontology.org/uco/observable/">https://ontology.unifiedcyberontology.org/uco/observable/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#socketAddress" title="https://w3id.org/yang/server#socketAddress">socket address</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="StartupDatastore">
   <h3>Startup Datastore<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#StartupDatastore</p>
@@ -651,7 +672,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#datastore" title="https://w3id.org/yang/server#datastore">datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#socketAddress" title="https://w3id.org/yang/server#socketAddress">socket address</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -669,6 +690,7 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#filter" title="https://w3id.org/yang/server#filter">filter</a></li>
   <li><a href="#namespace" title="https://w3id.org/yang/server#namespace">namespace</a></li>
   <li><a href="#period" title="https://w3id.org/yang/server#period">period</a></li>
+  <li><a href="#socketAddress" title="https://w3id.org/yang/server#socketAddress">socket address</a></li>
   <li><a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a></li>
   <li><a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a></li>
   <li><a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a></li>
@@ -828,6 +850,37 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
+ <div class="entity" id="socketAddress">
+  <h3>socket address<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#socketAddress</p>
+  <div class="comment">
+   <span class="markdown">Refers to the socket address for connecting to the YANG server.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress" title="https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress">SocketAddress</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="sourceDatastore">
   <h3>source datastore<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#sourceDatastore</p>
@@ -916,7 +969,7 @@ This section provides details for each class and property defined by YANG Server
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#http://xmlns.com/foaf/0.1/accountName" title="http://xmlns.com/foaf/0.1/accountName">account name</a></li>
-  <li><a href="#endpoint" title="https://w3id.org/yang/server#endpoint">endpoint</a></li>
+  <li><a href="#https://ontology.unifiedcyberontology.org/uco/observable/addressValue" title="https://ontology.unifiedcyberontology.org/uco/observable/addressValue">addressValue</a></li>
   <li><a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a></li>
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
@@ -950,18 +1003,15 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
- <div class="entity" id="endpoint">
-  <h3>endpoint<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#endpoint</p>
-  <div class="comment">
-   <span class="markdown">YANG server endpoint. </span>
-  </div>
+ <div class="entity" id="https://ontology.unifiedcyberontology.org/uco/observable/addressValue">
+  <h3>addressValue<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ontology.unifiedcyberontology.org/uco/observable/addressValue</p>
   <dl class="definedBy">
    <dt>
     Is defined by
    </dt>
    <dd>
-    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+    <a href="https://ontology.unifiedcyberontology.org/uco/observable/">https://ontology.unifiedcyberontology.org/uco/observable/</a>
    </dd>
   </dl>
   <dl>
@@ -972,22 +1022,6 @@ This section provides details for each class and property defined by YANG Server
     <pre>192.168.1.10:830</pre>
    </dd>
   </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
  </div>
  <div class="entity" id="filterValue">
   <h3>filter value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
