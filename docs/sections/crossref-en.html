@@ -11,9 +11,11 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#IntendedDatastore" title="https://w3id.org/yang/server#IntendedDatastore">Intended Datastore</a></li>
   <li><a href="#Namespace" title="https://w3id.org/yang/server#Namespace">Namespace</a></li>
   <li><a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a></li>
+  <li><a href="#NetconfQuerySource" title="https://w3id.org/yang/server#NetconfQuerySource">Netconf Query Source</a></li>
   <li><a href="#NetconfServer" title="https://w3id.org/yang/server#NetconfServer">Netconf Server</a></li>
   <li><a href="#OnChangeSubscription" title="https://w3id.org/yang/server#OnChangeSubscription">On-change Subscription</a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/OnlineAccount" title="http://xmlns.com/foaf/0.1/OnlineAccount">Online Account</a></li>
+  <li><a href="#Operation" title="https://w3id.org/yang/server#Operation">Operation</a></li>
   <li><a href="#OperationalDatastore" title="https://w3id.org/yang/server#OperationalDatastore">Operational Datastore</a></li>
   <li><a href="#Period" title="https://w3id.org/yang/server#Period">Period</a></li>
   <li><a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a></li>
@@ -101,6 +103,12 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#ConventionalDatastore" title="https://w3id.org/yang/server#ConventionalDatastore">Conventional Datastore</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicDatastore" title="https://w3id.org/yang/server#DynamicDatastore">Dynamic Datastore</a> <sup class="type-c" title="class">c</sup>, <a href="#OperationalDatastore" title="https://w3id.org/yang/server#OperationalDatastore">Operational Datastore</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#server" title="https://w3id.org/yang/server#server">server</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -239,7 +247,7 @@ This section provides details for each class and property defined by YANG Server
     is in domain of
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -251,7 +259,30 @@ This section provides details for each class and property defined by YANG Server
     has members
    </dt>
    <dd>
-    <a href="#CandidateCapability" title="https://w3id.org/yang/server#CandidateCapability">Candidate Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ConfirmedCommitCapability" title="https://w3id.org/yang/server#ConfirmedCommitCapability">Confirmed Commit Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#DistinctStartupCapability" title="https://w3id.org/yang/server#DistinctStartupCapability">Distinct Startup Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RollbackOnErrorCapability" title="https://w3id.org/yang/server#RollbackOnErrorCapability">Rollback-on-Error Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#UrlCapability" title="https://w3id.org/yang/server#UrlCapability">URL Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ValidationCapability" title="https://w3id.org/yang/server#ValidationCapability">Validation Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#WritableRunningCapability" title="https://w3id.org/yang/server#WritableRunningCapability">Writable Running Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#XpathCapability" title="https://w3id.org/yang/server#XpathCapability">XPath Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#YangLibraryCapability" title="https://w3id.org/yang/server#YangLibraryCapability">Yang Library Capability</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#CandidateCapability" title="https://w3id.org/yang/server#CandidateCapability">Candidate Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ConfirmedCommitCapability" title="https://w3id.org/yang/server#ConfirmedCommitCapability">Confirmed Commit Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RollbackOnErrorCapability" title="https://w3id.org/yang/server#RollbackOnErrorCapability">Rollback-on-Error Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#StartupCapability" title="https://w3id.org/yang/server#StartupCapability">Startup Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#UrlCapability" title="https://w3id.org/yang/server#UrlCapability">URL Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ValidateCapability" title="https://w3id.org/yang/server#ValidateCapability">Validate Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#WritableRunningCapability" title="https://w3id.org/yang/server#WritableRunningCapability">Writable Running Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#XpathCapability" title="https://w3id.org/yang/server#XpathCapability">XPath Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#YangLibrary1.0Capability" title="https://w3id.org/yang/server#YangLibrary1.0Capability">Yang Library 1.0 Capability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#YangLibrary1.1Capability" title="https://w3id.org/yang/server#YangLibrary1.1Capability">Yang Library 1.1 Capability</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NetconfQuerySource">
+  <h3>Netconf Query Source<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#NetconfQuerySource</p>
+  <div class="comment">
+   <span class="markdown">Represents a NETCONF query operation in RML mappings.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/rml/XPathReferenceFormulation" target="_blank" title="http://w3id.org/rml/XPathReferenceFormulation">X Path Reference Formulation</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -324,6 +355,35 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="#ServerAccount" title="https://w3id.org/yang/server#ServerAccount">Server Account</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Operation">
+  <h3>Operation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#Operation</p>
+  <div class="comment">
+   <span class="markdown">Represents a Operation to a YANG server using the corresponding network management protocol.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup>, <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#filter" title="https://w3id.org/yang/server#filter">filter</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -418,10 +478,10 @@ This section provides details for each class and property defined by YANG Server
   </dl>
   <dl class="description">
    <dt>
-    is in domain of
+    has super-classes
    </dt>
    <dd>
-    <a href="#filter" title="https://w3id.org/yang/server#filter">filter</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#Operation" title="https://w3id.org/yang/server#Operation">Operation</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -536,16 +596,16 @@ This section provides details for each class and property defined by YANG Server
   </dl>
   <dl class="description">
    <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Operation" title="https://w3id.org/yang/server#Operation">Operation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
     has sub-classes
    </dt>
    <dd>
     <a href="#OnChangeSubscription" title="https://w3id.org/yang/server#OnChangeSubscription">On-change Subscription</a> <sup class="type-c" title="class">c</sup>, <a href="#PeriodicSubscription" title="https://w3id.org/yang/server#PeriodicSubscription">Periodic Subscription</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#filter" title="https://w3id.org/yang/server#filter">filter</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a> <sup class="type-op" title="object property">op</sup>, <a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -678,7 +738,7 @@ This section provides details for each class and property defined by YANG Server
     is in range of
    </dt>
    <dd>
-    <a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#server" title="https://w3id.org/yang/server#server">server</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -690,9 +750,9 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#filter" title="https://w3id.org/yang/server#filter">filter</a></li>
   <li><a href="#namespace" title="https://w3id.org/yang/server#namespace">namespace</a></li>
   <li><a href="#period" title="https://w3id.org/yang/server#period">period</a></li>
+  <li><a href="#server" title="https://w3id.org/yang/server#server">server</a></li>
   <li><a href="#socketAddress" title="https://w3id.org/yang/server#socketAddress">socket address</a></li>
   <li><a href="#sourceDatastore" title="https://w3id.org/yang/server#sourceDatastore">source datastore</a></li>
-  <li><a href="#sourceServer" title="https://w3id.org/yang/server#sourceServer">source server</a></li>
   <li><a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a></li>
  </ul>
  <div class="entity" id="capability">
@@ -777,7 +837,7 @@ This section provides details for each class and property defined by YANG Server
      has domain
     </dt>
     <dd>
-     <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Operation" title="https://w3id.org/yang/server#Operation">Operation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -850,6 +910,37 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
+ <div class="entity" id="server">
+  <h3>server<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#server</p>
+  <div class="comment">
+   <span class="markdown">Refers to the YANG server that runs the YANG datastore.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="socketAddress">
   <h3>socket address<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#socketAddress</p>
@@ -901,44 +992,13 @@ This section provides details for each class and property defined by YANG Server
      has domain
     </dt>
     <dd>
-     <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Operation" title="https://w3id.org/yang/server#Operation">Operation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="#Datastore" title="https://w3id.org/yang/server#Datastore">Datastore</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="sourceServer">
-  <h3>source server<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#sourceServer</p>
-  <div class="comment">
-   <span class="markdown">Refers to the YANG server which the YANG operation is sent to using a network management protocol.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Query" title="https://w3id.org/yang/server#Query">Query</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Subscription" title="https://w3id.org/yang/server#Subscription">Subscription</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#YangServer" title="https://w3id.org/yang/server#YangServer">Yang Server</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -972,9 +1032,11 @@ This section provides details for each class and property defined by YANG Server
   <li><a href="#https://ontology.unifiedcyberontology.org/uco/observable/addressValue" title="https://ontology.unifiedcyberontology.org/uco/observable/addressValue">addressValue</a></li>
   <li><a href="#filterValue" title="https://w3id.org/yang/server#filterValue">filter value</a></li>
   <li><a href="#hostKeyVerification" title="https://w3id.org/yang/server#hostKeyVerification">host key verification</a></li>
-  <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
   <li><a href="#namespacePrefix" title="https://w3id.org/yang/server#namespacePrefix">namespace prefix</a></li>
   <li><a href="#namespaceURL" title="https://w3id.org/yang/server#namespaceURL">namespace url</a></li>
+  <li><a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a></li>
+  <li><a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a></li>
+  <li><a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a></li>
   <li><a href="#http://qudt.org/schema/qudt/numericValue" title="http://qudt.org/schema/qudt/numericValue">numeric value</a></li>
   <li><a href="#subtreeValue" title="https://w3id.org/yang/server#subtreeValue">subtree value</a></li>
   <li><a href="#https://ontology.unifiedcyberontology.org/uco/observable/userName" title="https://ontology.unifiedcyberontology.org/uco/observable/userName">userName</a></li>
@@ -1091,34 +1153,6 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
- <div class="entity" id="http://purl.org/dc/terms/identifier">
-  <h3>identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/dc/terms/identifier</p>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="namespacePrefix">
   <h3>namespace prefix<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/yang/server#namespacePrefix</p>
@@ -1181,6 +1215,99 @@ This section provides details for each class and property defined by YANG Server
    </dl>
   </div>
  </div>
+ <div class="entity" id="netconfCapabilityId">
+  <h3>netconf capability id<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#netconfCapabilityId</p>
+  <div class="comment">
+   <span class="markdown">Represents the URI that identifies the NETCONF capability.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="netconfCapabilityName">
+  <h3>netconf capability name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#netconfCapabilityName</p>
+  <div class="comment">
+   <span class="markdown">Represents the name of the NETCONF capability.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="netconfCapabilityVersion">
+  <h3>netconf capability version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#netconfCapabilityVersion</p>
+  <div class="comment">
+   <span class="markdown">Represents the version of the NETCONF capability.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="http://qudt.org/schema/qudt/numericValue">
   <h3>numeric value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://qudt.org/schema/qudt/numericValue</p>
@@ -1205,6 +1332,17 @@ This section provides details for each class and property defined by YANG Server
    </dt>
    <dd>
     <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>&lt;interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"&gt;
+  &lt;interface&gt;
+  &lt;/interface&gt;
+&lt;/interfaces&gt;</pre>
    </dd>
   </dl>
   <div class="description">
@@ -1308,7 +1446,7 @@ This section provides details for each class and property defined by YANG Server
     Example
    </dt>
    <dd>
-    <pre>/ietf-interfaces:interfaces-state/interface</pre>
+    <pre>/ietf-interfaces:interfaces</pre>
    </dd>
   </dl>
   <div class="description">
@@ -1339,13 +1477,14 @@ This section provides details for each class and property defined by YANG Server
  <ul class="hlist">
   <li><a href="#CandidateCapability" title="https://w3id.org/yang/server#CandidateCapability">Candidate Capability</a></li>
   <li><a href="#ConfirmedCommitCapability" title="https://w3id.org/yang/server#ConfirmedCommitCapability">Confirmed Commit Capability</a></li>
-  <li><a href="#DistinctStartupCapability" title="https://w3id.org/yang/server#DistinctStartupCapability">Distinct Startup Capability</a></li>
   <li><a href="#RollbackOnErrorCapability" title="https://w3id.org/yang/server#RollbackOnErrorCapability">Rollback-on-Error Capability</a></li>
+  <li><a href="#StartupCapability" title="https://w3id.org/yang/server#StartupCapability">Startup Capability</a></li>
   <li><a href="#UrlCapability" title="https://w3id.org/yang/server#UrlCapability">URL Capability</a></li>
-  <li><a href="#ValidationCapability" title="https://w3id.org/yang/server#ValidationCapability">Validation Capability</a></li>
+  <li><a href="#ValidateCapability" title="https://w3id.org/yang/server#ValidateCapability">Validate Capability</a></li>
   <li><a href="#WritableRunningCapability" title="https://w3id.org/yang/server#WritableRunningCapability">Writable Running Capability</a></li>
   <li><a href="#XpathCapability" title="https://w3id.org/yang/server#XpathCapability">XPath Capability</a></li>
-  <li><a href="#YangLibraryCapability" title="https://w3id.org/yang/server#YangLibraryCapability">Yang Library Capability</a></li>
+  <li><a href="#YangLibrary1.0Capability" title="https://w3id.org/yang/server#YangLibrary1.0Capability">Yang Library 1.0 Capability</a></li>
+  <li><a href="#YangLibrary1.1Capability" title="https://w3id.org/yang/server#YangLibrary1.1Capability">Yang Library 1.1 Capability</a></li>
  </ul>
  <div class="entity" id="CandidateCapability">
   <h3>Candidate Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
@@ -1372,7 +1511,13 @@ This section provides details for each class and property defined by YANG Server
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:candidate:1.0"</span>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:candidate:1.0"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"candidate"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"</span>
    </dd>
   </dl>
  </div>
@@ -1401,36 +1546,13 @@ This section provides details for each class and property defined by YANG Server
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:confirmed-commit:1.1"</span>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:confirmed-commit:1.1"</span>
    </dd>
-  </dl>
- </div>
- <div class="entity" id="DistinctStartupCapability">
-  <h3>Distinct Startup Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#DistinctStartupCapability</p>
-  <div class="comment">
-   <span class="markdown">The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
    <dd>
-    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"confirmed-commit"</span>
    </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
    <dd>
-    <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:startup:1.0"</span>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.1"</span>
    </dd>
   </dl>
  </div>
@@ -1459,7 +1581,48 @@ This section provides details for each class and property defined by YANG Server
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:rollback-on-error:1.0"</span>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:rollback-on-error:1.0"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"rollback-on-error"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StartupCapability">
+  <h3>Startup Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#StartupCapability</p>
+  <div class="comment">
+   <span class="markdown">The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:startup:1.0"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"startup"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"</span>
    </dd>
   </dl>
  </div>
@@ -1488,15 +1651,21 @@ This section provides details for each class and property defined by YANG Server
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:url:1.0"</span>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:url:1.0"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"url"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"</span>
    </dd>
   </dl>
  </div>
- <div class="entity" id="ValidationCapability">
-  <h3>Validation Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#ValidationCapability</p>
+ <div class="entity" id="ValidateCapability">
+  <h3>Validate Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#ValidateCapability</p>
   <div class="comment">
-   <span class="markdown">Validation consists of checking a complete configuration for syntactical and semantic errors before applying the configuration to the device.</span>
+   <span class="markdown">Validate consists of checking a complete configuration for syntactical and semantic errors before applying the configuration to the device.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1517,7 +1686,13 @@ This section provides details for each class and property defined by YANG Server
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:validate:1.1"</span>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:validate:1.1"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"validate"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.1"</span>
    </dd>
   </dl>
  </div>
@@ -1546,7 +1721,13 @@ This section provides details for each class and property defined by YANG Server
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:writable-running:1.0"</span>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:writable-running:1.0"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"writable-running"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"</span>
    </dd>
   </dl>
  </div>
@@ -1575,15 +1756,21 @@ This section provides details for each class and property defined by YANG Server
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:xpath:1.0"</span>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:xpath:1.0"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"xpath"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"</span>
    </dd>
   </dl>
  </div>
- <div class="entity" id="YangLibraryCapability">
-  <h3>Yang Library Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/yang/server#YangLibraryCapability</p>
+ <div class="entity" id="YangLibrary1.0Capability">
+  <h3>Yang Library 1.0 Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#YangLibrary1.0Capability</p>
   <div class="comment">
-   <span class="markdown">NETCONF capability that indicates that the NETCONF server implements YANG Library.</span>
+   <span class="markdown">NETCONF capability that indicates that the NETCONF server implements YANG Library RFC7895.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1604,7 +1791,48 @@ This section provides details for each class and property defined by YANG Server
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:yang-library:1.1"</span>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:yang-library:1.0"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"yang-library"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YangLibrary1.1Capability">
+  <h3>Yang Library 1.1 Capability<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/yang/server#YangLibrary1.1Capability</p>
+  <div class="comment">
+   <span class="markdown">NETCONF capability that indicates that the NETCONF server implements YANG Library RFC8525.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/yang/server">https://w3id.org/yang/server</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#NetconfCapability" title="https://w3id.org/yang/server#NetconfCapability">Netconf Capability</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#netconfCapabilityId" title="https://w3id.org/yang/server#netconfCapabilityId">netconf capability id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"urn:ietf:params:netconf:capability:yang-library:1.1"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityName" title="https://w3id.org/yang/server#netconfCapabilityName">netconf capability name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"yang-library"</span>
+   </dd>
+   <dd>
+    <a href="#netconfCapabilityVersion" title="https://w3id.org/yang/server#netconfCapabilityVersion">netconf capability version</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.1"</span>
    </dd>
   </dl>
  </div>

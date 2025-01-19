@@ -16,33 +16,19 @@
   } ]
 }, {
   "@id" : "_:genid3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/yang/server#Query"
-    }, {
-      "@id" : "https://w3id.org/yang/server#Subscription"
-    } ]
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Ignacio Dominguez Martinez-Casanueva"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@id" : "https://orcid.org/0000-0002-8573-127X"
   } ]
 }, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/yang/server#Query"
-    }, {
-      "@id" : "https://w3id.org/yang/server#Subscription"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/yang/server#Query"
-    }, {
-      "@id" : "https://w3id.org/yang/server#Subscription"
-    } ]
+  "@id" : "_:genid4",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://github.com/candil-data-fabric"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "CANDIL Data Fabric"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
@@ -55,19 +41,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/identifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/yang/server#NetconfCapability"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://purl.org/dc/terms/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -119,6 +93,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://qudt.org/schema/qudt/Unit"
   } ]
+}, {
+  "@id" : "http://w3id.org/rml/XPathReferenceFormulation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
@@ -199,7 +176,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-01-09"
+    "@value" : "2025-01-18"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "_:genid1"
@@ -233,7 +210,7 @@
     "@id" : "https://w3id.org/yang/server"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.5.0"
+    "@value" : "1.6.0"
   } ],
   "https://w3id.org/mod#createdWith" : [ {
     "@id" : "https://chowlk.linkeddata.es/"
@@ -241,9 +218,6 @@
 }, {
   "@id" : "https://w3id.org/yang/server#CandidateCapability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:candidate:1.0"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/yang/server#NetconfCapability"
   } ],
@@ -258,6 +232,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.3"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:candidate:1.0"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "candidate"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.0"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#CandidateDatastore",
@@ -280,9 +263,6 @@
 }, {
   "@id" : "https://w3id.org/yang/server#ConfirmedCommitCapability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:confirmed-commit:1.1"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/yang/server#NetconfCapability"
   } ],
@@ -297,6 +277,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.4"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:confirmed-commit:1.1"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "confirmed-commit"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.1"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#ConventionalDatastore",
@@ -330,27 +319,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/rfc8342"
-  } ]
-}, {
-  "@id" : "https://w3id.org/yang/server#DistinctStartupCapability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:startup:1.0"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/yang/server#NetconfCapability"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/yang/server"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Distinct Startup Capability"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.7"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#DynamicDatastore",
@@ -431,6 +399,26 @@
     "@id" : "https://datatracker.ietf.org/doc/rfc6241"
   } ]
 }, {
+  "@id" : "https://w3id.org/yang/server#NetconfQuerySource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents a NETCONF query operation in RML mappings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Netconf Query Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://datatracker.ietf.org/doc/rfc6241"
+  }, {
+    "@id" : "https://w3id.org/yang/w3id.org/rml/io/spec"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rml/XPathReferenceFormulation"
+  } ]
+}, {
   "@id" : "https://w3id.org/yang/server#NetconfServer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -465,6 +453,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/yang/server#Subscription"
+  } ]
+}, {
+  "@id" : "https://w3id.org/yang/server#Operation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents a Operation to a YANG server using the corresponding network management protocol."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://datatracker.ietf.org/doc/rfc6241"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#OperationalDatastore",
@@ -531,13 +534,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/rfc6241"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/yang/server#Operation"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#RollbackOnErrorCapability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:rollback-on-error:1.0"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/yang/server#NetconfCapability"
   } ],
@@ -552,6 +555,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.5"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:rollback-on-error:1.0"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "rollback-on-error"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.0"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#RunningDatastore",
@@ -592,6 +604,33 @@
     "@id" : "https://ontology.unifiedcyberontology.org/uco/observable/UserAccount"
   } ]
 }, {
+  "@id" : "https://w3id.org/yang/server#StartupCapability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/yang/server#NetconfCapability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Startup Capability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.7"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:startup:1.0"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "startup"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.0"
+  } ]
+}, {
   "@id" : "https://w3id.org/yang/server#StartupDatastore",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -623,6 +662,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/rfc8641"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/yang/server#Operation"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#SubtreeFilter",
@@ -645,9 +687,6 @@
 }, {
   "@id" : "https://w3id.org/yang/server#UrlCapability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:url:1.0"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/yang/server#NetconfCapability"
   } ],
@@ -662,34 +701,46 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.8"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:url:1.0"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "url"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.0"
   } ]
 }, {
-  "@id" : "https://w3id.org/yang/server#ValidationCapability",
+  "@id" : "https://w3id.org/yang/server#ValidateCapability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:validate:1.1"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/yang/server#NetconfCapability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Validation consists of checking a complete configuration for syntactical and semantic errors before applying the configuration to the device."
+    "@value" : "Validate consists of checking a complete configuration for syntactical and semantic errors before applying the configuration to the device."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/yang/server"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Validation Capability"
+    "@value" : "Validate Capability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.6"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:validate:1.1"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "validate"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.1"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#WritableRunningCapability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:writable-running:1.0"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/yang/server#NetconfCapability"
   } ],
@@ -704,6 +755,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.2"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:writable-running:1.0"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "writable-running"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.0"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#XPathFilter",
@@ -726,9 +786,6 @@
 }, {
   "@id" : "https://w3id.org/yang/server#XpathCapability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:xpath:1.0"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/yang/server#NetconfCapability"
   } ],
@@ -743,27 +800,69 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.9"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:xpath:1.0"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "xpath"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.0"
   } ]
 }, {
-  "@id" : "https://w3id.org/yang/server#YangLibraryCapability",
+  "@id" : "https://w3id.org/yang/server#YangLibrary1.0Capability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/dc/terms/identifier" : [ {
-    "@value" : "urn:ietf:params:netconf:capability:yang-library:1.1"
-  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/yang/server#NetconfCapability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "NETCONF capability that indicates that the NETCONF server implements YANG Library."
+    "@value" : "NETCONF capability that indicates that the NETCONF server implements YANG Library RFC7895."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/yang/server"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Yang Library Capability"
+    "@value" : "Yang Library 1.0 Capability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://datatracker.ietf.org/doc/html/rfc7895"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:yang-library:1.0"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "yang-library"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/yang/server#YangLibrary1.1Capability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/yang/server#NetconfCapability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "NETCONF capability that indicates that the NETCONF server implements YANG Library RFC8525."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Yang Library 1.1 Capability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/html/rfc8526"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityId" : [ {
+    "@value" : "urn:ietf:params:netconf:capability:yang-library:1.1"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityName" : [ {
+    "@value" : "yang-library"
+  } ],
+  "https://w3id.org/yang/server#netconfCapabilityVersion" : [ {
+    "@value" : "1.1"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#YangServer",
@@ -823,7 +922,7 @@
     "@value" : "Refers to the YANG filter used when accessing the YANG server using a network management protocol."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid3"
+    "@id" : "https://w3id.org/yang/server#Operation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/yang/server"
@@ -928,6 +1027,60 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
+  "@id" : "https://w3id.org/yang/server#netconfCapabilityId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the URI that identifies the NETCONF capability."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/yang/server#NetconfCapability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "netconf capability id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/yang/server#netconfCapabilityName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the name of the NETCONF capability."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/yang/server#NetconfCapability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "netconf capability name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/yang/server#netconfCapabilityVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the version of the NETCONF capability."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/yang/server#NetconfCapability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "netconf capability version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
   "@id" : "https://w3id.org/yang/server#period",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -947,6 +1100,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://datatracker.ietf.org/doc/rfc8641"
+  } ]
+}, {
+  "@id" : "https://w3id.org/yang/server#server",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the YANG server that runs the YANG datastore."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/yang/server#Datastore"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/yang/server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "server"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/yang/server#YangServer"
   } ]
 }, {
   "@id" : "https://w3id.org/yang/server#socketAddress",
@@ -973,7 +1144,7 @@
     "@value" : "Refers to the YANG datastore of the source YANG server to be selected in the YANG operation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid6"
+    "@id" : "https://w3id.org/yang/server#Operation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/yang/server"
@@ -985,26 +1156,11 @@
     "@id" : "https://w3id.org/yang/server#Datastore"
   } ]
 }, {
-  "@id" : "https://w3id.org/yang/server#sourceServer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Refers to the YANG server which the YANG operation is sent to using a network management protocol."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid9"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/yang/server"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "source server"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/yang/server#YangServer"
-  } ]
-}, {
   "@id" : "https://w3id.org/yang/server#subtreeValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@value" : "\n<interfaces xmlns=\"urn:ietf:params:xml:ns:yang:ietf-interfaces\">\n  <interface>\n  </interface>\n</interfaces>"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "XML Subtree filter used to access YANG data of the NETCONF server."
   } ],
@@ -1050,7 +1206,7 @@
   "@id" : "https://w3id.org/yang/server#xpathValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/vocab/vann/example" : [ {
-    "@value" : "/ietf-interfaces:interfaces-state/interface"
+    "@value" : "/ietf-interfaces:interfaces"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "XPath expression used to access YANG data of the YANG server."

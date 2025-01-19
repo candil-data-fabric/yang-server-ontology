@@ -1,31 +1,39 @@
+@prefix yl: <https://w3id.org/yang/library#> .
 @prefix ys: <https://w3id.org/yang/server#> .
-@prefix qudt: <http://qudt.org/2.1/schema/qudt#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
-@base <https://example.org/> .
+@base <https://netconf-rml-demo.org/> .
 
+# Connection details to NETCONF server
 <netconf-server-1> a ys:NetconfServer ;
     ys:socketAddress <netconf-server-1/socket-address> ;
     ys:serverAccount <netconf-server-1/account> ;
-    ys:hostKeyVerification "false" ;
-    ys:datastore <netconf-server-1/datastores/operational> ;
-    ys:datastore <netconf-server-1/datastores/running> ;
-    ys:capability ys:XpathCapability .
-
-<netconf-server-1/socket-address> a observable:SocketAddress ;
-    observable:addressValue "192.168.1.10:830" .
-
-<netconf-server-1/account> a ys:ServerAccount ;
-    ys:username "admin" ;
-    observable:hasFacet <netconf-server-1/account/authentication> .
-
-<netconf-server-1/account/authentication> a observable:AccountAuthenticationFacet ;
-    observable:password "admin" ;
-    observable:passwordType "plain-text" .
+    ys:hostKeyVerification "false"
+.
 
 # In this example the NETCONF server is non-NMDA compatible.
 # Thus, only operational and running datastores are available.
-<netconf-server-1/datastores/operational> a ys:OperationalDatastore .
-<netconf-server-1/datastores/running> a ys:RunningDatastore .
+<netconf-server-1/datastores/operational> a ys:OperationalDatastore ;
+    ys:server <netconf-server-1>
+.
+<netconf-server-1/datastores/running> a ys:RunningDatastore ;
+    ys:server <netconf-server-1>
+.
+
+<netconf-server-1/socket-address> a observable:SocketAddress ;
+    observable:addressValue "192.168.10.10:830"
+.
+
+<netconf-server-1/account> a ys:ServerAccount ;
+    ys:username "admin" ;
+    observable:hasFacet <netconf-server-1/account/authentication>
+.
+
+<netconf-server-1/account/authentication> a observable:AccountAuthenticationFacet ;
+    observable:password "admin" ;
+    observable:passwordType "plain-text"
+.
 
 # Example 1: Query with XPath filter to NETCONF server
 <query-xpath> a ys:Query ;
