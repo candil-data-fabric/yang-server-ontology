@@ -6,9 +6,9 @@
     "title" : {
       "undefined" : "YANG Server Ontology"
     },
-    "iri" : "https://w3id.org/yang/server",
+    "iri" : "https://w3id.org/yang/server#",
     "version" : "1.6.0",
-    "author" : [ "_:genid2147483648" ],
+    "author" : [ "_:genid2147483651" ],
     "description" : {
       "undefined" : "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 "
     },
@@ -25,7 +25,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
+        "value" : "_:genid2147483651",
         "type" : "label"
       } ],
       "createdWith" : [ {
@@ -49,14 +49,14 @@
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
-        "value" : "_:genid2147483649",
+        "value" : "_:genid2147483650",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/server#",
-        "type" : "iri"
+        "value" : "1.6.0",
+        "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
@@ -64,11 +64,11 @@
         "value" : "https://github.com/candil-data-fabric/yang-server-ontology",
         "type" : "iri"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
-        "value" : "1.6.0",
-        "type" : "label"
+        "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -101,7 +101,7 @@
     "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
     "id" : "40",
@@ -393,7 +393,7 @@
     "comment" : {
       "undefined" : "An entity that provides access to YANG-defined data to a client, over some network management protocol."
     },
-    "id" : "30"
+    "id" : "29"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/OnlineAccount",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -1267,7 +1267,7 @@
       "undefined" : "YANG server that can be managed via the NETCONF protocol."
     },
     "id" : "16",
-    "superClasses" : [ "30" ]
+    "superClasses" : [ "29" ]
   } ],
   "property" : [ {
     "id" : "2",
@@ -1291,7 +1291,7 @@
     "id" : "26",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "29",
+    "id" : "30",
     "type" : "owl:objectProperty"
   }, {
     "id" : "31",
@@ -1393,7 +1393,7 @@
   "propertyAttribute" : [ {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "2"
   }, {
     "iri" : "https://w3id.org/yang/server#period",
@@ -1476,12 +1476,12 @@
   }, {
     "range" : "4",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "range" : "4",
     "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "24"
   }, {
     "iri" : "https://w3id.org/yang/server#subtreeValue",
@@ -1514,7 +1514,7 @@
   }, {
     "iri" : "https://w3id.org/yang/server#server",
     "baseIri" : "https://w3id.org/yang/server",
-    "range" : "30",
+    "range" : "29",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1532,7 +1532,7 @@
       "undefined" : "Refers to the YANG server that runs the YANG datastore."
     },
     "attributes" : [ "object" ],
-    "id" : "29"
+    "id" : "30"
   }, {
     "iri" : "https://w3id.org/yang/server#xpathValue",
     "baseIri" : "https://w3id.org/yang/server",
@@ -1564,17 +1564,17 @@
   }, {
     "range" : "36",
     "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
     "range" : "19",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "37"
   }, {
     "range" : "4",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/yang/server#filter",
@@ -1601,27 +1601,27 @@
   }, {
     "range" : "36",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
     "range" : "9",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "range" : "9",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "44"
   }, {
     "range" : "19",
     "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   }, {
     "range" : "9",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/yang/server#namespace",
@@ -1706,27 +1706,27 @@
       "undefined" : "unit"
     },
     "domain" : "56",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "55"
   }, {
-    "range" : "30",
+    "range" : "29",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "57"
   }, {
     "range" : "13",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "58"
   }, {
     "range" : "40",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "59"
   }, {
     "range" : "11",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "61"
   }, {
     "iri" : "https://w3id.org/yang/server#sourceDatastore",
@@ -1895,7 +1895,7 @@
       "IRI-based" : "datastore",
       "undefined" : "datastore"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "Indicates the YANG datastore used by the YANG server."
     },
@@ -1967,7 +1967,7 @@
   }, {
     "range" : "1",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "81"
   }, {
     "iri" : "https://w3id.org/yang/server#socketAddress",
@@ -1985,7 +1985,7 @@
       "IRI-based" : "socketAddress",
       "undefined" : "socket address"
     },
-    "domain" : "30",
+    "domain" : "29",
     "comment" : {
       "undefined" : "Refers to the socket address for connecting to the YANG server."
     },
@@ -1994,7 +1994,7 @@
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "83"
   } ]
 }

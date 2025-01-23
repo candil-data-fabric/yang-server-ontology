@@ -1,21 +1,21 @@
-<https://w3id.org/yang/server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/created> "2025-01-18"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/creator> _:genid1 .
+<https://w3id.org/yang/server#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/created> "2025-01-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-8573-127X> .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/description> "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 " .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/publisher> _:genid2 .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/description> "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 " .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/publisher> _:genid2 .
 _:genid2 <http://xmlns.com/foaf/0.1/name> "CANDIL Data Fabric" .
 _:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fabric> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/source> <https://github.com/candil-data-fabric/yang-server-ontology> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/title> "YANG Server Ontology" .
-<https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ys" .
-<https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
-<https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionInfo> "1.6.0" .
-<https://w3id.org/yang/server> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/source> <https://github.com/candil-data-fabric/yang-server-ontology> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/title> "YANG Server Ontology" .
+<https://w3id.org/yang/server#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ys" .
+<https://w3id.org/yang/server#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
+<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "1.6.0" .
+<https://w3id.org/yang/server#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
 # #################################################################
@@ -611,8 +611,8 @@ _:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fa
 <https://w3id.org/yang/server#YangLibrary1.1Capability> <http://www.w3.org/2000/01/rdf-schema#label> "Yang Library 1.1 Capability" .
 <https://w3id.org/yang/server#YangLibrary1.1Capability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc8526> .
 # 
-_:genid3 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" .
-_:genid3 <https://schema.org/identifier> <https://orcid.org/0000-0002-8573-127X> .
-_:genid4 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fabric> .
-_:genid4 <http://xmlns.com/foaf/0.1/name> "CANDIL Data Fabric" .
+_:genid3 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fabric> .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "CANDIL Data Fabric" .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" .
+_:genid4 <https://schema.org/identifier> <https://orcid.org/0000-0002-8573-127X> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

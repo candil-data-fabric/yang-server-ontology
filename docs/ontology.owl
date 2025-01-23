@@ -12,7 +12,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/"
      xmlns:server="https://w3id.org/yang/server#">
-    <owl:Ontology rdf:about="https://w3id.org/yang/server">
+    <owl:Ontology rdf:about="https://w3id.org/yang/server#">
         <owl:versionIRI rdf:resource="https://w3id.org/yang/server"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-01-18</terms:created>
         <terms:creator rdf:nodeID="genid1"/>
@@ -1027,12 +1027,12 @@
         <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc8526"/>
     </owl:NamedIndividual>
     <rdf:Description rdf:nodeID="genid3">
-        <foaf:name>Ignacio Dominguez Martinez-Casanueva</foaf:name>
-        <schema:identifier rdf:resource="https://orcid.org/0000-0002-8573-127X"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid4">
         <foaf:homepage rdf:resource="https://github.com/candil-data-fabric"/>
         <foaf:name>CANDIL Data Fabric</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <foaf:name>Ignacio Dominguez Martinez-Casanueva</foaf:name>
+        <schema:identifier rdf:resource="https://orcid.org/0000-0002-8573-127X"/>
     </rdf:Description>
 </rdf:RDF>
 

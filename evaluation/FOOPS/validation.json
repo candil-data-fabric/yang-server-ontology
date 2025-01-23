@@ -1,8 +1,8 @@
 {
-"ontology_URI": "https://w3id.org/yang/server",
+"ontology_URI": "https://w3id.org/yang/server#",
 "ontology_title": "YANG Server Ontology",
 "ontology_license": "http://purl.org/NET/rdflicense/APACHE2.0",
-"overall_score":0.78333336,
+"overall_score":0.81666666,
 "checks":[
   {
     "id": "https://w3id.org/foops/test/PURL1",
@@ -155,9 +155,9 @@
     "total_tests_run": 1,
     "reference_resources": [
       "http://qudt.org/schema/qudt/",
+      "http://w3id.org/rml/",
       "http://xmlns.com/foaf/0.1/",
-      "https://ontology.unifiedcyberontology.org/uco/observable/",
-      "http://purl.org/dc/terms/"
+      "https://ontology.unifiedcyberontology.org/uco/observable/"
     ]
   },
   {
@@ -169,8 +169,8 @@
     "explanation": "Labels found for all ontology terms",
     "abbreviation": "VOC3",
     "description": "This check verifies the extent to which all ontology terms have labels (rdfs:label in OWL vocabularies, skos:prefLabel in SKOS vocabularies)",
-    "total_passed_tests": 36,
-    "total_tests_run": 36
+    "total_passed_tests": 41,
+    "total_tests_run": 41
   },
   {
     "id": "https://w3id.org/foops/test/VOC4",
@@ -181,19 +181,19 @@
     "explanation": "Descriptions found for all ontology terms",
     "abbreviation": "VOC4",
     "description": "This check verifies whether all ontology terms have descriptions (rdfs:comment in OWL vocabularies, skos:definition in SKOS vocabularies)",
-    "total_passed_tests": 36,
-    "total_tests_run": 36
+    "total_passed_tests": 41,
+    "total_tests_run": 41
   },
   {
     "id": "https://w3id.org/foops/test/VER1",
     "principle_id": "F1",
     "category_id": "Findable",
-    "status": "error",
+    "status": "ok",
     "title": "Version IRI",
-    "explanation": "Version IRI  defined but equal to ontology id",
+    "explanation": "Version IRI defined, IRI is different from ontology URI",
     "abbreviation": "VER1",
     "description": "This check verifies if there is an id for this ontology version, and whether the id is unique (i.e., different from the ontology URI)",
-    "total_passed_tests": 1,
+    "total_passed_tests": 2,
     "total_tests_run": 2
   }
 ]
