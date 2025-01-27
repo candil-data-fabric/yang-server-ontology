@@ -20,7 +20,7 @@ The requirements of this ontology are written as competency questions/natural la
 
 The following diagrams shows the classes and properties defined in the ontology. The diagram follows the [Chowlk notation](https://chowlk.linkeddata.es/notation.html).
 
-![YANG Server Ontology Figures](diagrams/yang-server-figures.svg)
+![YANG Server Ontology Diagram](diagrams/yang-server-figures.svg)
 
 ### Ontology Code (OWL)
 
