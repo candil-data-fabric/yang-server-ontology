@@ -1,0 +1,108 @@
+@prefix ys: <https://w3id.org/yang/server#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@base <https://netconf-rml-demo.org/> .
+
+# Connection details to NETCONF server
+<netconf-server-1> a ys:NetconfServer ;
+    ys:socketAddress <netconf-server-1/socket-address> ;
+    ys:serverAccount <netconf-server-1/account> ;
+    ys:hostKeyVerification "false" ;
+    ys:capability ys:XpathCapability ,
+                  ys:YangLibrary1.0Capability
+.
+
+# In this example the NETCONF server is non-NMDA compatible.
+# For more info see: https://www.rfc-editor.org/rfc/rfc8342.html#section-4.1
+<netconf-server-1/datastores/operational> a ys:OperationalDatastore ;
+    ys:server <netconf-server-1>
+.
+<netconf-server-1/datastores/running> a ys:RunningDatastore ;
+    ys:server <netconf-server-1>
+.
+
+<netconf-server-1/datastores/candidate> a ys:CandidateDatastore ;
+    ys:server <netconf-server-1>
+.
+
+<netconf-server-1/datastores/startup> a ys:StartupDatastore ;
+    ys:server <netconf-server-1>
+.
+
+<netconf-server-1/socket-address> a observable:SocketAddress ;
+    observable:addressValue "localhost:830"
+.
+
+<netconf-server-1/account> a ys:ServerAccount ;
+    ys:username "netconf" ;
+    observable:hasFacet <netconf-server-1/account/authentication>
+.
+
+<netconf-server-1/account/authentication> a observable:AccountAuthenticationFacet ;
+    observable:password "netconf" ;
+    observable:passwordType "plain-text"
+.
+
+# Example 1: Query with XPath filter to NETCONF server
+<query-xpath> a ys:Query ;
+    ys:sourceDatastore <netconf-server-1/datastores/operational> ;
+    ys:filter [ a ys:XPathFilter ;
+        ys:xpathValue "/yanglib:modules-state" ;
+        ys:namespace [ a ys:Namespace ;
+            ys:namespacePrefix "yanglib" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-yang-library" ;
+        ];
+    ];
+.
+
+# Example 2: Query with Subtree filter to NETCONF server
+<query-subtree> a ys:Query ;
+    ys:sourceDatastore <netconf-server-1/datastores/operational> ;
+    ys:filter [ a ys:SubtreeFilter ;
+        ys:subtreeValue '''
+        <modules-state xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
+            <module>
+            </module>
+        </modules-state>
+        ''';
+    ];
+.
+
+# Example 3: Periodic subscription to output octets counter of interfaces
+# Dynamic subscription is configured to push updated every 10 seconds
+<sub-periodic> a ys:PeriodicSubscription ;
+    ys:sourceDatastore <netconf-server-1/datastores/operational> ;
+    ys:filter [ a ys:XPathFilter ;
+        ys:xpathValue "/if:interfaces-state/if:interface/if:statistics/if:out-octets" ;
+        ys:namespace [ a ys:Namespace ;
+            ys:namespacePrefix "if" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
+        ];
+        ys:namespace [ a ys:Namespace ;
+            ys:namespacePrefix "ip" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-ip" ;
+        ];
+    ];
+    ys:period [ a ys:Period ;
+        qudt:numericValue "10" ;
+        qudt:unit <http://qudt.org/vocab/unit/MilliSEC>
+    ];
+.
+
+# Example 4: On-change subscription to interface enabled status
+<sub-onchange> a ys:OnChangeSubscription ;
+    ys:sourceDatastore <netconf-server-1/datastores/running> ;
+    ys:filter [ a ys:XPathFilter ;
+        ys:xpathValue "/if:interfaces/if:interface/if:enabled" ;
+        ys:namespace [ a ys:Namespace ;
+            ys:namespacePrefix "if" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-interfaces" ;
+        ];
+        ys:namespace [ a ys:Namespace ;
+            ys:namespacePrefix "ip" ;
+            ys:namespaceURL "urn:ietf:params:xml:ns:yang:ietf-ip" ;
+        ];
+    ];
+.

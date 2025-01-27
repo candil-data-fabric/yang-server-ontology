@@ -1,21 +1,21 @@
-<https://w3id.org/yang/server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/created> "2024-10-03"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/creator> _:genid1 .
+<https://w3id.org/yang/server#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/created> "2025-01-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-8573-127X> .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/description> "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 " .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/publisher> _:genid2 .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/description> "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 " .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/publisher> _:genid2 .
 _:genid2 <http://xmlns.com/foaf/0.1/name> "CANDIL Data Fabric" .
 _:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fabric> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/source> <https://github.com/candil-data-fabric/yang-server-ontology> .
-<https://w3id.org/yang/server> <http://purl.org/dc/terms/title> "YANG Server Ontology" .
-<https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ys" .
-<https://w3id.org/yang/server> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/yang/server#> .
-<https://w3id.org/yang/server> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
-<https://w3id.org/yang/server> <http://www.w3.org/2002/07/owl#versionInfo> "1.4.1" .
-<https://w3id.org/yang/server> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/source> <https://github.com/candil-data-fabric/yang-server-ontology> .
+<https://w3id.org/yang/server#> <http://purl.org/dc/terms/title> "YANG Server Ontology" .
+<https://w3id.org/yang/server#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ys" .
+<https://w3id.org/yang/server#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/yang/server#> .
+<https://w3id.org/yang/server#> <http://www.w3.org/2000/01/rdf-schema#label> "YANG Server Ontology"@en .
+<https://w3id.org/yang/server#> <http://www.w3.org/2002/07/owl#versionInfo> "1.6.0" .
+<https://w3id.org/yang/server#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
 # #################################################################
@@ -33,6 +33,9 @@ _:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fa
 # 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -115,15 +118,7 @@ _:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fa
 # 
 # https://w3id.org/yang/server#filter
 <https://w3id.org/yang/server#filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid3 .
-_:genid3 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Operation> .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Filter> .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG filter used when accessing the YANG server using a network management protocol." .
 <https://w3id.org/yang/server#filter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
@@ -146,37 +141,29 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#label> "period" .
 <https://w3id.org/yang/server#period> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8641> .
 # 
+# https://w3id.org/yang/server#server
+<https://w3id.org/yang/server#server> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#server> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Datastore> .
+<https://w3id.org/yang/server#server> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#server> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG server that runs the YANG datastore." .
+<https://w3id.org/yang/server#server> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#server> <http://www.w3.org/2000/01/rdf-schema#label> "server" .
+# 
+# https://w3id.org/yang/server#socketAddress
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#range> <https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the socket address for connecting to the YANG server." .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#socketAddress> <http://www.w3.org/2000/01/rdf-schema#label> "socket address" .
+# 
 # https://w3id.org/yang/server#sourceDatastore
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid6 .
-_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#Operation> .
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#Datastore> .
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG datastore of the source YANG server to be selected in the YANG operation." .
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#sourceDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "source datastore" .
-# 
-# https://w3id.org/yang/server#sourceServer
-<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Subscription> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/yang/server#Query> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/yang/server#YangServer> .
-<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the YANG server which the YANG operation is sent to using a network management protocol." .
-<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server#sourceServer> <http://www.w3.org/2000/01/rdf-schema#label> "source server" .
 # 
 # 
 # 
@@ -187,26 +174,26 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfCapability> .
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
-# 
 # http://qudt.org/schema/qudt/numericValue
 <http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> .
 <http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/2000/01/rdf-schema#label> "numeric value" .
 # 
-# https://w3id.org/yang/server#endpoint
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/yang/server#endpoint> <http://purl.org/vocab/vann/example> "192.168.1.10:830" .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "YANG server endpoint. " .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server#endpoint> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint" .
+# http://xmlns.com/foaf/0.1/accountName
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#label> "account name" .
+# 
+# https://ontology.unifiedcyberontology.org/uco/observable/addressValue
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> <http://purl.org/vocab/vann/example> "192.168.1.10:830" .
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
+<https://ontology.unifiedcyberontology.org/uco/observable/addressValue> <http://www.w3.org/2000/01/rdf-schema#label> "addressValue" .
+# 
+# https://ontology.unifiedcyberontology.org/uco/observable/userName
+<https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
+<https://ontology.unifiedcyberontology.org/uco/observable/userName> <http://www.w3.org/2000/01/rdf-schema#label> "userName" .
 # 
 # https://w3id.org/yang/server#filterValue
 <https://w3id.org/yang/server#filterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -241,26 +228,45 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#namespaceURL> <http://www.w3.org/2000/01/rdf-schema#label> "namespace url" .
 # 
-# https://w3id.org/yang/server#password
-<https://w3id.org/yang/server#password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#comment> "Password for accessing the YANG server." .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server#password> <http://www.w3.org/2000/01/rdf-schema#label> "password" .
+# https://w3id.org/yang/server#netconfCapabilityId
+<https://w3id.org/yang/server#netconfCapabilityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#netconfCapabilityId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfCapability> .
+<https://w3id.org/yang/server#netconfCapabilityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/yang/server#netconfCapabilityId> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the URI that identifies the NETCONF capability." .
+<https://w3id.org/yang/server#netconfCapabilityId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#netconfCapabilityId> <http://www.w3.org/2000/01/rdf-schema#label> "netconf capability id" .
+# 
+# https://w3id.org/yang/server#netconfCapabilityName
+<https://w3id.org/yang/server#netconfCapabilityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#netconfCapabilityName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfCapability> .
+<https://w3id.org/yang/server#netconfCapabilityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/yang/server#netconfCapabilityName> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the name of the NETCONF capability." .
+<https://w3id.org/yang/server#netconfCapabilityName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#netconfCapabilityName> <http://www.w3.org/2000/01/rdf-schema#label> "netconf capability name" .
+# 
+# https://w3id.org/yang/server#netconfCapabilityVersion
+<https://w3id.org/yang/server#netconfCapabilityVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/yang/server#netconfCapabilityVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#NetconfCapability> .
+<https://w3id.org/yang/server#netconfCapabilityVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/yang/server#netconfCapabilityVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the version of the NETCONF capability." .
+<https://w3id.org/yang/server#netconfCapabilityVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#netconfCapabilityVersion> <http://www.w3.org/2000/01/rdf-schema#label> "netconf capability version" .
 # 
 # https://w3id.org/yang/server#subtreeValue
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/yang/server#filterValue> .
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#SubtreeFilter> .
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<https://w3id.org/yang/server#subtreeValue> <http://purl.org/vocab/vann/example> "\n<interfaces xmlns=\"urn:ietf:params:xml:ns:yang:ietf-interfaces\">\n  <interface>\n  </interface>\n</interfaces>" .
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "XML Subtree filter used to access YANG data of the NETCONF server." .
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#subtreeValue> <http://www.w3.org/2000/01/rdf-schema#label> "subtree value" .
 # 
 # https://w3id.org/yang/server#username
 <https://w3id.org/yang/server#username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#YangServer> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/accountName> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ontology.unifiedcyberontology.org/uco/observable/userName> .
+<https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#ServerAccount> .
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#comment> "Username for accessing the YANG server." .
 <https://w3id.org/yang/server#username> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
@@ -271,7 +277,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/yang/server#filterValue> .
 <https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/yang/server#XPathFilter> .
 <https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/yang/server#xpathValue> <http://purl.org/vocab/vann/example> "/ietf-interfaces:interfaces-state/interface" .
+<https://w3id.org/yang/server#xpathValue> <http://purl.org/vocab/vann/example> "/ietf-interfaces:interfaces" .
 <https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#comment> "XPath expression used to access YANG data of the YANG server." .
 <https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#xpathValue> <http://www.w3.org/2000/01/rdf-schema#label> "xpath value" .
@@ -290,6 +296,24 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> .
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
 # 
+# http://w3id.org/rml/XPathReferenceFormulation
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/OnlineAccount
+<http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+<http://xmlns.com/foaf/0.1/OnlineAccount> <http://www.w3.org/2000/01/rdf-schema#label> "Online Account" .
+# 
+# https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress
+<https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
+<https://ontology.unifiedcyberontology.org/uco/observable/SocketAddress> <http://www.w3.org/2000/01/rdf-schema#label> "SocketAddress" .
+# 
+# https://ontology.unifiedcyberontology.org/uco/observable/UserAccount
+<https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ontology.unifiedcyberontology.org/uco/observable/> .
+<https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> <http://www.w3.org/2000/01/rdf-schema#label> "UserAccount" .
+# 
 # https://w3id.org/yang/server#CandidateDatastore
 <https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#CandidateDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#ConventionalDatastore> .
@@ -301,7 +325,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/yang/server#ConventionalDatastore
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Datastore> .
-<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the following set of configuration datastores: <running>, <startup>, <candidate>, and <intended>.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores." .
+<https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the following set of configuration datastores: `<running>`, `<startup>`, `<candidate>`, and `<intended>`.  These datastores share a common datastore schema, and protocol operations allow copying data between these datastores. The term \"conventional\" is chosen as a generic umbrella term for these datastores." .
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Conventional Datastore" .
 <https://w3id.org/yang/server#ConventionalDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
@@ -349,6 +373,15 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#NetconfCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Netconf Capability" .
 <https://w3id.org/yang/server#NetconfCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
 # 
+# https://w3id.org/yang/server#NetconfQuerySource
+<https://w3id.org/yang/server#NetconfQuerySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#NetconfQuerySource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/XPathReferenceFormulation> .
+<https://w3id.org/yang/server#NetconfQuerySource> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a NETCONF query operation in RML mappings." .
+<https://w3id.org/yang/server#NetconfQuerySource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#NetconfQuerySource> <http://www.w3.org/2000/01/rdf-schema#label> "Netconf Query Source" .
+<https://w3id.org/yang/server#NetconfQuerySource> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+<https://w3id.org/yang/server#NetconfQuerySource> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/yang/w3id.org/rml/io/spec> .
+# 
 # https://w3id.org/yang/server#NetconfServer
 <https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#NetconfServer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#YangServer> .
@@ -364,6 +397,13 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#OnChangeSubscription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#OnChangeSubscription> <http://www.w3.org/2000/01/rdf-schema#label> "On-change Subscription" .
 <https://w3id.org/yang/server#OnChangeSubscription> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8641> .
+# 
+# https://w3id.org/yang/server#Operation
+<https://w3id.org/yang/server#Operation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Operation> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a Operation to a YANG server using the corresponding network management protocol." .
+<https://w3id.org/yang/server#Operation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#Operation> <http://www.w3.org/2000/01/rdf-schema#label> "Operation" .
+<https://w3id.org/yang/server#Operation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
 # 
 # https://w3id.org/yang/server#OperationalDatastore
 <https://w3id.org/yang/server#OperationalDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -390,6 +430,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/yang/server#Query
 <https://w3id.org/yang/server#Query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Query> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Operation> .
 <https://w3id.org/yang/server#Query> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a query operation to a YANG server using the corresponding network management protocol." .
 <https://w3id.org/yang/server#Query> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#Query> <http://www.w3.org/2000/01/rdf-schema#label> "Query" .
@@ -403,6 +444,15 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#label> "Running Datastore" .
 <https://w3id.org/yang/server#RunningDatastore> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc8342> .
 # 
+# https://w3id.org/yang/server#ServerAccount
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/OnlineAccount> .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ontology.unifiedcyberontology.org/uco/observable/UserAccount> .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an account used for accessing the YANG server." .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#label> "Server Account" .
+<https://w3id.org/yang/server#ServerAccount> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/rfc6241> .
+# 
 # https://w3id.org/yang/server#StartupDatastore
 <https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/yang/server#StartupDatastore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#ConventionalDatastore> .
@@ -413,6 +463,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/yang/server#Subscription
 <https://w3id.org/yang/server#Subscription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/yang/server#Subscription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/yang/server#Operation> .
 <https://w3id.org/yang/server#Subscription> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a subscription operation to a YANG server using the corresponding network management protocol." .
 <https://w3id.org/yang/server#Subscription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#Subscription> <http://www.w3.org/2000/01/rdf-schema#label> "Subscription" .
@@ -453,7 +504,9 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/yang/server#CandidateCapability
 <https://w3id.org/yang/server#CandidateCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/yang/server#CandidateCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#CandidateCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:candidate:1.0" .
+<https://w3id.org/yang/server#CandidateCapability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:candidate:1.0" .
+<https://w3id.org/yang/server#CandidateCapability> <https://w3id.org/yang/server#netconfCapabilityName> "candidate" .
+<https://w3id.org/yang/server#CandidateCapability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.0" .
 <https://w3id.org/yang/server#CandidateCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The candidate configuration capability, `:candidate`, indicates that the device supports a candidate configuration datastore, which is used to hold configuration data that can be manipulated without impacting the device's current configuration." .
 <https://w3id.org/yang/server#CandidateCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#CandidateCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Candidate Capability" .
@@ -462,52 +515,64 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/yang/server#ConfirmedCommitCapability
 <https://w3id.org/yang/server#ConfirmedCommitCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/yang/server#ConfirmedCommitCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#ConfirmedCommitCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:confirmed-commit:1.1" .
+<https://w3id.org/yang/server#ConfirmedCommitCapability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:confirmed-commit:1.1" .
+<https://w3id.org/yang/server#ConfirmedCommitCapability> <https://w3id.org/yang/server#netconfCapabilityName> "confirmed-commit" .
+<https://w3id.org/yang/server#ConfirmedCommitCapability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.1" .
 <https://w3id.org/yang/server#ConfirmedCommitCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The `:confirmed-commit:1.1` capability indicates that the server will support the `<cancel-commit>` operation and the `<confirmed>`, `<confirm-timeout>`, `<persist>`, and `<persist-id>` parameters for the `<commit>` operation." .
 <https://w3id.org/yang/server#ConfirmedCommitCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#ConfirmedCommitCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Confirmed Commit Capability" .
 <https://w3id.org/yang/server#ConfirmedCommitCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc6241#section-8.4> .
 # 
-# https://w3id.org/yang/server#DistinctStartupCapability
-<https://w3id.org/yang/server#DistinctStartupCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/yang/server#DistinctStartupCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#DistinctStartupCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:startup:1.0" .
-<https://w3id.org/yang/server#DistinctStartupCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots." .
-<https://w3id.org/yang/server#DistinctStartupCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server#DistinctStartupCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Distinct Startup Capability" .
-<https://w3id.org/yang/server#DistinctStartupCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc6241#section-8.7> .
-# 
 # https://w3id.org/yang/server#RollbackOnErrorCapability
 <https://w3id.org/yang/server#RollbackOnErrorCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/yang/server#RollbackOnErrorCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#RollbackOnErrorCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:rollback-on-error:1.0" .
+<https://w3id.org/yang/server#RollbackOnErrorCapability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:rollback-on-error:1.0" .
+<https://w3id.org/yang/server#RollbackOnErrorCapability> <https://w3id.org/yang/server#netconfCapabilityName> "rollback-on-error" .
+<https://w3id.org/yang/server#RollbackOnErrorCapability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.0" .
 <https://w3id.org/yang/server#RollbackOnErrorCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "This capability indicates that the server will support the `rollback-on-error` value in the `<error-option>` parameter to the `<edit-config>` operation." .
 <https://w3id.org/yang/server#RollbackOnErrorCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#RollbackOnErrorCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Rollback-on-Error Capability" .
 <https://w3id.org/yang/server#RollbackOnErrorCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc6241#section-8.5> .
 # 
+# https://w3id.org/yang/server#StartupCapability
+<https://w3id.org/yang/server#StartupCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/yang/server#StartupCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
+<https://w3id.org/yang/server#StartupCapability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:startup:1.0" .
+<https://w3id.org/yang/server#StartupCapability> <https://w3id.org/yang/server#netconfCapabilityName> "startup" .
+<https://w3id.org/yang/server#StartupCapability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.0" .
+<https://w3id.org/yang/server#StartupCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The device supports separate running and startup configuration datastores. The startup configuration is loaded by the device when it boots." .
+<https://w3id.org/yang/server#StartupCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#StartupCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Startup Capability" .
+<https://w3id.org/yang/server#StartupCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc6241#section-8.7> .
+# 
 # https://w3id.org/yang/server#UrlCapability
 <https://w3id.org/yang/server#UrlCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/yang/server#UrlCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#UrlCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:url:1.0" .
+<https://w3id.org/yang/server#UrlCapability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:url:1.0" .
+<https://w3id.org/yang/server#UrlCapability> <https://w3id.org/yang/server#netconfCapabilityName> "url" .
+<https://w3id.org/yang/server#UrlCapability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.0" .
 <https://w3id.org/yang/server#UrlCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The NETCONF peer has the ability to accept the `<url>` element in `<source>` and `<target>` parameters. The capability is further identified by URL arguments indicating the URL schemes supported." .
 <https://w3id.org/yang/server#UrlCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#UrlCapability> <http://www.w3.org/2000/01/rdf-schema#label> "URL Capability" .
 <https://w3id.org/yang/server#UrlCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc6241#section-8.8> .
 # 
-# https://w3id.org/yang/server#ValidationCapability
-<https://w3id.org/yang/server#ValidationCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/yang/server#ValidationCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#ValidationCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:validate:1.1" .
-<https://w3id.org/yang/server#ValidationCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Validation consists of checking a complete configuration for syntactical and semantic errors before applying the configuration to the device." .
-<https://w3id.org/yang/server#ValidationCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server#ValidationCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Validation Capability" .
-<https://w3id.org/yang/server#ValidationCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc6241#section-8.6> .
+# https://w3id.org/yang/server#ValidateCapability
+<https://w3id.org/yang/server#ValidateCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/yang/server#ValidateCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
+<https://w3id.org/yang/server#ValidateCapability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:validate:1.1" .
+<https://w3id.org/yang/server#ValidateCapability> <https://w3id.org/yang/server#netconfCapabilityName> "validate" .
+<https://w3id.org/yang/server#ValidateCapability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.1" .
+<https://w3id.org/yang/server#ValidateCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Validate consists of checking a complete configuration for syntactical and semantic errors before applying the configuration to the device." .
+<https://w3id.org/yang/server#ValidateCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#ValidateCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Validate Capability" .
+<https://w3id.org/yang/server#ValidateCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc6241#section-8.6> .
 # 
 # https://w3id.org/yang/server#WritableRunningCapability
 <https://w3id.org/yang/server#WritableRunningCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/yang/server#WritableRunningCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#WritableRunningCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:writable-running:1.0" .
+<https://w3id.org/yang/server#WritableRunningCapability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:writable-running:1.0" .
+<https://w3id.org/yang/server#WritableRunningCapability> <https://w3id.org/yang/server#netconfCapabilityName> "writable-running" .
+<https://w3id.org/yang/server#WritableRunningCapability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.0" .
 <https://w3id.org/yang/server#WritableRunningCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The `:writable-running` capability indicates that the device supports direct writes to the `<running>` configuration datastore. In other words, the device supports `<edit-config>` and `<copy-config>` operations where the `<running>` configuration is the target." .
 <https://w3id.org/yang/server#WritableRunningCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#WritableRunningCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Writable Running Capability" .
@@ -516,19 +581,38 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/yang/server#XpathCapability
 <https://w3id.org/yang/server#XpathCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/yang/server#XpathCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#XpathCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:xpath:1.0" .
+<https://w3id.org/yang/server#XpathCapability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:xpath:1.0" .
+<https://w3id.org/yang/server#XpathCapability> <https://w3id.org/yang/server#netconfCapabilityName> "xpath" .
+<https://w3id.org/yang/server#XpathCapability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.0" .
 <https://w3id.org/yang/server#XpathCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The XPath capability indicates that the NETCONF peer supports the use of XPath expressions in the `<filter>` element." .
 <https://w3id.org/yang/server#XpathCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
 <https://w3id.org/yang/server#XpathCapability> <http://www.w3.org/2000/01/rdf-schema#label> "XPath Capability" .
 <https://w3id.org/yang/server#XpathCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc6241#section-8.9> .
 # 
-# https://w3id.org/yang/server#YangLibraryCapability
-<https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
-<https://w3id.org/yang/server#YangLibraryCapability> <http://purl.org/dc/terms/identifier> "urn:ietf:params:netconf:capability:yang-library:1.1" .
-<https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "NETCONF capability that indicates that the NETCONF server implements YANG Library." .
-<https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
-<https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Yang Library Capability" .
-<https://w3id.org/yang/server#YangLibraryCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc8526> .
+# https://w3id.org/yang/server#YangLibrary1.0Capability
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:yang-library:1.0" .
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <https://w3id.org/yang/server#netconfCapabilityName> "yang-library" .
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.0" .
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <http://www.w3.org/2000/01/rdf-schema#comment> "NETCONF capability that indicates that the NETCONF server implements YANG Library RFC7895." .
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <http://www.w3.org/2000/01/rdf-schema#label> "Yang Library 1.0 Capability" .
+<https://w3id.org/yang/server#YangLibrary1.0Capability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc7895> .
 # 
+# https://w3id.org/yang/server#YangLibrary1.1Capability
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/yang/server#NetconfCapability> .
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <https://w3id.org/yang/server#netconfCapabilityId> "urn:ietf:params:netconf:capability:yang-library:1.1" .
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <https://w3id.org/yang/server#netconfCapabilityName> "yang-library" .
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <https://w3id.org/yang/server#netconfCapabilityVersion> "1.1" .
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <http://www.w3.org/2000/01/rdf-schema#comment> "NETCONF capability that indicates that the NETCONF server implements YANG Library RFC8525." .
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/yang/server> .
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <http://www.w3.org/2000/01/rdf-schema#label> "Yang Library 1.1 Capability" .
+<https://w3id.org/yang/server#YangLibrary1.1Capability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://datatracker.ietf.org/doc/html/rfc8526> .
+# 
+_:genid3 <http://xmlns.com/foaf/0.1/homepage> <https://github.com/candil-data-fabric> .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "CANDIL Data Fabric" .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Ignacio Dominguez Martinez-Casanueva" .
+_:genid4 <https://schema.org/identifier> <https://orcid.org/0000-0002-8573-127X> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
