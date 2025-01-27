@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/yang/server#",
     "version" : "1.6.0",
-    "author" : [ "_:genid2147483651" ],
+    "author" : [ "_:genid2147483649" ],
     "description" : {
       "undefined" : "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 "
     },
@@ -25,7 +25,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483651",
+        "value" : "_:genid2147483649",
         "type" : "label"
       } ],
       "createdWith" : [ {
@@ -49,13 +49,7 @@
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
-        "value" : "_:genid2147483650",
-        "type" : "label"
-      } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.6.0",
+        "value" : "_:genid2147483648",
         "type" : "label"
       } ],
       "source" : [ {
@@ -69,6 +63,12 @@
         "language" : "undefined",
         "value" : "https://w3id.org/yang/server#",
         "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.6.0",
+        "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -949,30 +949,6 @@
         "undefined" : "Rollback-on-Error Capability"
       }
     }, {
-      "iri" : "https://w3id.org/yang/server#YangLibrary1.0Capability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc7895",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "NETCONF capability that indicates that the NETCONF server implements YANG Library RFC7895."
-      },
-      "labels" : {
-        "IRI-based" : "YangLibrary1.0Capability",
-        "undefined" : "Yang Library 1.0 Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#UrlCapability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
@@ -995,6 +971,30 @@
       "labels" : {
         "IRI-based" : "UrlCapability",
         "undefined" : "URL Capability"
+      }
+    }, {
+      "iri" : "https://w3id.org/yang/server#YangLibrary1.0Capability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc7895",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "NETCONF capability that indicates that the NETCONF server implements YANG Library RFC7895."
+      },
+      "labels" : {
+        "IRI-based" : "YangLibrary1.0Capability",
+        "undefined" : "Yang Library 1.0 Capability"
       }
     }, {
       "iri" : "https://w3id.org/yang/server#ConfirmedCommitCapability",
@@ -1093,12 +1093,12 @@
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/w3id.org/rml/io/spec",
+        "value" : "https://datatracker.ietf.org/doc/rfc6241",
         "type" : "iri"
       }, {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://datatracker.ietf.org/doc/rfc6241",
+        "value" : "https://w3id.org/yang/w3id.org/rml/io/spec",
         "type" : "iri"
       } ]
     },
@@ -1393,7 +1393,7 @@
   "propertyAttribute" : [ {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "2"
   }, {
     "iri" : "https://w3id.org/yang/server#period",
@@ -1476,12 +1476,12 @@
   }, {
     "range" : "4",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "22"
   }, {
     "range" : "4",
     "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "24"
   }, {
     "iri" : "https://w3id.org/yang/server#subtreeValue",
@@ -1564,17 +1564,17 @@
   }, {
     "range" : "36",
     "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "34"
   }, {
     "range" : "19",
     "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
     "range" : "4",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/yang/server#filter",
@@ -1601,27 +1601,27 @@
   }, {
     "range" : "36",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "41"
   }, {
     "range" : "9",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "43"
   }, {
     "range" : "9",
     "domain" : "42",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "44"
   }, {
     "range" : "19",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "45"
   }, {
     "range" : "9",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/yang/server#namespace",
@@ -1711,22 +1711,22 @@
   }, {
     "range" : "29",
     "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "57"
   }, {
     "range" : "13",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "58"
   }, {
     "range" : "40",
     "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "59"
   }, {
     "range" : "11",
     "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "61"
   }, {
     "iri" : "https://w3id.org/yang/server#sourceDatastore",
@@ -1814,28 +1814,9 @@
     "attributes" : [ "datatype" ],
     "id" : "73"
   }, {
-    "iri" : "http://xmlns.com/foaf/0.1/accountName",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "64",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://xmlns.com/foaf/0.1/",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "accountName",
-      "undefined" : "account name"
-    },
-    "domain" : "63",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "74"
-  }, {
     "iri" : "https://ontology.unifiedcyberontology.org/uco/observable/addressValue",
     "baseIri" : "https://ontology.unifiedcyberontology.org/uco/observable",
-    "range" : "60",
+    "range" : "64",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1853,6 +1834,25 @@
     "label" : {
       "IRI-based" : "addressValue",
       "undefined" : "addressValue"
+    },
+    "domain" : "63",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/accountName",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "accountName",
+      "undefined" : "account name"
     },
     "domain" : "63",
     "attributes" : [ "datatype", "external" ],
@@ -1902,6 +1902,25 @@
     "attributes" : [ "object" ],
     "id" : "77"
   }, {
+    "iri" : "https://ontology.unifiedcyberontology.org/uco/observable/userName",
+    "baseIri" : "https://ontology.unifiedcyberontology.org/uco/observable",
+    "range" : "62",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "userName",
+      "undefined" : "userName"
+    },
+    "domain" : "63",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "78"
+  }, {
     "iri" : "https://w3id.org/yang/server#netconfCapabilityVersion",
     "baseIri" : "https://w3id.org/yang/server",
     "range" : "70",
@@ -1922,25 +1941,6 @@
       "undefined" : "Represents the version of the NETCONF capability."
     },
     "attributes" : [ "datatype" ],
-    "id" : "78"
-  }, {
-    "iri" : "https://ontology.unifiedcyberontology.org/uco/observable/userName",
-    "baseIri" : "https://ontology.unifiedcyberontology.org/uco/observable",
-    "range" : "62",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://ontology.unifiedcyberontology.org/uco/observable/",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "userName",
-      "undefined" : "userName"
-    },
-    "domain" : "63",
-    "attributes" : [ "datatype", "external" ],
     "id" : "79"
   }, {
     "iri" : "https://w3id.org/yang/server#capability",
@@ -1967,7 +1967,7 @@
   }, {
     "range" : "1",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "81"
   }, {
     "iri" : "https://w3id.org/yang/server#socketAddress",
@@ -1994,7 +1994,7 @@
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "83"
   } ]
 }

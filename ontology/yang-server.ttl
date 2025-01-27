@@ -13,9 +13,9 @@
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
-@base <https://w3id.org/yang/server> .
+@base <https://w3id.org/yang/server#> .
 
-<https://w3id.org/yang/server> rdf:type owl:Ontology ;
+<https://w3id.org/yang/server#> rdf:type owl:Ontology ;
                                 owl:versionIRI <https://w3id.org/yang/server> ;
                                 dcterms:created "2025-01-18"^^xsd:date ;
                                 dcterms:creator [ foaf:name "Ignacio Dominguez Martinez-Casanueva" ;
