@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/yang/server#",
     "version" : "1.6.0",
-    "author" : [ "_:genid2147483649" ],
+    "author" : [ "_:genid2147483650" ],
     "description" : {
       "undefined" : "\n                                 Ontology that defines core concepts for representing YANG servers, including connection details and the available YANG datastores, along with operations for retrieving YANG data from a YANG server. The goal of this ontology is to enable the declarative and abstract of the interactions with YANG servers for monitoring and configuration purposes. In this sense, the ontology can become the basis for building a knowledge graph from YANG data obtained from YANG servers.\n                                 "
     },
@@ -25,7 +25,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483649",
+        "value" : "_:genid2147483650",
         "type" : "label"
       } ],
       "createdWith" : [ {
@@ -52,16 +52,16 @@
         "value" : "_:genid2147483648",
         "type" : "label"
       } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://github.com/candil-data-fabric/yang-server-ontology",
-        "type" : "iri"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/yang/server#",
+        "type" : "iri"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://github.com/candil-data-fabric/yang-server-ontology",
         "type" : "iri"
       } ],
       "versionInfo" : [ {
@@ -203,10 +203,10 @@
     "id" : "48",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "16",
@@ -949,30 +949,6 @@
         "undefined" : "Rollback-on-Error Capability"
       }
     }, {
-      "iri" : "https://w3id.org/yang/server#UrlCapability",
-      "baseIri" : "https://w3id.org/yang/server",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/yang/server",
-          "type" : "iri"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.8",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "The NETCONF peer has the ability to accept the `<url>` element in `<source>` and `<target>` parameters. The capability is further identified by URL arguments indicating the URL schemes supported."
-      },
-      "labels" : {
-        "IRI-based" : "UrlCapability",
-        "undefined" : "URL Capability"
-      }
-    }, {
       "iri" : "https://w3id.org/yang/server#YangLibrary1.0Capability",
       "baseIri" : "https://w3id.org/yang/server",
       "annotations" : {
@@ -995,6 +971,30 @@
       "labels" : {
         "IRI-based" : "YangLibrary1.0Capability",
         "undefined" : "Yang Library 1.0 Capability"
+      }
+    }, {
+      "iri" : "https://w3id.org/yang/server#UrlCapability",
+      "baseIri" : "https://w3id.org/yang/server",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/yang/server",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://datatracker.ietf.org/doc/html/rfc6241#section-8.8",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "The NETCONF peer has the ability to accept the `<url>` element in `<source>` and `<target>` parameters. The capability is further identified by URL arguments indicating the URL schemes supported."
+      },
+      "labels" : {
+        "IRI-based" : "UrlCapability",
+        "undefined" : "URL Capability"
       }
     }, {
       "iri" : "https://w3id.org/yang/server#ConfirmedCommitCapability",
@@ -1093,12 +1093,12 @@
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://datatracker.ietf.org/doc/rfc6241",
+        "value" : "https://w3id.org/yang/w3id.org/rml/io/spec",
         "type" : "iri"
       }, {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://w3id.org/yang/w3id.org/rml/io/spec",
+        "value" : "https://datatracker.ietf.org/doc/rfc6241",
         "type" : "iri"
       } ]
     },
@@ -1187,33 +1187,6 @@
     },
     "id" : "48"
   }, {
-    "iri" : "https://w3id.org/yang/server#ServerAccount",
-    "baseIri" : "https://w3id.org/yang/server",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/yang/server",
-        "type" : "iri"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://datatracker.ietf.org/doc/rfc6241",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ServerAccount",
-      "undefined" : "Server Account"
-    },
-    "comment" : {
-      "undefined" : "Represents an account used for accessing the YANG server."
-    },
-    "id" : "12",
-    "superClasses" : [ "11", "40" ]
-  }, {
     "iri" : "https://w3id.org/yang/server#Subscription",
     "baseIri" : "https://w3id.org/yang/server",
     "instances" : 0,
@@ -1241,6 +1214,33 @@
     },
     "id" : "1",
     "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/yang/server#ServerAccount",
+    "baseIri" : "https://w3id.org/yang/server",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/yang/server",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://datatracker.ietf.org/doc/rfc6241",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServerAccount",
+      "undefined" : "Server Account"
+    },
+    "comment" : {
+      "undefined" : "Represents an account used for accessing the YANG server."
+    },
+    "id" : "12",
+    "superClasses" : [ "11", "40" ]
   }, {
     "iri" : "https://w3id.org/yang/server#NetconfServer",
     "baseIri" : "https://w3id.org/yang/server",
@@ -1814,9 +1814,28 @@
     "attributes" : [ "datatype" ],
     "id" : "73"
   }, {
+    "iri" : "http://xmlns.com/foaf/0.1/accountName",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "64",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "accountName",
+      "undefined" : "account name"
+    },
+    "domain" : "63",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "74"
+  }, {
     "iri" : "https://ontology.unifiedcyberontology.org/uco/observable/addressValue",
     "baseIri" : "https://ontology.unifiedcyberontology.org/uco/observable",
-    "range" : "64",
+    "range" : "60",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1834,25 +1853,6 @@
     "label" : {
       "IRI-based" : "addressValue",
       "undefined" : "addressValue"
-    },
-    "domain" : "63",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "74"
-  }, {
-    "iri" : "http://xmlns.com/foaf/0.1/accountName",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "60",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://xmlns.com/foaf/0.1/",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "accountName",
-      "undefined" : "account name"
     },
     "domain" : "63",
     "attributes" : [ "datatype", "external" ],

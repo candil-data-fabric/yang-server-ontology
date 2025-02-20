@@ -16,19 +16,19 @@
   } ]
 }, {
   "@id" : "_:genid3",
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://github.com/candil-data-fabric"
-  } ],
-  "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "CANDIL Data Fabric"
-  } ]
-}, {
-  "@id" : "_:genid4",
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Ignacio Dominguez Martinez-Casanueva"
   } ],
   "https://schema.org/identifier" : [ {
     "@id" : "https://orcid.org/0000-0002-8573-127X"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://github.com/candil-data-fabric"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "CANDIL Data Fabric"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
